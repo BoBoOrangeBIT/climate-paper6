@@ -1,0 +1,21 @@
+# Egress reachability pre-check — 2026-08-27, session env: Default (trusted network access)
+# method: curl -sS -o /dev/null --max-time 15 https://DOMAIN/ via mandatory agent proxy
+www.jumia.co.ke | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+www.kilimall.co.ke | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+www.epra.go.ke | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+kebs.org | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+webstore.kebs.org | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+www.lg.com | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+www.samsung.com | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+global.hisense.com | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+www.midea.com | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+global.gree.com | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+www.tcl.com | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+www.haier.com | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+www.daikin.co.ke | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+www.carrier.com | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+ramtons.com | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+vonhouseholds.com | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+bruhm.com | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+mika.co.ke | curl: (56) CONNECT tunnel failed, response 403HTTP:000
+hotpoint.co.ke | curl: (56) CONNECT tunnel failed, response 403HTTP:000

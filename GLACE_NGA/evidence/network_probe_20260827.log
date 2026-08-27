@@ -1,0 +1,80 @@
+GLACE NGA_split_20260827 — network egress probe
+Probe start (UTC): 2026-08-27T22:32:18Z
+Environment: Claude Code remote container, session a37d392e; outbound HTTPS via policy-enforcing agent proxy (HTTPS_PROXY=http://127.0.0.1:43373)
+
+22:32:18Z https://www.jumia.com.ng/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:32:21Z https://www.konga.com/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:32:24Z https://son.gov.ng/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:32:28Z https://energycommission.gov.ng/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:32:31Z https://energy.gov.ng/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:32:34Z https://www.lg.com/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:32:37Z https://www.samsung.com/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:32:40Z https://www.hisense.com/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:32:44Z https://www.midea.com/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:32:47Z https://global.gree.com/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:32:50Z https://www.tcl.com/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:32:53Z https://www.haier.com/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:32:57Z https://www.daikin.com/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+22:33:00Z https://www.example.com/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+
+Proxy status excerpt:
+{
+ "enabled": true,
+ "selective": false,
+ "recentRelayFailures": [
+  {
+   "ts": "2026-08-27T22:30:36.164Z",
+   "kind": "connect_rejected",
+   "detail": "gateway answered 403 to CONNECT (policy denial or upstream failure)",
+   "host": "www.jumia.com.ng:443"
+  },
+  {
+   "ts": "2026-08-27T22:30:59.586Z",
+   "kind": "connect_rejected",
+   "detail": "gateway answered 403 to CONNECT (policy denial or upstream failure)",
+   "host": "www.konga.com:443"
+  },
+  {
+   "ts": "2026-08-27T22:30:59.800Z",
+   "kind": "connect_rejected",
+   "detail": "gateway answered 403 to CONNECT (policy denial or upstream failure)",
+   "host": "son.gov.ng:443"
+  },
+  {
+   "ts": "2026-08-27T22:31:00.008Z",
+   "kind": "connect_rejected",
+   "detail": "gateway answered 403 to CONNECT (policy denial or upstream failure)",
+   "host": "energy.gov.ng:443"
+  },
+  {
+   "ts": "2026-08-27T22:31:00.239Z",
+   "kind": "connect_rejected",
+   "detail": "gateway answered 403 to CONNECT (policy denial or upstream failure)",
+   "host": "www.lg.com:443"
+  },
+  {
+   "ts": "2026-08-27T22:31:00.532Z",
+   "kind": "connect_rejected",
+   "detail": "gateway answered 403 to CONNECT (policy denial or upstream failure)",
+   "host": "www.example.com:443"
+  }
+ ]
+}
+
+Harness-side WebFetch probe of https://www.jumia.com.ng/robots.txt -> EGRESS_BLOCKED (error_type EGRESS_BLOCKED, 'Access to www.jumia.com.ng is blocked by the network egress proxy.')
+Harness-side WebSearch (Anthropic server-side) succeeded and returned live jumia.com.ng category pages (e.g. 'Air Conditioners Prices in Nigeria (1195 Products) | Jumia' at https://www.jumia.com.ng/air-conditioners-d/), confirming the platform itself is up: the failure is local egress policy, not platform outage.
+Probe end (UTC): 2026-08-27T22:33:03Z

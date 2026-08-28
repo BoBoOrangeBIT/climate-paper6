@@ -1,0 +1,37 @@
+# GLACE KEN × split — egress allowlist for a Custom-network cloud environment
+# Paste into the "Allowed domains" field of the environment dialog at claude.ai/code
+# (Network access = Custom, one domain per line, leading *. matches all subdomains).
+# Tick "Also include default list of common package managers" so pip/npm still work.
+# Verify with: python3 tooling/precheck_egress.py  before starting the run.
+
+# --- Phase A retail platforms ---
+*.jumia.co.ke
+*.jumia.is
+*.kilimall.co.ke
+*.kilimall.com
+
+# --- Phase B T1a registries / standards ---
+*.epra.go.ke
+*.kebs.org
+
+# --- Phase B T1b manufacturer sites, international brands ---
+*.lg.com
+*.samsung.com
+*.hisense.com
+*.midea.com
+*.gree.com
+*.tcl.com
+*.haier.com
+*.daikin.com
+*.daikin.co.ke
+*.carrier.com
+
+# --- Phase B T1b manufacturer sites, regional brands ---
+*.ramtons.com
+*.vonhouseholds.com
+*.hotpoint.co.ke
+*.bruhm.com
+*.mika.co.ke
+# Armco, Nunix, Roch: official domains not yet confirmed. Locate them at Step 9 by
+# searching brand + Kenya (the WebSearch tool does not use the session network, so it
+# works at any access level), then add the domains here and re-run the pre-check.

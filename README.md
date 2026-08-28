@@ -43,3 +43,29 @@ tooling/
 4. Extract per the prompt; every record needs a full-page PNG + MHTML with UTC
    timestamp and SHA-256 (`tooling/snapshot_manifest.py`).
 5. Collection window: late August–September preferred; log any promotion within 14 days.
+
+## Getting an environment that can reach the sources
+
+The blocking constraint is the cloud environment's **Network access** level. The
+**Default** environment uses **Trusted**, which allows package registries and GitHub
+only. To run this cell from a cloud session, create an environment with **Network
+access = Custom** and paste `rerun_egress_allowlist.txt` into its **Allowed domains**
+field (tick "Also include default list of common package managers"), then select that
+environment before starting the session. **Full** works too, if a broad allowlist is
+acceptable.
+
+Editing an environment affects sessions started afterwards, not ones already running,
+so the rerun needs a **new session** in the reconfigured environment.
+
+First command in the rerun, before Step 0:
+
+```
+python3 tooling/precheck_egress.py --out runs/<RUN_ID>/reachability_precheck_raw.txt
+```
+
+It probes all 19 source domains, writes the evidence file the log requires, and exits
+non-zero if either Phase A platform is unreachable — in which case the run must not
+start.
+
+Alternatively, run the cell in Claude in Chrome on your own machine, which is the
+runtime both prompts were written for and needs no environment change.

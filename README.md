@@ -3,20 +3,23 @@
 Working repository for the GLACE retail price / efficiency extraction and tracing runs
 for the **KEN × split** cell, following the two operating prompts in `prompts/`.
 
-## Status — 2026-08-27
+## Status — 2026-08-28
 
-The first run attempt, `KEN_split_20260827`, **terminated at Step 0**: the execution
-environment's network egress policy blocks every retail platform, registry and
-manufacturer domain (HTTP 403 at the proxy CONNECT stage, before any target is
-reached). Per the prompt's Interruption rule the run stopped without improvising a
-workaround; 0 records were extracted. Full detail, the per-domain reachability
-pre-check, and the Phase B source discovery notes are in
-`runs/KEN_split_20260827/KEN_split_20260827_run_log.md`.
+Second run attempt, `KEN_split_20260828`, from a rebuilt environment with the custom
+egress allowlist: **network egress now works** (pre-check passed; browser runtime
+verified after fixing a gateway TLS incompatibility), but the run again **terminated
+at Step 0** — this time by the platform, not the environment. Jumia (PLATFORM_1)
+serves a Cloudflare interactive "Verify you are human" (Turnstile) interstitial to
+this egress IP on the homepage and on the Step 1 search URL; per Section 3 (never
+bypass a CAPTCHA; Interruption rule) and the operator's standing instruction the run
+stopped with 0 records and no workaround attempted. Kilimall (PLATFORM_2) renders
+fully and is collectable. Evidence, the browser-level reachability table, and the
+operator decision options (run Jumia from Claude in Chrome on a residential network;
+or authorize a Kilimall-first frame in a prompt v1.1; or retry later) are in
+`runs/KEN_split_20260828/KEN_split_20260828_run_log.md`.
 
-The run is fully staged and executable as written from an environment that can reach
-the target domains — Claude in Chrome on the operator's machine (as the prompts
-specify), or a remote environment whose network policy allows jumia.co.ke,
-kilimall.co.ke, epra.go.ke, kebs.org and the manufacturer sites.
+First attempt `KEN_split_20260827` (terminated at Step 0, environment egress blocked)
+is retained under `runs/KEN_split_20260827/`.
 
 ## Layout
 

@@ -1,0 +1,21 @@
+# Egress reachability pre-check — 2026-08-28T04:19:30Z
+# method: curl https://DOMAIN/ from the session network
+www.jumia.co.ke | Phase A P1 | Jumia Kenya | reachable | HTTP 403
+www.kilimall.co.ke | Phase A P2 | Kilimall | reachable | HTTP 200
+www.epra.go.ke | T1a | EPRA appliance register | blocked | curl: (28) Connection timed out after 12002 milliseconds
+kebs.org | T1a | KEBS | reachable | HTTP 200
+webstore.kebs.org | T1a | KEBS webstore | reachable | HTTP 200
+www.lg.com | T1b intl | LG | reachable | HTTP 301
+www.samsung.com | T1b intl | Samsung | reachable | HTTP 301
+global.hisense.com | T1b intl | Hisense | reachable | HTTP 302
+www.midea.com | T1b intl | Midea | reachable | HTTP 302
+global.gree.com | T1b intl | Gree | reachable | HTTP 200
+www.tcl.com | T1b intl | TCL | reachable | HTTP 301
+www.haier.com | T1b intl | Haier | reachable | HTTP 200
+www.daikin.co.ke | T1b intl | Daikin Kenya | blocked | curl: (35) Recv failure: Connection reset by peer
+www.carrier.com | T1b intl | Carrier | reachable | HTTP 301
+ramtons.com | T1b reg | Ramtons | reachable | HTTP 301
+vonhouseholds.com | T1b reg | Von | blocked | curl: (56) CONNECT tunnel failed, response 502
+hotpoint.co.ke | T1b reg | Von / Hotpoint | reachable | HTTP 200
+bruhm.com | T1b reg | Bruhm | reachable | HTTP 200
+mika.co.ke | T1b reg | Mika | blocked | curl: (56) CONNECT tunnel failed, response 502

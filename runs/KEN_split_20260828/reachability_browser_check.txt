@@ -1,0 +1,37 @@
+# Browser-level reachability check — supplement to reachability_precheck_raw.txt
+# RUN_ID KEN_split_20260828 · 2026-08-28 · UTC
+#
+# Method: Chromium 141 (Playwright-driven, the session's configured browser runtime),
+# anonymous persistent profile, session egress proxy, no CAPTCHA interaction of any
+# kind — pages loaded passively and observed. This check exists because the raw
+# pre-check probes with curl and counts ANY http response as "reachable"; a CAPTCHA
+# interstitial answers 403 and passes that test while still blocking collection.
+#
+# Control (proves the browser/network path works):
+# example.com                | HTTP 200 | renders "Example Domain"
+#
+# Phase A platforms:
+# www.jumia.co.ke/           | HTTP 403 | Cloudflare interstitial "Just a moment..." /
+#                            |          | "Performing security verification" with an
+#                            |          | INTERACTIVE "Verify you are human" checkbox
+#                            |          | (Turnstile). Not cleared after 40 s (attempt 1,
+#                            |          | 04:37 UTC) and 60 s (attempt 2, 04:43 UTC) of
+#                            |          | passive waiting in two separate sessions.
+#                            |          | Ray ID a320a3bd9f4f9acd (attempt 1).
+# www.jumia.co.ke/catalog/?q=air+conditioner
+#                            | HTTP 403 | same interstitial — the exact search URL
+#                            |          | required by Step 1 is gated (04:44 UTC)
+# www.kilimall.co.ke/        | HTTP 200 | full homepage renders to the anonymous
+#                            |          | visitor; title "Kilimall - Affordable Online
+#                            |          | Shopping in Kenya" (04:43:59 UTC)
+#
+# Evidence snapshots (full-page PNG + MHTML, sha256 in snapshots/sha256_manifest.txt):
+# KEN_split_jumia_STEP0_challenge_20260828T044315Z.{png,mhtml}
+# KEN_split_kilimall_STEP0_control_20260828T044359Z.{png,mhtml}
+#
+# Conclusion: PLATFORM_1 (Jumia) is blocked to this environment by a platform-side
+# interactive CAPTCHA gate (gap code C). The extraction prompt Section 3 prohibits
+# bypassing a CAPTCHA; per the Interruption rule and the operator's standing
+# instruction (stop if either Phase A platform is unreachable, no workarounds),
+# the run terminates at Step 0. PLATFORM_2 (Kilimall) is fully collectable from
+# this environment.

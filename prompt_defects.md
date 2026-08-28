@@ -19,3 +19,31 @@ recorded at close-out. One entry per run that surfaced a defect.
     be run from a cloud session instead, the prompt should state the minimum egress
     allowlist for the run (platform domains + registry + manufacturer domains) so the
     environment can be validated against it up front.
+
+## KEN_split_20260828
+
+- **Uncovered case: PLATFORM_1 gated by an interactive CAPTCHA while PLATFORM_2 is
+  open.** Jumia served a Cloudflare "Verify you are human" (Turnstile) interstitial
+  on the homepage and on the Step 1 search URL to the anonymous browser session;
+  Kilimall rendered fully. Section 3 forbids bypassing a CAPTCHA and the Interruption
+  rule forbids improvising, so the run stopped at Step 0 — but the prompt offers no
+  authorized continuation: the ladder cannot start at level 2, Checkpoint 0 is
+  defined on PLATFORM_1, and `frame_exhausted` misdescribes a level that was never
+  enterable.
+  - Suggested prompt change: define `stop_reason = platform_blocked` for an
+    anti-bot-gated platform, and state explicitly whether the operator may authorize
+    a P2-first frame (with a single-platform comparability note) or must move the
+    run to a human-attended browser.
+- **Pre-check definition of "reachable" is too weak for anti-bot platforms.** An
+  HTTP-level probe accepts a 403 challenge interstitial as proof of reachability
+  (any HTTP response counts), so a platform can pass the pre-check and still be
+  closed to collection. Suggested fix: probe with the actual browser runtime and
+  classify challenge interstitials (title "Just a moment...", response header
+  `cf-mitigated: challenge`) as blocked.
+- **Environment note for cloud reruns (fixed in-run):** the cloud egress gateway's
+  TLS-inspection layer resets TLS ClientHellos carrying post-quantum (ML-KEM) key
+  shares — the Chromium 141 default — so the browser runtime fails on every domain
+  while curl succeeds, which can mislead the pre-check. Fix: Chromium enterprise
+  policy `PostQuantumKeyAgreementEnabled: false` (ECH and DoH also off) in
+  `/etc/chromium/policies/managed/`. This adjusts the client's own TLS offer, not
+  certificate verification.

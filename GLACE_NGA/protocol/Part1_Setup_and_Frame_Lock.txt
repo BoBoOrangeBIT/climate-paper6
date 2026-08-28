@@ -1,0 +1,76 @@
+GLACE Nigeria — Part 1 of 4
+Setup and Frame Lock
+Steps 0 to 2 · ends at Checkpoint 0 · no records are created in this part
+v1.0 · 2026-08-26 · Cell: NGA × split · Mirrors the Chinese master template v2.2 · Run this part alone, then stop
+What this part does
+Sets the delivery address and interface, fixes the search and sort into a single frozen URL, and presents the frame for human approval.
+No product record is created here. Nothing is extracted. The output is a locked URL and an approved frame.
+Stop at the end of Step 2 and wait. Part 2 does not begin until a human has approved Checkpoint 0.
+1. Parameters
+2. Role and task
+You are the extraction operator for the GLACE project. Using Claude in Chrome, you collect retail price and efficiency fields for one country × ac_type cell. This part prepares the sampling frame only.
+Record only what is visible on the page. Do not infer, complete or estimate anything.
+Do not assign efficiency grades, rank products, or filter listings on quality.
+The stopping condition depends only on a record position in the sampling frame, never on its price or efficiency values.
+3. Hard constraints (violation terminates the run)
+Compliance. Respect robots.txt and platform rate limits; keep at least three seconds between page loads. Never bypass a CAPTCHA, login wall, or paywall. Use public product pages only, no undocumented endpoints.
+Privacy. Do not record seller names, storefront identities, or customer reviews. From label images, extract numeric values only.
+Completeness. Never skip a record because a field is missing. Leave the field blank and assign a gap code. Never insert an estimate.
+Order. Advance strictly by rank. No cherry-picking, no content-based selection. Sponsored placements keep their rank position.
+Evidence. A record without a full-page snapshot is not a valid record.
+Interruption. If any constraint cannot be met, stop immediately, log the reason and the current rank, and do not improvise a workaround.
+4. Procedure
+Step 0　Environment and delivery address
+Open {PLATFORM_1} and set the delivery address to Abuja 900001, the national capital.
+The interface is English throughout. No language switch is required, but record the interface state in the log.
+Do not log in. Member pricing changes displayed prices. The observation is the price shown to an anonymous visitor.
+Reload the search page and confirm on any product page that the address took effect.
+If the platform has no delivery address field, set delivery_city_set to false and note in the log whether the price is national.
+Write the delivery city, the interface state and the method used into the run log before moving to Step 1.
+Step 1　Fixing the sampling frame
+Search with {KEYWORDS}, fix the sort to {SORT_PARAM}, write it into the URL, and do not change it during the run.
+Sort policy. Use the platform default sort, which is the only ordering available on every platform in the 53-cell frame and therefore the only one comparable across countries. Fall back to a sales or popularity sort only when the default cannot be pinned into a URL, and log the fallback.
+Record capture_date in UTC and the measured category_total_listings for that platform and category.
+Number qualifying results consecutively from 1 as rank. Sponsored placements are counted in the ranking and flagged with is_sponsored true.
+Save one full-page snapshot of the search results page as evidence of the frame.
+Step 2　Checkpoint 0 (human approval required)
+Output the following four items, then stop and wait for explicit human approval. Do not begin Part 2 without it.
+Platform name, domain, and channel type
+Search terms or category path
+The full URL after the sort is fixed
+The first ten product names and prices returned by that URL
+Rationale. Choosing the wrong primary platform is the one failure mode that is both systematic and invisible to every downstream quality check, so it is closed by human review before any measurement starts.
+Report category_total_listings alongside the four items, so that the human can judge whether the pilot rank target of 150 is reachable on this platform before collection begins.
+Ask the human to confirm the rank target of 150 in the same reply.
+Checkpoint 0b. Escalating to {PLATFORM_2} later in Part 3 requires the same four items and a second approval. That approval is requested in Part 3, not here.
+5. Nigeria rules that apply to this part
+6. Handoff to Part 2
+Before Part 2 is loaded, the following must exist and be recorded in the run log.
+The frozen search URL with the sort parameter written into it, copied verbatim.
+The delivery address confirmed as Abuja 900001, with the verification method noted.
+The interface state and any language or region setting recorded.
+capture_date in UTC, the run start timestamp, and category_total_listings.
+The full-page snapshot of the search results page, with its SHA-256.
+Written human approval of Checkpoint 0 and of the rank target of 150.
+Do not continue past this point in the same session. Stop here.
+--- TABLE 0 ---
+Parameter | Value
+{COUNTRY} / {ISO3} | Nigeria / NGA
+{AC_TYPE} | split
+{DELIVERY_CITY} | Abuja 900001, the national capital
+{CURRENCY} | NGN
+{PLATFORM_1} | Jumia Nigeria, jumia.com.ng, marketplace
+{PLATFORM_2} | Konga, konga.com, marketplace
+{KEYWORDS} | air conditioner. Search in English. Record the category path if the search lands in one.
+{SORT_PARAM} | Jumia default sort. Select it in the sort control and copy the resulting URL verbatim. Do not assume the parameter name, verify it.
+{N_MIN} | 30
+{RANK_TARGET} | 150. This is a pilot over-collection cell, so the usual 60 cap is suspended. See Part 3.
+{LABEL_SCHEME} | SON Mandatory Energy Labeling Scheme under NIS 943:2024, one to five stars. Native metric: NSEER. Not yet in force at the collection date.
+{RUN_ID} | NGA_split_YYYYMMDD
+--- TABLE 1 ---
+Item | Rule
+Scope | The frame contains no NGA × window, no NGA × central and no NGA × portable cell; all three are out of scope for Nigeria by design. Listings of those types appearing inside an in-scope search are counted under scope_status in Part 2 and excluded from the sample count, from brand saturation and from all extraction.
+Pure online basis | Jumia and Konga are pure-online marketplaces with no physical store network, which departs from the omnichannel basis preferred in the retail price scraping literature. Note this in the log so that the basis is visible downstream.
+Collection window | Avoid Jumia Black Friday, which in this market runs for most of November rather than a single day, the Jumia anniversary campaign in mid-year, the December holiday trade, Ramadan and Eid, and Easter. The preferred window is February to April or late August to September. Record the actual window and any promotional event falling within fourteen days of it. If a listed period cannot be avoided, escalate rather than proceed.
+Currency movement | The naira has moved sharply in recent years, so a price observation is only interpretable with its exact capture date. Record the start timestamp of the run in UTC here, and capture_date to the day on every record in Part 2. Do not convert to any other currency at any stage of this run.
+Login and membership | Run anonymously. Do not log in, do not accept member pricing, do not apply coupon codes.

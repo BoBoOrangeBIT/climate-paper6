@@ -1,0 +1,92 @@
+GLACE Nigeria — Part 3 of 4
+Deduplication, Stopping and Close-out
+Steps 6 to 8 · ends at Checkpoint 1 · no new listings are read unless the ladder escalates
+v1.0 · 2026-08-26 · Cell: NGA × split · Mirrors the Chinese master template v2.2 · Run this part alone, then stop
+Preconditions
+Parts 1 and 2 have been run and the Part 2 handoff items are all present.
+If the record table, the counters or the snapshot manifest is missing, stop and return to Part 2.
+Parameter recap
+Constraints carried forward
+These were stated in full in Part 1 and remain binding. A violation terminates the run.
+At least three seconds between page loads. robots.txt respected. No CAPTCHA, login wall or paywall bypass. Public pages only.
+No seller names, storefront identities or customer reviews recorded. Numeric values only from label images.
+Never skip a record for a missing field. Leave it blank and assign a gap code. Never insert an estimate.
+Advance strictly by rank. No content-based selection. Sponsored placements keep their rank position.
+A record without a full-page snapshot is not a valid record.
+If any constraint cannot be met, stop, log the reason and the current rank, and do not improvise a workaround.
+1. Step 6　Deduplication and the platform ladder
+Deduplicate on manufacturer_mpn, the only reliable join key. Where the platform gives no MPN, compare on brand plus normalized model string and set mpn_missing true.
+When the same model appears on both platforms, keep the record from the higher ladder position and log the removal.
+If fewer than {N_MIN} unique models remain, escalate to {PLATFORM_2}. Brand sets accumulate across the ladder rather than restarting per platform.
+The ladder has two levels only. If both are exhausted below {N_MIN}, stop, record frame_exhausted, and report to the operator. Do not select a third platform independently.
+Checkpoint 0b (human approval required before any Konga collection)
+If the ladder escalates, output the same four items as Checkpoint 0 for Konga, then stop and wait for approval. Do not continue automatically.
+Platform name, domain, and channel type
+Search terms or category path
+The full URL after the sort is fixed
+The first ten product names and prices returned by that URL
+Once approved, return to Part 2 and run the extraction loop against Konga under the same rules, continuing the same rank sequence. Then come back to this part.
+2. Step 7　Stopping rule
+A short frame is a legitimate outcome. If both ladder levels are exhausted below the target, do not widen the query, do not relax the classification gate and do not add a third platform in order to reach it. Report frame_exhausted with the per-platform counts.
+3. Step 8　Deliverables and Checkpoint 1
+Produce the three outputs in Section 4, then report the following and stop. Tracing may not begin without human approval.
+Actual N, rank range, stop_reason, the five classification counts and shares, scanned_items and dilution rate
+Record counts by pilot_segment, production and calibration reported separately
+Brand set and record count per brand, grouped as international, regional and Nigerian domestic
+Gap code counts for the retail efficiency fields
+The tracing worklist split into priority 1, records with blank rated capacity or blank rated input power, and priority 2, records with retail values present
+Model recovery results for rows with mpn_missing true, and elapsed time and token consumption for Parts 1 to 3
+The Part 4 source list and the result of its reachability pre-check
+4. Deliverables
+4.1　Resource record
+Append one row on completing each part. Do not reconstruct it from memory at the end. Where the runtime gives no token count, enter an estimate marked estimated. Also record the per-record mean elapsed time and mean tokens, and log an interrupted rerun of Part 2 on its own row.
+Anything these prompts do not cover goes to the defects section and to prompt_defects.md at close-out. Do not resolve an uncovered case by improvising a rule.
+5. Pre-submission checklist for Parts 1 to 3
+Delivery address is Abuja 900001, the interface state is recorded, and both are confirmed effective.
+Checkpoint 0 was approved by a human, and Checkpoint 0b before any Konga collection.
+Rank is consecutive with no gaps, sponsored placements were not removed, and rank equals the count of qualifying records.
+The five classification counters and scanned_items are recorded and reconcile with rank.
+pilot_segment is filled on every row and the two segments reconcile with the rank range.
+Every record has a full-page PNG whose filename carries a UTC timestamp, with SHA-256 computed and stored.
+Records with an official label image have that image saved; those without have a spec table screenshot.
+capacity_raw_value and capacity_raw_unit are filled and 0.29307 was the only conversion applied. No horsepower value was converted.
+rated_eer computed for every record, with out-of-range values flagged rather than altered.
+Every record with a struck-through price carries price_list_label; those without carry gap code B.
+listing_condition is new on every stored row, and installation_bundled is determined on every row.
+No computation other than rated_eer and the authorised conversion, no efficiency grading, no estimates, no currency conversion.
+Every blank field carries a gap code, and no EER value was substituted for a missing NSEER.
+Deduplication complete, higher ladder position retained.
+stop_reason recorded and the outcome against the rank target of 150 is documented.
+The resource record is filled part by part, and no seller names, storefront identities or customer reviews appear in the output.
+6. Handoff to Part 4
+Part 4 begins only after a human has approved the Checkpoint 1 report. Hand over the records file, the run log, the snapshot manifest, the approved tracing worklist with tracing_priority set on every row, and the saved label images.
+Do not begin tracing in this session. Stop here.
+--- TABLE 0 ---
+Parameter | Value
+Country / cell | Nigeria / NGA × split
+Platform ladder | Jumia Nigeria (jumia.com.ng) then Konga (konga.com), both marketplace
+Delivery city / currency | Abuja 900001 / NGN
+Rank target | 30 minimum, 150 pilot target, cap suspended
+Label scheme | SON SONMELS, NIS 943:2024, NSEER, not yet enforced
+{RUN_ID} | NGA_split_YYYYMMDD, identical to Part 1
+--- TABLE 1 ---
+Condition | Decision and stop_reason
+Floor | Below 30 records after deduplication, the run may not stop for any reason
+Saturation | Ten consecutive records add no new brand to the cumulative brand set, record brand_saturation. In this cell saturation is recorded when it occurs but is not a reason to stop
+Cap | The usual 60 cap is suspended for this pilot cell. Collection continues to rank 150
+Pilot target reached | rank 150 reached, record pilot_target_reached
+Frame exhausted | Both ladder levels exhausted below the target, record frame_exhausted, list per-platform counts, and escalate
+Dilution warning | At scanned_items 60 the rank share is below 50 percent. Log and escalate, but do not stop. Usually a query that is too broad or a mixed category
+Scan cap | The 120 scan cap is scaled with the pilot rank target to 300. Record scan_cap_reached and escalate if the qualifying share collapses
+--- TABLE 2 ---
+File | Contents
+{RUN_ID}_records.xlsx | Record-level data, columns exactly as ordered in Part 2 Section 4
+{RUN_ID}_run_log.md | Single log file in three parts. Run record: platform, full URL, sort parameter and any fallback, interface state, delivery city, start and end time, rank range, actual N, the five classification counts and shares, scanned_items and dilution rate, stop_reason, category_total_listings, brand set evolution, cross-platform deduplication removals, counts by pilot_segment. Resource record: elapsed time and input and output tokens per part, plus per-record means. Defects section: page structure anomalies, systematic field gaps, suspected platform rule changes, situations these prompts do not cover
+snapshots/ | Full-page PNG, MHTML, label and spec images, and a sha256 manifest
+--- TABLE 3 ---
+Part | Start and end (UTC) | Elapsed | Input tokens | Output tokens | Records
+1 |  |  |  |  | 
+2 Jumia |  |  |  |  | 
+2 Konga if run |  |  |  |  | 
+3 |  |  |  |  | 
+Total |  |  |  |  | 

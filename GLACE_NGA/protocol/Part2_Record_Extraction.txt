@@ -1,0 +1,147 @@
+GLACE Nigeria — Part 2 of 4
+Record Extraction
+Steps 3 to 5 · the per-record loop · stops when the rank target or frame exhaustion is reached
+v1.0 · 2026-08-26 · Cell: NGA × split · Mirrors the Chinese master template v2.2 · Run this part alone, then stop
+Preconditions
+Part 1 has been run, Checkpoint 0 has been approved by a human, and the rank target of 150 has been confirmed.
+The frozen search URL, the delivery address, capture_date and the frame snapshot are all recorded in the run log.
+If any of these is missing, stop and return to Part 1. Do not reconstruct the frame from memory.
+Parameter recap
+Constraints carried forward
+These were stated in full in Part 1 and remain binding. A violation terminates the run.
+At least three seconds between page loads. robots.txt respected. No CAPTCHA, login wall or paywall bypass. Public pages only.
+No seller names, storefront identities or customer reviews recorded. Numeric values only from label images.
+Never skip a record for a missing field. Leave it blank and assign a gap code. Never insert an estimate.
+Advance strictly by rank. No content-based selection. Sponsored placements keep their rank position.
+A record without a full-page snapshot is not a valid record.
+If any constraint cannot be met, stop, log the reason and the current rank, and do not improvise a workaround.
+1. Step 3　Record-level extraction
+Each listing passes a classification gate before extraction. Apply the tests in order and stop at the first hit.
+A failed listing gets no row, no rank number, no detail page and no snapshot. Increment its counter and increment scanned_items. rank therefore always equals the number of qualifying records. Carry the five counters forward to Part 3.
+Open each qualifying product detail page. Do not extract specification fields from the search page.
+Scroll to the bottom and wait for the specification table and image gallery to load fully before reading values, otherwise lazy-loaded content is lost.
+Extract each field per Section 4. If a value is unavailable, leave it blank and assign a gap code.
+Out-of-scope types are counted under scope_status and nothing further is extracted. Out of scope does not mean the category is absent from the market, so gap code A does not apply.
+Write a checkpoint every 20 to 30 listings, counting by rank rather than by valid records.
+Process at most ten records per batch to avoid debugging-protocol timeouts. After an interruption, resume from the product detail page using platform_sku rather than re-running the search.
+Record elapsed time and token consumption per batch in the log as you go, not from memory at the end.
+Struck-through prices. Where the page shows an original price struck through above the selling price, record the label text verbatim into price_list_label, never the number alone. Where no struck-through price is shown, leave price_list blank with gap code B and never substitute price_current.
+2. Step 4　Snapshots (mandatory for every record)
+Save a full-page PNG of the price source page by scrolling capture. It must contain the price block, the model identifier, and the specification table.
+Save an MHTML copy under the same name as redundant backup.
+Naming: {ISO3}_{AC_TYPE}_{platform}_{rank}_{platform_sku}_{YYYYMMDD}T{HHMMSS}Z.png. The timestamp is UTC and must agree with capture_date.
+Compute SHA-256 for each file and store it in snapshot_id and snapshot_sha256.
+Snapshots stay on the institutional server. They are not published with the dataset; only the hashes are.
+3. Step 5　Capturing efficiency evidence in place
+When the gallery contains an official energy label image, save it as a separate PNG, set efficiency_source_type to label_image_official, and read the model, star rating, label version and efficiency value from the label. Label images are for internal verification only and are never published.
+Inspect every gallery image, including those placed after the marketing banners, before concluding that no label exists.
+When no label image exists but the specification table carries an efficiency value, capture a separate screenshot of that table region, named as above with the suffix _spec.
+Any efficiency value stated by the retailer goes into efficiency_retail_claimed, never into efficiency_native. Retail efficiency fields carry very high error rates and are treated as unverified candidates.
+Rated cooling capacity and rated power input are mandatory and are stored as separate fields. Never back-derive power input from a seasonal metric, a star rating or a nominal size class.
+4. Field list
+Column order below is the output column order. Required means always filled. If available means filled whenever the page provides it, otherwise blank plus a gap code.
+4.1　Identification and sampling
+4.2　Price
+If price_list is missing, leave it blank with gap code B. Never substitute price_current. Currency conversion, tax treatment and price per kW are derived downstream and are out of scope for this run.
+4.3　Efficiency
+rated_eer is the only computation permitted at this stage beyond the authorised unit conversion. If either input is missing, leave it blank with gap code B, and never back-derive from a seasonal metric or a star rating. Values outside 2.0 to 7.0 are left unchanged and flagged with qc_flag set to eer_out_of_range for human review.
+4.4　Extension fields (record if shown, otherwise blank)
+5. Gap codes
+Every blank field carries a gap code. Keep the record, flag it, never delete it, never impute.
+6. Nigeria rules that apply to this part
+7. Handoff to Part 3
+Stop when rank reaches 150, when the platform listing is exhausted, or when a hard constraint forces a halt. Then hand over the following.
+The record table produced so far, with all columns in Section 4 order.
+rank reached, scanned_items, and the five classification counters with their shares.
+The cumulative brand set in the order brands first appeared.
+Record counts by pilot_segment, production and calibration reported separately.
+All snapshots with their SHA-256 manifest.
+Elapsed time and token consumption for this part.
+Do not deduplicate, do not escalate to Konga, and do not decide whether to stop. Those are Part 3.
+--- TABLE 0 ---
+Parameter | Value
+Country / cell | Nigeria / NGA × split
+Platform ladder | Jumia Nigeria (jumia.com.ng) then Konga (konga.com), both marketplace
+Delivery city / currency | Abuja 900001 / NGN
+Rank target | 30 minimum, 150 pilot target, cap suspended
+Label scheme | SON SONMELS, NIS 943:2024, NSEER, not yet enforced
+{RUN_ID} | NGA_split_YYYYMMDD, identical to Part 1
+--- TABLE 1 ---
+Test | Fails when | Action
+1. Complete air conditioner | Brackets, covers, WiFi modules, remotes, filters | No rank, no row. Increment accessory counter
+2. This cell type | Window, portable or ducted unit returned by a split query | No rank, no row. Increment other-type counter
+3. New, with a new-unit price on the page | Used, refurbished, display unit, or only third-party used offers | No rank, no row. Increment no-new-price counter
+4. Not an excluded category | VRF and multi-split systems | No rank, no row. Increment excluded counter
+5. All four passed |  | Enter rank and extract in full
+--- TABLE 2 ---
+Field | Values and format | Source | Required
+country | NGA | parameter | yes
+platform | platform name | parameter | yes
+platform_type | marketplace | parameter | yes
+delivery_city | Abuja 900001 | Part 1 | yes
+rank | integer, consecutive from 1, qualifying records only | search page | yes
+is_sponsored | true / false | search page | yes
+pilot_segment | production for rank 1 to 60, calibration for rank 61 and above | derived | yes
+frame_position | position of the listing in the raw search results, including failed listings | search page | recommended
+brand | brand name | detail page | yes
+manufacturer_mpn | manufacturer model code, verbatim casing and hyphens | spec table | yes
+mpn_missing | true / false | derived | yes
+platform_sku | platform item id, taken from the URL | URL | yes
+ac_type | split | parameter | yes
+listing_condition | fixed at new. Non-new listings do not enter the file; the column proves the gate was applied | detail page | yes
+scope_status | in_scope / out_of_scope_window / out_of_scope_portable / out_of_scope_central / out_of_scope_vrf | derived | yes
+capture_date | YYYY-MM-DD in UTC | system | yes
+snapshot_id | snapshot file name | Step 4 | yes
+snapshot_sha256 | 64 hex characters, produced by sha256sum | Step 4 | yes
+--- TABLE 3 ---
+Field | Values and format | Source | Required
+price_list | struck-through or original price, numeric, no thousands separator | detail page | if available
+price_current | current selling price, numeric | detail page | yes
+price_list_label | verbatim label text of the struck-through price | detail page | if available
+currency | NGN | parameter | yes
+price_basis | single_merchant_list_price on both platforms | parameter | yes
+price_tax_status | vat_inclusive_7pt5pct by default; vat_exclusive where the page states a pre-tax price | detail page | yes
+installation_bundled | true / false / unstated, with the verbatim label in installation_label | detail page | yes
+price_source_url | full product detail page URL | URL | yes
+price_flag | blank or unresolved when the price gap ratio exceeds 0.3 | derived | conditional
+--- TABLE 4 ---
+Field | Values and format | Source | Required
+capacity_raw_value | the capacity figure exactly as printed | spec table | yes
+capacity_raw_unit | BTU/h in most listings; record kW verbatim if that is what is shown | spec table | yes
+rated_cooling_capacity_w | numeric, watts, converted at 0.29307 W per BTU/h | derived | yes
+rated_power_input_w | numeric, watts | spec table | yes
+rated_eer | capacity divided by input power, two decimals | computed | yes
+capacity_source | fixed at retail_page for this stage | derived | yes
+efficiency_retail_claimed | efficiency value stated by the retailer | detail page | if available
+efficiency_metric_claimed | the metric name exactly as stated by the page | detail page | if available
+label_grade_reported | star count, verbatim | detail page or label | if available
+label_version | NIS 943:2024 or the edition stated on the label | label image | yes where a grade is shown
+efficiency_source_type | label_image_official / retail_page_claim / none | derived | yes
+efficiency_source_url | URL of the label image or spec table; the detail page URL when no efficiency data exists | detail page | yes
+match_ambiguous | true / false | derived | yes
+--- TABLE 5 ---
+Field | Values | Note
+installation_label | verbatim text | Record the text, not an interpretation of it
+installation_price | numeric, in NGN | Only where installation is quoted separately
+refrigerant | R22 / R410A / R32 / R290 / R454B | Retail labelling is unreliable; verify later against the specification sheet
+compressor_type | fixed / inverter | Independent field, never a proxy for efficiency
+reversible_heat_pump | true / false | True only when a rated heating output is listed, not from marketing names
+noise_level_db | numeric | Direct proxy for the quietness premium
+smart_features | true / false | WiFi or app control, binary is sufficient
+--- TABLE 6 ---
+Code | Type | Definition
+A | Category absent | The type is genuinely not sold in this market, a real market-structure finding. Also used where the unit falls outside the national labelling scheme, since no label exists to disclose
+B | Disclosure absent | The product is sold but the page does not disclose the field
+C | Platform blocked | Anti-scraping, login requirement, or page failure
+C-geo | Geoblocked | The source is public but blocked to foreign network egress; never circumvent
+D | Tier absent | That efficiency tier has no product in this market
+X | Not an air conditioner | Controllers, sensors, WiFi modules; flagged and kept but excluded from brand and efficiency statistics
+--- TABLE 7 ---
+Item | Rule
+Pilot over-collection | This cell is one of three deliberate over-collection cells used to calibrate the analysis sufficiency threshold. Collection continues to rank 150, or to frame exhaustion if that comes first. Every record carries pilot_segment, set to production for rank 1 to 60 and to calibration for rank 61 and above. Records beyond rank 60 are collected under exactly the same rules and the same field list, with no relaxation whatsoever, because a calibration record collected under looser rules is worthless for calibration.
+Labelling not yet enforced | The SON scheme carries a December 2026 enforcement deadline and certification is voluntary at the collection date. Expect star labels to be absent from almost all listings and NSEER values to be absent from retail pages. Record the absence as gap code B and leave the fields empty. Do not substitute an EER value for NSEER, do not infer a star rating, and do not treat the absence as an extraction failure. The pre-enforcement market state is a documented finding.
+Seller-uploaded specifications | Most listings are uploaded by third-party sellers, and specification blocks are frequently copied, incomplete or transposed from a different model. Any efficiency figure found goes into efficiency_retail_claimed only, and a mismatch between the title capacity and the specification capacity is recorded rather than reconciled. Set qc_flag to unresolved_match and leave both values.
+Inflated struck-through prices | Jumia routinely displays a struck-through price far above any observed transaction price. Record it in price_list with its verbatim label in price_list_label, and set price_flag to unresolved wherever the gap ratio exceeds 0.3. Do not omit the value and do not correct it.
+Capacity units | Nigerian listings state cooling capacity in BTU per hour, and in horsepower in titles. Record the printed figure and unit in capacity_raw_value and capacity_raw_unit, then convert at 0.29307 watts per BTU per hour. This is a unit conversion, not a computation. Horsepower in a title is a nominal size class and must never be converted.
+Currency movement | Record capture_date to the day in UTC on every record. Do not convert to any other currency in this run.
+Tax | Displayed prices include VAT at 7.5 percent. Set price_tax_status to vat_inclusive_7pt5pct unless the page states a price before VAT. Do not adjust the price in this run.

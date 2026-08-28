@@ -1,0 +1,23 @@
+User-agent: Googlebot
+Disallow: /product/*/details
+
+Allow: /*.js
+Allow: /*.css
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: *
+Disallow: /product/*/details
+Disallow: /account/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /search
+Disallow: /category/-
+Disallow: /product/-
+
+Allow: /*.js
+Allow: /*.css
+
+Sitemap: https://www.konga.com/sitemap.xml

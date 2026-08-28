@@ -1,22 +1,24 @@
-# GLACE Nigeria — NGA × split — run NGA_split_20260827
+# GLACE Nigeria — NGA × split
 
-**Outcome: run halted at Part 1, Step 0 — `platform_blocked` (run-level C-geo). 0 records. This is a protocol-compliant halt, not a crash.**
+Two runs so far, both protocol-compliant halts at Part 1 Step 0, for **different** reasons:
 
-Every source named in Parts 1–4 (Jumia, Konga, SON, ECN, and all eight T1b manufacturer sites) is denied by this session's network egress policy — the proxy refuses the CONNECT before any packet leaves. A server-side check confirms Jumia itself is live (~1,195 AC listings), so the block is local to the run environment. The protocol forbids circumvention without exception and requires an immediate logged stop when a hard constraint cannot be met; that is what happened.
+| Run | Outcome |
+|---|---|
+| `NGA_split_20260827` | Halted: organisation **egress policy** denied all web traffic (run-level C-geo). 0 records. |
+| `NGA_split_20260828` (re-run, egress open) | Halted: **jumia.com.ng serves a Cloudflare interactive challenge** (Turnstile checkbox) on every path — home, robots.txt, category — to this runner's egress IP class. CAPTCHA bypass is prohibited without exception; robots.txt is unverifiable behind the same challenge. stop_reason `platform_blocked`, 0 records. Konga/SON/ECN/most T1b hosts **are** reachable this run; only the frame platform is gated. |
 
 | Path | Contents |
 |---|---|
-| `NGA_split_20260827_run_log.md` | Run record · resource record · defects (Part 3 §4.2 format) |
-| `checkpoints/checkpoint0_report.md` | The four Checkpoint 0 items as far as producible; status NOT APPROVABLE; decisions needed for the re-run |
-| `evidence/network_probe_20260827.log` (+ `.sha256`) | Timestamped probe of all 14 hosts, proxy status excerpt |
-| `records/NGA_split_20260827_records.xlsx` | Schema scaffold, 0 rows: sheet `records` has the 48 Part 2 §4 columns in exact order; sheet `part4_append_layer` lists the tracing/final columns; sheet `run_state` states the halt |
-| `prompt_defects.md` | Five template gaps found by this run |
-| `snapshots/` | Empty by construction — no page rendered, no snapshot; N=0 |
+| `NGA_split_20260828_run_log.md` | Re-run log: gate results, halt narrative, resource record, defects |
+| `checkpoints/checkpoint0_report_20260828.md` | Checkpoint 0 (NOT APPROVABLE) + the three realistic paths to actual collection |
+| `evidence/network_probe_20260828.log` (+ screenshots, `gate_evidence_20260828.sha256`) | curl + real-browser gate probe of all 14+ hosts, Turnstile screenshots, jumia/konga robots.txt captures |
+| `NGA_split_20260827_run_log.md`, `checkpoints/checkpoint0_report.md`, `evidence/network_probe_20260827.log` | First run's reports (egress-policy halt) |
+| `records/NGA_split_20260827_records.xlsx` | Schema scaffold, 0 rows, 48 Part 2 §4 columns — still reusable |
+| `prompt_defects.md` | Template gaps from both runs (now 7 items) |
+| `snapshots/` | Empty by construction — N = 0 |
 
-## To actually collect the data (decisions for the reviewer)
+## Decision needed from the operator (see checkpoint0_report_20260828.md §What changed)
 
-1. **Re-run environment.** Either run in **Claude in Chrome** (the environment the protocol was written for), or create/select a Claude Code remote **environment whose network policy allows** at minimum: `jumia.com.ng`, `konga.com`, `son.gov.ng`, `energycommission.gov.ng`, `energy.gov.ng`, plus the T1b manufacturer domains (LG, Samsung, Hisense, Midea, Gree, TCL, Haier, Daikin — Nigerian country sites located per Part 4 Table 1). Environment network policy is set at claude.ai when creating/editing the environment (docs: https://code.claude.com/docs/en/claude-code-on-the-web).
-2. **Confirm the rank target 150** (Checkpoint 0 asks for this in the same reply).
-3. **Window.** Today is inside the preferred late-Aug–Sep window; re-running before end of September avoids the November Black Friday exclusion.
-
-Everything in this directory is re-usable on the re-run: the xlsx scaffold is the correct column order, and the run log's structure follows Part 3 Table 2.
+1. **(a) Run in Claude in Chrome** on an operator machine (residential egress; the environment the protocol assumes) — recommended; or **(b)** template-owner amendment authorizing a Konga-first *category-path* frame (Konga robots.txt disallows `/search`); or **(c)** record the cell as blocked from managed runners.
+2. The late-Aug–September collection window closes at end of September; November is excluded.
+3. Part 4 source list correction: ECN lives at `energy.gov.ng` (old `energycommission.gov.ng` is dead).

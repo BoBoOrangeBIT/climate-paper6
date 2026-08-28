@@ -1,0 +1,54 @@
+GLACE NGA_split_20260828 — network gate probe (re-run)
+Probe start (UTC): 2026-08-28T04:23:48Z
+Environment: Claude Code remote container; outbound HTTPS via agent proxy (HTTPS_PROXY=http://127.0.0.1:36467)
+
+04:23:48Z https://www.jumia.com.ng/ -> 403
+04:23:51Z https://www.konga.com/ -> 200
+04:23:56Z https://son.gov.ng/ -> curl: (35) Recv failure: Connection reset by peer
+000
+04:24:06Z https://energycommission.gov.ng/ -> curl: (56) CONNECT tunnel failed, response 502
+000
+04:24:09Z https://energy.gov.ng/ -> 200
+04:24:15Z https://www.lg.com/ -> 403
+04:24:18Z https://www.samsung.com/ -> 403
+04:24:22Z https://www.hisense.com/ -> 200
+04:24:27Z https://www.midea.com/ -> 200
+04:24:32Z https://global.gree.com/ -> 200
+04:24:37Z https://www.tcl.com/ -> 200
+04:24:42Z https://www.haier.com/ -> 200
+04:24:45Z https://www.daikin.com/ -> 200
+04:24:50Z https://www.example.com/ -> 200
+
+Probe end (UTC): 2026-08-28T04:24:53Z
+
+=== Phase 2: TLS/proxy remediation (04:25–04:33 UTC) ===
+curl HTTP 403 on jumia.com.ng was a Cloudflare challenge page, not the egress proxy (proxy CONNECT succeeded; contrast 20260827 where CONNECT itself was refused).
+Chromium via agent proxy initially failed with net_error -101/-202: (a) proxy CA absent from browser NSS store -> imported /root/.ccr/agent-proxy-ca.crt via certutil (trust CT,C,C); (b) gateway TLS1.3 incompatible with Chromium ClientHello -> resolved with --ssl-version-max=tls1.2 on the MITM leg only. No TLS verification was disabled for collection; NSS trust honoured.
+
+=== Phase 3: Browser-based gate probe (Playwright/Chromium headless=new, fresh context per target, >=3.2s spacing) ===
+2026-08-28T04:35:20.635Z jumia_home_retry https://www.jumia.com.ng/ -> HTTP 403 title="Just a moment..." challenge=true
+2026-08-28T04:35:32.569Z jumia_robots https://www.jumia.com.ng/robots.txt -> HTTP 403 title="Just a moment..." challenge=true
+2026-08-28T04:35:44.710Z jumia_category https://www.jumia.com.ng/air-conditioners-d/ -> HTTP 403 title="Just a moment..." challenge=true
+2026-08-28T04:35:56.544Z konga_home https://www.konga.com/ -> HTTP 200 title="Konga Nigeria | Online Shopping for Genuine Electronics, Phones, Fashion & More" challenge=false
+2026-08-28T04:36:10.694Z konga_robots https://www.konga.com/robots.txt -> HTTP 200 title="" challenge=false
+2026-08-28T04:36:22.811Z son_gov_ng https://son.gov.ng/ -> HTTP 200 title="Standards Organisation of Nigeria – Nigeria" challenge=false
+2026-08-28T04:36:42.215Z ecn_gov_ng https://energycommission.gov.ng/ -> ERROR page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://energycommission.gov.ng/
+2026-08-28T04:36:45.725Z energy_gov_ng https://energy.gov.ng/ -> HTTP 200 title="Energy Commission of Nigeria" challenge=false
+2026-08-28T04:37:03.295Z lg https://www.lg.com/africa/ -> HTTP 403 title="Access Denied" challenge=false
+2026-08-28T04:37:15.223Z samsung https://www.samsung.com/ng/ -> HTTP 404 title="Home Electronics | Home Appliances | Mobile | Computing |" challenge=false
+2026-08-28T04:37:29.081Z hisense https://hisense-africa.com/ -> ERROR page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://hisense-africa.com/
+2026-08-28T04:37:32.572Z midea https://www.midea.com/ng/ -> HTTP 200 title="Midea Nigeria | Simply ideal - Innovative Home Appliances & Smart Solutions" challenge=false
+2026-08-28T04:37:48.508Z gree https://global.gree.com/ -> HTTP 200 title="Gree Global" challenge=false
+2026-08-28T04:38:02.107Z tcl https://www.tcl.com/ng/en.html -> HTTP 200 title="TCL West Africa | TVs and Electronics | TCL.com" challenge=false
+2026-08-28T04:38:16.946Z haier https://www.haier.com/ng/ -> HTTP 403 title="403 Forbidden" challenge=false
+2026-08-28T04:38:28.604Z daikin https://www.daikin.com/ -> HTTP 200 title="Daikin Global | A leading air conditioning and refrigeration innovator and provider for residential," challenge=false
+
+=== Findings ===
+1. PLATFORM_1 jumia.com.ng: Cloudflare INTERACTIVE challenge (cType 'interactive', Turnstile 'Verify you are human' checkbox) on /, /robots.txt and /air-conditioners-d/ in a real browser after 75s+ wait and on fresh-context retry. Screenshots: gate_jumia_home_retry.png, gate_jumia_robots.png, gate_jumia_category.png, and probe (04:29-04:31) 'Performing security verification' with visible checkbox. robots.txt therefore UNVERIFIABLE. Completing the challenge was not attempted: the protocol forbids CAPTCHA bypass without exception.
+2. PLATFORM_2 konga.com: reachable, HTTP 200. robots.txt (konga_robots_20260828.txt): 'User-agent: *' DISALLOWS /search, /product/*/details, /category/-, /product/- ; category paths otherwise allowed. A search-URL frame on Konga would violate robots.txt.
+3. T1a: son.gov.ng reachable (200). energy.gov.ng reachable (200, titles 'Energy Commission of Nigeria'). energycommission.gov.ng CONNECT 502/tunnel failed (host itself appears dead; energy.gov.ng is the live ECN domain).
+4. T1b browser check: midea.com/ng 200, global.gree.com 200, tcl.com/ng 200, daikin.com 200, samsung.com/ng reachable (404 on exact path, site up); lg.com/africa 403 Access Denied; haier.com/ng 403; hisense-africa.com tunnel failed (domain to be located by search per Part 4 Table 1 if Part 4 ever runs).
+5. Control host example.com: reachable. Egress policy is OPEN this run; the 20260827 total egress block is resolved.
+
+Gate verdict: PLATFORM_1 is blocked by an interactive anti-bot challenge; robots.txt compliance cannot be verified; per Part 1 §3 and operator instruction ('若关键源仍不可达，按协议记 platform_blocked 停机，不得绕行') the run halts at Part 1 Step 0 with stop_reason=platform_blocked (gap class C). No extraction was started.
+Gate end (UTC): 2026-08-28T04:39:37Z

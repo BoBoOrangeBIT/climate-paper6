@@ -1,0 +1,4 @@
+country,iso3,ac_type,platform,domain,channel_type,a_sells_ducted_priced_sets,b_prices_visible_not_logged_in,c_stable_ducted_category_or_search_url,d_reachable_no_captcha_no_geoblock,validation_result,validated_on_utc,evidence,note
+South Africa,ZAF,central,AC Direct,acdirect.co.za,vertical_dealer,not_observable,not_observable,not_observable,no,not_validated,2026-10-12T20:36Z,network_probe_20261012.log,"CONNECT refused 403 by session egress policy (control hosts also refused); platform itself not reached; robots.txt unverifiable"
+South Africa,ZAF,central,Builders,builders.co.za,marketplace,not_observable,not_observable,not_observable,no,not_validated,2026-10-12T20:36Z,network_probe_20261012.log,"same egress-policy refusal"
+South Africa,ZAF,central,Takealot,takealot.com,marketplace,not_observable,not_observable,not_observable,no,not_validated,2026-10-12T20:36Z,network_probe_20261012.log,"same egress-policy refusal"

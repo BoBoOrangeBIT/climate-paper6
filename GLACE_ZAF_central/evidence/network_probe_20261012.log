@@ -1,0 +1,53 @@
+GLACE ZAF_central_20261012 — network gate probe (Section 0.1 platform validation / Step 0 environment gate)
+Probe start (UTC): 2026-10-12T20:35:57Z
+Environment: Claude Code remote container; outbound HTTPS via agent proxy (HTTPS_PROXY=http://127.0.0.1:38827); curl with browser User-Agent; >=3 s spacing
+
+20:35:57Z PLATFORM_1 candidate         https://www.acdirect.co.za/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:00Z PLATFORM_1 robots            https://www.acdirect.co.za/robots.txt -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:03Z PLATFORM_2 candidate         https://www.builders.co.za/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:07Z PLATFORM_2 robots            https://www.builders.co.za/robots.txt -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:10Z PLATFORM_2 alt               https://www.takealot.com/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:13Z PLATFORM_2 alt robots        https://www.takealot.com/robots.txt -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:17Z T1b Samsung ZA               https://www.samsung.com/za/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:20Z T1b Midea ZA                 https://www.midea.com/za/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:23Z T1b Daikin ZA                https://www.daikin.co.za/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:26Z T1b LG ZA                    https://www.lg.com/za/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:30Z T1b Hisense ZA               https://www.hisense.co.za/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:33Z T1b Alliance                 https://www.alliance-air.co.za/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:36Z T1b Mitsubishi Electric ZA   https://www.mitsubishielectric.co.za/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:40Z T1b Carrier                  https://www.carrier.com/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:43Z T1b Jet-Air                  https://www.jetair.co.za/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:46Z control                      https://www.example.com/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+20:36:50Z control                      https://www.google.com/ -> curl: (56) CONNECT tunnel failed, response 403 HTTP 000
+
+Probe end (UTC): 2026-10-12T20:36:53Z
+
+=== Phase 2: real-browser gate probe (Playwright/Chromium headless, fresh context per target, >=3.2 s spacing) ===
+2026-10-12T20:37:20.098Z PLATFORM_1 acdirect home https://www.acdirect.co.za/ -> ERROR page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.acdirect.co.za/
+2026-10-12T20:37:23.652Z PLATFORM_2 builders home https://www.builders.co.za/ -> ERROR page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.builders.co.za/
+2026-10-12T20:37:27.210Z control example.com https://www.example.com/ -> ERROR page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://www.example.com/
+
+=== Phase 3: agent-proxy status and relay-failure log at 2026-10-12T20:37:30Z ===
+enabled: True | selective: False | noProxy (bypassed hosts): localhost,127.0.0.1,::1,127.0.0.0/8,0.0.0.0/8,::,169.254.0.0/16,api.anthropic.com,api-staging.anthropic.com,api-pr-preview.anthropic.com,mcp-proxy.anthropic.com ...
+recentRelayFailures (last entries):
+  2026-10-12T20:36:17.422Z connect_rejected www.samsung.com:443 - gateway answered 403 to CONNECT (policy denial or upstream failure)
+  2026-10-12T20:36:20.754Z connect_rejected www.midea.com:443 - gateway answered 403 to CONNECT (policy denial or upstream failure)
+  2026-10-12T20:36:23.979Z connect_rejected www.daikin.co.za:443 - gateway answered 403 to CONNECT (policy denial or upstream failure)
+  2026-10-12T20:36:27.269Z connect_rejected www.lg.com:443 - gateway answered 403 to CONNECT (policy denial or upstream failure)
+  2026-10-12T20:36:30.552Z connect_rejected www.hisense.co.za:443 - gateway answered 403 to CONNECT (policy denial or upstream failure)
+  2026-10-12T20:36:33.808Z connect_rejected www.alliance-air.co.za:443 - gateway answered 403 to CONNECT (policy denial or upstream failure)
+  2026-10-12T20:36:37.148Z connect_rejected www.mitsubishielectric.co.za:443 - gateway answered 403 to CONNECT (policy denial or upstream failure)
+  2026-10-12T20:36:40.423Z connect_rejected www.carrier.com:443 - gateway answered 403 to CONNECT (policy denial or upstream failure)
+  2026-10-12T20:36:43.714Z connect_rejected www.jetair.co.za:443 - gateway answered 403 to CONNECT (policy denial or upstream failure)
+  2026-10-12T20:36:47.037Z connect_rejected www.example.com:443 - gateway answered 403 to CONNECT (policy denial or upstream failure)
+  2026-10-12T20:36:50.350Z connect_rejected www.google.com:443 - gateway answered 403 to CONNECT (policy denial or upstream failure)
+
+=== Phase 4: WebFetch tool path (separate egress from the shell proxy) ===
+WebFetch https://www.acdirect.co.za/robots.txt -> ERROR getaddrinfo ENOTFOUND www.acdirect.co.za (DNS resolution refused on that path; recorded from the tool result at ~20:35Z)
+
+=== Findings ===
+1. Every probed host — PLATFORM_1 (acdirect.co.za), PLATFORM_2 (builders.co.za, takealot.com), all nine T1b manufacturer/brand hosts, and the two control hosts (example.com, google.com) — is refused at the proxy CONNECT stage with HTTP 403 ('gateway answered 403 to CONNECT (policy denial or upstream failure)'). No TLS handshake with any target ever occurred; no target server was contacted.
+2. The control hosts failing identically proves the cause is the session's organisation egress (network) policy, not platform-side anti-bot measures, geo-blocking, or robots.txt. This is the same failure class as NGA_split_20260827 (run-level C-geo / platform_blocked), not the Cloudflare-challenge class of NGA_split_20260828.
+3. robots.txt of all platforms is therefore UNVERIFIABLE; Section 0.1 platform validation (a)-(d) cannot be performed; Step 0 cannot start.
+4. Per Section 3 constraint 6 (stop immediately, log reason and rank reached, no workaround) and Section 0.1 (do not start the run when no vertical dealer can be validated), the run halts at Step 0 (pre-frame), rank 0, stop_reason=platform_blocked, with gap code C-geo at run level. No extraction, no record, no frame snapshot, no quote requested.
+Gate end (UTC): 2026-10-12T20:37:30Z

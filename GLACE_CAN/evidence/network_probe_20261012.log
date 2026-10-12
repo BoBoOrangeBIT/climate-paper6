@@ -1,0 +1,46 @@
+GLACE CAN_split_20261012 — Section 0.1 platform validation / network gate probe
+Probe start (UTC): 2026-10-12T20:36:51Z
+Environment: Claude Code remote container; outbound HTTPS via agent proxy
+
+20:36:52Z https://hvacmarket.ca/ -> 000
+20:36:55Z https://hvacmarket.ca/robots.txt -> 000
+20:36:59Z https://www.amazon.ca/ -> 000
+20:37:02Z https://www.amazon.ca/robots.txt -> 000
+20:37:06Z https://www.homedepot.ca/ -> 000
+20:37:09Z https://www.homedepot.ca/robots.txt -> 000
+20:37:13Z https://oee.nrcan-rncan.gc.ca/pml-lmp/index.cfm -> 000
+20:37:16Z https://natural-resources.canada.ca/energy-efficiency/energy-star-canada -> 000
+20:37:20Z https://www.ahridirectory.org/ -> 000
+20:37:23Z https://www.mitsubishielectric.ca/ -> 000
+20:37:26Z https://www.daikincomfort.com/ -> 000
+20:37:30Z https://www.fujitsugeneral.com/ca/ -> 000
+20:37:34Z https://www.lg.com/ca_en/ -> 000
+20:37:37Z https://www.senville.ca/ -> 000
+20:37:41Z https://www.pioneerminisplit.com/ -> 000
+20:37:44Z https://www.moovair.ca/ -> 000
+20:37:48Z https://www.example.com/ -> 000
+Probe end (UTC): 2026-10-12T20:37:51Z
+
+=== Phase 1 verdict (curl via agent proxy) ===
+All 17 targets returned HTTP 000 with curl exit 56 "CONNECT tunnel failed, response 403".
+Agent-proxy status (recentRelayFailures) records kind=connect_rejected, detail="gateway answered 403 to CONNECT (policy denial or upstream failure)" for every host,
+INCLUDING the control host www.example.com. The denial therefore originates in the environment's network/egress policy, not at any platform.
+Per /root/.ccr/README.md, organisation policy denials (403/407) are not to be retried or worked around; they are reported.
+Consequence: Section 0.1 platform validation (open each candidate in a browser; confirm pricing, category page, no CAPTCHA) cannot be executed from this runner.
+Step 0 (delivery city, consumer view) and Step 1 (frame, snapshot) are likewise impossible. No full-page snapshot can be produced -> no record can be valid (Section 3 rule 5).
+
+=== Phase 2: out-of-band reachability check via WebFetch tool (server-side fetch, not the agent proxy) ===
+20:39Z https://hvacmarket.ca/            -> getaddrinfo ENOTFOUND hvacmarket.ca
+20:39Z https://hvacmarket.ca/robots.txt  -> getaddrinfo ENOTFOUND hvacmarket.ca
+20:40Z https://www.example.com/ (control)-> getaddrinfo ENOTFOUND www.example.com
+20:40Z https://www.hvacmarket.ca/        -> getaddrinfo ENOTFOUND www.hvacmarket.ca
+20:40Z https://www.amazon.ca/s?k=...     -> getaddrinfo ENOTFOUND www.amazon.ca
+20:40Z https://oee.nrcan-rncan.gc.ca/... -> getaddrinfo ENOTFOUND oee.nrcan-rncan.gc.ca
+20:40Z https://www.homedepot.ca/search   -> getaddrinfo ENOTFOUND www.homedepot.ca
+The control host fails identically, so DNS resolution itself is disabled for this runner; the ENOTFOUND on hvacmarket.ca says nothing about whether that domain exists.
+
+=== Gate verdict ===
+Run-level block: no general web egress from this runner by either channel. Not attributable to any platform.
+Section 0.1 platform validation NOT executed (cannot be). Step 0 / Step 1 NOT started. Checkpoint 0 NOT approvable (items 1-5 unobtainable).
+Per Section 3 rule 6: halt, log reason and rank reached (rank 0). No workaround attempted (none permitted: README forbids retrying/circumventing policy denials; protocol forbids improvisation).
+Nearest gap code: C (platform blocked, technical cause) at run level; the body has no run-level stop_reason for a pre-frame block -> coined value platform_blocked reused from NGA runs, see prompt_defects.md.

@@ -1,0 +1,4 @@
+country,iso3,ac_type,platform,domain,channel_type,sells_complete_splits,prices_visible_logged_out,stable_url_category,no_captcha_geoblock,validation_result,date_utc,note
+Canada,CAN,split,HVAC Market,hvacmarket.ca,vertical_dealer,not_tested,not_tested,not_tested,not_tested,NOT_VALIDATED_runner_no_egress,2026-10-12,agent-proxy CONNECT 403 on all hosts incl. control; WebFetch DNS ENOTFOUND incl. control. See network_probe_20261012.log
+Canada,CAN,split,Amazon Canada,amazon.ca,marketplace,not_tested,not_tested,not_tested,not_tested,NOT_VALIDATED_runner_no_egress,2026-10-12,agent-proxy CONNECT 403 on all hosts incl. control; WebFetch DNS ENOTFOUND incl. control. See network_probe_20261012.log
+Canada,CAN,split,Home Depot Canada,homedepot.ca,marketplace,not_tested,not_tested,not_tested,not_tested,NOT_VALIDATED_runner_no_egress,2026-10-12,agent-proxy CONNECT 403 on all hosts incl. control; WebFetch DNS ENOTFOUND incl. control. See network_probe_20261012.log

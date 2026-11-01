@@ -85,7 +85,7 @@ module.exports = function addQ1(pres) {
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
   s.addText("Q1-d 能源系统 / IAM / 建筑存量模型：技术组合如何被决定", { placeholder: "title" });
   L.addLitTable(pres, s, ["文献 / DOI（核实）", "决定机制", "关键数字（原文）", "技术覆盖"], [
-    ["IEA (2018) The Future of Cooling\n报告无 DOI；已核实（iea.org 报告页/PDF 摘录）", "全球建筑存量-能耗情景（Baseline vs Efficient Cooling）", "空调存量 \"1.6 billion → 5.6 billion by 2050\"；风扇 \"2.3 billion residential electric fans\"、\"more than 80 TWh in 2016, or nearly 1.5% of residential electricity\"", "AC 为主；风扇有存量/用电但无价格或情景；蒸发冷却未见"],
+    ["IEA (2018) The Future of Cooling\n报告无 DOI；已核实（iea.org 报告页/PDF 摘录）", "全球建筑存量-能耗情景（Baseline vs Efficient Cooling）", "空调存量 \"1.6 billion → 5.6 billion by 2050\"；风扇 \"2.3 billion residential electric fans\"、\"more than 80 TWh in 2016, or nearly 1.5% of residential electricity\"", "AC 为主；风扇有存量/用电（2.3→3.9 billion，2016–50）但无价格；蒸发冷却器仅定性提及"],
     ["Mastrucci et al. (2019) Energy Build\n10.1016/j.enbuild.2019.01.015（Consensus）", "格网 variable degree days：室内目标温度 × 暴露天数 → \"需要空调\"", "\"1.8 to 4.1 billion … may need AC\"；弥补缺口能耗 \"14% of current global residential electricity\"", "AC / 风扇（分配规则未能核实）"],
     ["Pavanello et al. (2021) Nat Commun\n10.1038/s41467-021-26592-2（Consensus）", "离散选择：收入 + \"humidity-adjusted temperature\"", "2040 年采用增 \"twofold to sixteen-fold\"；\"64 to 100 million families\" 无法满足舒适", "AC（风扇描述性）"],
     ["Davis & Gertler (2015) PNAS；Davis et al. (2021) Glob Environ Change\n10.1073/pnas.1423558112；10.1016/j.gloenvcha.2021.102299（Consensus）", "采用（extensive）与使用（intensive）边际分开估计", "暖区采用随收入每千美元增 \"2.7%\"；饱和近 \"80%\"", "仅 AC"],
@@ -106,7 +106,7 @@ module.exports = function addQ1(pres) {
     ["Meade et al. (2024) Lancet Planet Health\n10.1016/s2542-5196(24)00030-5（Consensus）", "批判性综述：把 \"air conditioning or evaporative coolers\" 列为环境降温，\"skin wetting or fan use\" 列为个人降温", "无数值", "层级式论述，非定量判别"],
     ["UNEP Cool Coalition. Global Cooling Watch 2023/2025\n报告无 DOI；已核实（unep.org）", "可持续降温路径：被动优先 → 低能耗/混合 → 高效设备", "2025 版点名 \"fans, evaporative coolers, hybrid fan-AC systems\"；\"hybrid systems combining fans and AC can cut energy use by 30 per cent\"", "路径层面同时点名三种技术"],
   ], { fontSize: 10, colW: [3.3, 3.6, 3.4, 1.8] });
-  L.addSummary(pres, s, "蒸发冷却仅在 5–6 项研究中成为独立选项，判别变量一致指向湿度/湿球温度与收入；无一项热舱实验测试真正的蒸发冷却器，IEA、SEforALL、CLASP 的可见摘要中也未将其量化。");
+  L.addSummary(pres, s, "蒸发冷却仅在 5–6 项研究中成为独立选项，判别变量一致指向湿度/湿球温度与收入；无一项热舱实验测试真正的蒸发冷却器，IEA 2018 仅定性提及其效果取决于相对湿度，SEforALL、CLASP 亦未将其量化。");
 
   // (e) other approaches
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });

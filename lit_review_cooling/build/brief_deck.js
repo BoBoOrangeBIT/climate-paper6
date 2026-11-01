@@ -15,7 +15,7 @@ const REFS = require("./refs.js");
   s.addText("空调、风扇与蒸发冷却：成本收益替代与组合关系 · 文献结论精炼版", { placeholder: "title" });
   s.addText([
     { text: "三个核心问题的结论、文献空白与研究建议 · 9 页", options: { breakLine: true } },
-    { text: "基于 160 条文献/报告（130 条 DOI 经 Consensus 核实、18 条经出版社/机构库页面核实、11 条为无 DOI 报告、1 条无 DOI 工作论文；31 条已独立二次复核）· 2026 年 11 月", options: {} },
+    { text: "基于 160 条文献/报告：147 条 DOI 经 Crossref API 批量解析且题名一致，11 条为无 DOI 报告/标准，1 条 DOI 未能核实（Aynsley 2005），1 条为无 DOI 工作论文· 2026 年 11 月", options: {} },
   ], { placeholder: "body" });
 
   // 2 one-page conclusion + coverage matrix
@@ -123,30 +123,30 @@ const REFS = require("./refs.js");
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
   s.addText("核实状态与局限", { placeholder: "title" });
   L.addLitTable(pres, s, ["DOI 核实状态", "条数", "说明"], [
-    ["已核实（Consensus 结果中逐字出现）", String(REFS.filter(r => r[2] === "C").length), "随机抽检 10 条：8 条确认，Agarwal 2026 与 Sabater-Mezquita 2026 的 DOI 页面未见，待 doi.org 核验"],
-    ["已核实（WebSearch 出版社/PubMed/机构库页面）", String(REFS.filter(r => r[2] === "W").length), "17 条独立二次复核全部确认（research/DOI_recheck.md）；Ibbetson 2025 由错误记录 Bao 2025 更正后归入"],
+    ["Consensus 逐字核实 + Crossref API 解析题名一致", String(REFS.filter(r => r[2] === "C").length), "Agarwal 2026、Sabater-Mezquita 2026 等此前待定项已由 Crossref 确认"],
+    ["WebSearch 页面核实 + Crossref API 解析题名一致", String(REFS.filter(r => r[2] === "W").length), "17 条独立复核全部确认；Ibbetson 2025 由错误记录 Bao 2025 更正后归入"],
     ["报告/标准/机构网页，无 DOI", String(REFS.filter(r => r[2] === "R").length), "IEA、WHO、UNEP、EPA、CDC、UKHSA、ASHRAE、ISO；原文因域名阻断依赖搜索摘要"],
-    ["无 DOI 的工作论文", String(REFS.filter(r => r[2] === "N").length), "Pavanello & Sue Wing (2025) CESifo WP 12365（早期题为印度降温可及性）"],
+    ["DOI 未能核实", String(REFS.filter(r => r[2] === "N").length), "Aynsley 2005（Crossref 404）；Pavanello & Sue Wing CESifo WP 12365（仅 EGU 2024 摘要有 DOI 10.5194/egusphere-egu24-1254）"],
   ], { fontSize: 10.5, colW: [4.3, 1.0, 6.8] });
-  L.addCard(pres, s, { x: 0.6, y: 3.6, w: 5.9, h: 2.4, title: "本会话被网络策略阻断的域名", color: T.accent5, fontSize: 10.5, titleSize: 12.5, lines: [
-    "doi.org、api.crossref.org、api.openalex.org、api.semanticscholar.org、pubmed.ncbi.nlm.nih.gov",
-    "who.int、iea.org、epa.gov、seforall.org、pure.iiasa.ac.at、mja.com.au",
-    "放行方式：云环境设置 → Network access → Allowed domains 添加上述域名后可批量解析 160 条 DOI",
+  L.addCard(pres, s, { x: 0.6, y: 3.6, w: 5.9, h: 2.4, title: "网络访问与核验过程", color: T.accent5, fontSize: 10.5, titleSize: 12.5, lines: [
+    "第一阶段：doi.org、Crossref、PubMed、who.int、iea.org 均被阻断，DOI 依赖 Consensus 与 WebSearch 页面核实",
+    "第二阶段（放行后）：Crossref API 批量解析 147 条 DOI 全部题名一致；IEA 2018 PDF 原文已读取",
+    "仍受阻：doi.org 跳转链（出版社域名）、www.iea.org、who.int 网页",
   ] });
   L.addCard(pres, s, { x: 6.8, y: 3.6, w: 5.9, h: 2.4, title: "明示\"未核实\"而未沿用的数字", color: T.accent6, fontSize: 10.5, titleSize: 12.5, lines: [
     "Malik 2022 无固定 28°C 启动阈值：原文为 ASHRAE 55-2017 自适应模型逐日上限，风扇可将其提高约 3–4°C（二次复核）",
     "Jay 2021 Lancet 的\"风扇耗电为空调 1/30–1/50\"（仅见新闻稿）",
-    "Aynsley 2005 的\"空调运行成本是吊扇 11 倍\"（转引自不明来源）",
-    "IEA 2018 风扇价格（存量 2.3 billion 台、2016 年 >80 TWh 已核实，价格未见）",
+    "Aynsley 2005 的\"空调运行成本是吊扇 11 倍\"（转引自不明来源；其 DOI 在 Crossref 亦无法解析）",
+    "IEA 2018 风扇价格（PDF 原文已读：存量 2.3→3.9 billion 台、2016 年 >80 TWh、55% 家庭有风扇；蒸发冷却器仅定性提及；价格未见）",
   ] });
-  L.addSummary(pres, s, "所有数字均按摘要或页面原文抄录并区分\"直接设定\"与\"引用自\"；31 条独立二次复核：25 条确认、1 条更正（Bao→Ibbetson 2025）、5 条待 doi.org 放行后核验。");
+  L.addSummary(pres, s, "所有数字均按摘要或页面原文抄录并区分\"直接设定\"与\"引用自\"；147 条 DOI 经 Crossref 解析一致，1 条更正（Bao→Ibbetson 2025），1 条无法解析（Aynsley 2005）。");
 
   // 9 key references
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
   s.addText("关键参考文献（20 条；完整 160 条见完整版附录）", { placeholder: "title" });
   const keys = ["Jay O., Cramer", "Morris N.B. et al. (2021)", "Tartarini F., Schiavon", "Foster J. et al. (2021). Quantifying", "Mihalcin", "O'Connor F.K. et al. (2024)", "McKenna", "Meade", "Gupta S. et al. (2012)", "Bouchama", "Sera F.", "Barreca", "Achebak", "Taylor J. et al. (2018). Comparison", "Ibbetson", "Johnston", "Malik", "Agarwal", "Naderi", "Harby"];
   const sel = keys.map(k => REFS.find(r => r[0].startsWith(k) || r[0].includes(k))).filter(Boolean);
-  const status = { C: "Consensus", W: "WebSearch", N: "待复核", R: "无 DOI" };
+  const status = { C: "Crossref 核实", W: "Crossref 核实", N: "未能核实", R: "无 DOI" };
   [0, 1].forEach(col => {
     const items = sel.slice(col * 10, col * 10 + 10);
     const runs = [];

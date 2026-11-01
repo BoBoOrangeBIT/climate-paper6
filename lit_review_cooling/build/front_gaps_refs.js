@@ -28,15 +28,15 @@ function addFront(pres) {
   L.addCard(pres, s, { x: 8.8, y: 1.3, w: 3.9, h: 2.45, title: "核实规则", color: T.accent3, fontSize: 10.5, titleSize: 12.5, lines: [
     "DOI 仅在 Consensus 结果或出版社/机构库页面逐字出现时标\"已核实\"；否则标\"DOI 未找到\"；机构报告标\"报告无 DOI\"",
     "数字一律抄录摘要/页面原文，并区分 [直接设定/直接估计] 与 [引用自: X]",
-    "doi.org、Crossref、who.int、iea.org 等在本会话被网络策略阻断，机构报告原文依赖搜索摘要（已标注）",
+    "Crossref、OpenAlex、PubMed 与 IEA PDF 于复核阶段放行；doi.org 跳转链与 who.int、iea.org 网页仍受阻，相关机构原文依赖搜索摘要（已标注）",
   ] });
   L.addLitTable(pres, s, ["DOI 核实状态", "条数", "说明"], [
-    ["已核实（Consensus 结果中逐字出现）", String(REFS.filter(r => r[2] === "C").length), "最高置信度"],
-    ["已核实（WebSearch 出版社/PubMed/机构库页面）", String(REFS.filter(r => r[2] === "W").length), "17 条经独立二次复核全部确认；Ibbetson 2025 由错误记录更正后归入"],
+    ["Consensus 逐字核实 + Crossref API 解析题名一致", String(REFS.filter(r => r[2] === "C").length), "网络放行后 147 条 DOI 全部经 Crossref 解析（research/DOI_crossref_check.md）"],
+    ["WebSearch 页面核实 + Crossref API 解析题名一致", String(REFS.filter(r => r[2] === "W").length), "含由错误记录 Bao 2025 更正而来的 Ibbetson 2025"],
     ["报告/标准/机构网页，无 DOI", String(REFS.filter(r => r[2] === "R").length), "IEA、WHO、UNEP、EPA、CDC、UKHSA、ASHRAE、ISO"],
-    ["无 DOI 的工作论文", String(REFS.filter(r => r[2] === "N").length), "Pavanello & Sue Wing CESifo WP 12365；另 Agarwal 2026、Sabater-Mezquita 2026 的 DOI 二次复核未见页面，待 doi.org 核验"],
+    ["DOI 未能核实", String(REFS.filter(r => r[2] === "N").length), "Aynsley 2005（Crossref 404）；Pavanello & Sue Wing CESifo WP 12365（仅 EGU 2024 摘要有 DOI）"],
   ], { y: 3.95, fontSize: 10, colW: [4.3, 1.0, 6.8] });
-  L.addSummary(pres, s, "本综述对每条信息标注了出处与 DOI 核实状态，并对 31 条做了独立二次复核（25 条确认、1 条更正、5 条待 doi.org 核验）；凡未能核实的数字（如 Jay 2021 的\"1/50 电耗\"）均明示\"未核实\"而非沿用。", { y: 6.2 });
+  L.addSummary(pres, s, "全部 147 条 DOI 已经 Crossref API 批量解析且题名一致，另 31 条经 WebSearch 独立复核（1 条更正：Bao→Ibbetson 2025）；凡未能核实的数字（如 Jay 2021 的\"1/50 电耗\"、Aynsley 2005 的\"11 倍\"）均明示\"未核实\"而非沿用。", { y: 6.2 });
 
   // Executive summary
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
@@ -105,19 +105,19 @@ function addGaps(pres) {
 function addRefs(pres) {
   const SEC = "参考文献";
   pres.addSection({ title: SEC });
-  const status = { C: "已核实·Consensus", W: "已核实·WebSearch", N: "未找到/待复核", R: "报告/标准无 DOI" };
-  const perSlide = 22; // 11 per column
+  const status = { C: "Crossref+Consensus 核实", W: "Crossref+WebSearch 核实", N: "DOI 未能核实", R: "报告/标准无 DOI" };
+  const perSlide = 20; // 10 per column
   const total = Math.ceil(REFS.length / perSlide);
   for (let i = 0; i < total; i++) {
     const s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
     s.addText(`参考文献（${i + 1}/${total}）· 按第一作者字母序 · 括注为 DOI 核实状态`, { placeholder: "title" });
     const chunk = REFS.slice(i * perSlide, (i + 1) * perSlide);
     [0, 1].forEach(col => {
-      const items = chunk.slice(col * 11, col * 11 + 11);
+      const items = chunk.slice(col * 10, col * 10 + 10);
       if (!items.length) return;
       const runs = [];
       items.forEach((r, j) => {
-        const n = i * perSlide + col * 11 + j + 1;
+        const n = i * perSlide + col * 10 + j + 1;
         runs.push({ text: `[${n}] ${r[0]} `, options: { color: T.dk1 } });
         runs.push({ text: `DOI: ${r[1]}`, options: { color: T.dk2, bold: true } });
         runs.push({ text: ` （${status[r[2]]}）`, options: { color: r[2] === "N" ? T.accent5 : T.accent6, breakLine: j < items.length - 1 } });

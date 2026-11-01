@@ -36,7 +36,7 @@ module.exports = function addQ3(pres) {
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
   s.addText("Q3-a 全球 / IAM / 能源经济文献：成本参数只为空调而设", { placeholder: "title" });
   L.addLitTable(pres, s, ["文献 / DOI（核实）", "成本组分", "时空精细度", "关键数字（原文）"], [
-    ["IEA (2018) The Future of Cooling\n报告无 DOI；iea.org 报告页（PDF 被域名限制）", "电费（主体）、空调价格/效率、峰荷、排放；风扇有存量与用电、无价格", "全球+大区；年度至 2050；价格基年未见", "空调+风扇占建筑用电 \"about a fifth … 10% of all global electricity\"；风扇 \"2.3 billion\" 台、\"more than 80 TWh in 2016, or nearly 1.5% of residential electricity\"、自 2000 年增 3.6 倍 [直接设定]；风扇价格未见"],
+    ["IEA (2018) The Future of Cooling\n报告无 DOI；iea.org 报告页（PDF 被域名限制）", "电费（主体）、空调价格/效率、峰荷、排放；风扇有存量与用电、无价格", "全球+大区；年度至 2050；价格基年未见", "风扇 \"2.3 billion … in use in 2016\"、\"more than 80 TWh in 2016, or nearly 1.5% of residential electricity\"、\"2.3 billion to 3.9 billion over 2016-50\" [直接设定，PDF 原文]；蒸发冷却器仅定性提及；风扇价格未见"],
     ["IEA (2019) SE Asia；IEA (2023) Keeping cool 评论\n报告无 DOI；iea.org", "电费、峰荷、MEPS 对价格（定性）", "ASEAN 10 国/全球；年度", "\"Only 15% of households in Southeast Asia have an air conditioner\"；夏季电力需求可升 \"more than 50%\" [直接设定]"],
     ["Mastrucci et al. (2019) Energy Build；(2022) MASGC\n10.1016/j.enbuild.2019.01.015；10.1007/s11027-022-10032-7（Consensus）", "能耗（kWh，非货币）", "全球南方格网 / 22 特大城市；年度 VDD", "缺口能耗 \"14% of current global residential electricity\"；城市缺口人口 \"33% (SSP1) to 86% (SSP3)\" [直接设定]"],
     ["Randazzo, De Cian, Mistry (2020) Econ Model；De Cian et al. (2025) JEEM\n10.1016/j.econmod.2020.05.001；10.1016/j.jeem.2025.103122（Consensus）", "家庭电费支出；碳社会成本", "8 国 / 25 国家庭微观；年度（2011 调查）", "\"spend 35%–42% more on electricity when they adopt air conditioning\"；2050 \"social costs of $124–177 billion\" [直接设定]"],
@@ -44,7 +44,7 @@ module.exports = function addQ3(pres) {
     ["Falchetta & Mistry (2021) Energy Econ\n10.1016/j.eneco.2021.105307（Consensus）", "电气化投资（电网侧 capex）", "撒哈拉以南非洲格网；年度投资", "计入降温需求后投资 \"65.5% more\"；气候变化再加 \"4%\" [直接设定]；风扇并入 \"air circulation\""],
     ["Rode et al. (2021) Nature；Carleton et al. (2022) QJE\n10.1038/s41586-021-03883-8；10.1093/qje/qjac020（Consensus）", "能源支出 / 显示性偏好反推的适应成本", "全球 24,378 区域；年度至 2100；贴现敏感", "+1°C 使 2099 用电增 \"about 4.5 exajoules\"；死亡风险价值 \"3.2% of global GDP in 2100\" [直接设定]"],
   ], { fontSize: 10, colW: [3.4, 2.5, 2.5, 3.7] });
-  L.addSummary(pres, s, "全球与 IAM 文献能解释成本的异质性来源（度日、收入分位、城乡），但技术维度只有\"有/无空调\"；IEA 2018 给出风扇存量与用电（2.3 billion 台、>80 TWh）却无价格或成本曲线，蒸发冷却器完全不出现。");
+  L.addSummary(pres, s, "全球与 IAM 文献能解释成本的异质性来源（度日、收入分位、城乡），但技术维度只有\"有/无空调\"；IEA 2018 给出风扇存量与用电（2.3 billion 台、>80 TWh）却无价格或成本曲线，蒸发冷却器仅被定性提及。");
 
   // (b) fan energy/power
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
@@ -67,7 +67,7 @@ module.exports = function addQ3(pres) {
     ["Knudsen et al. (2023) Buildings\n10.3390/buildings13030589（Consensus）", "风扇投资、运行、生产率损失货币化（完整 CBA）", "德国单栋办公楼模拟；年度", "不舒适小时减 \"up to 50%\"，但 \"the initial investment of the fan is not compensated by savings in productivity losses\" [直接设定]"],
     ["Bone, Tartarini, Jay (2025) Med J Aust\n10.5694/mja2.52662（Consensus）", "电量、排放、成本曲线（定性引述）", "澳大利亚；典型年", "节电 \"more than 70%\" [引用自 Malik 2022]；净效益比 \"incandescent to LED\" 更强 [经 MJA Insight+ 转述]；座地扇 \"A$20 to $150\" [新闻报道，未核实]"],
     ["Jay et al. (2021) Lancet\n10.1016/S0140-6736(21)01209-5（WebSearch: LSHTM/PubMed）", "定性：空调 \"high capital and operational costs\"", "全球综述", "\"风扇耗电为空调 1/30–1/50\" 仅见悉尼大学新闻稿（\"30 to 50 times less energy\"）；论文原文未能核实"],
-    ["Aynsley (2005) Int J Ventilation（较旧）\n10.1080/14733315.2005.11683708（Consensus）", "运行成本比", "—", "\"a residential air conditioner costs 11 times more to operate than ceiling fans\" [引用自 \"Another study\"，原始出处不明]"],
+    ["Aynsley (2005) Int J Ventilation（较旧）\n10.1080/14733315.2005.11683708（Crossref 无法解析，DOI 未能核实）", "运行成本比", "—", "\"a residential air conditioner costs 11 times more to operate than ceiling fans\" [引用自 \"Another study\"，原始出处不明]"],
     ["BEE 印度吊扇星级标准 / CLASP / CEEW（灰色文献）\n报告无 DOI；clasp.ngo、consumeraffairs.nic.in", "零售价、功率/service value", "印度全国单一标准；2023 强制标签", "5 星 BLDC \"roughly 27–35 W\"；价格 \"Rs 2,500–3,500\" vs 1 星 \"roughly Rs 1,000\" [行业报道]"],
   ], { fontSize: 10, colW: [3.6, 2.6, 2.3, 3.6] });
   L.addSummary(pres, s, "同行评审文献中只有 LBNL/Shah 2015 与 Knudsen 2023 真正包含购置+运行+贴现；风扇零售价依赖行业报道，\"空调运行成本是风扇 11 倍\"\"耗电 1/30–1/50\"等常被转引的比值均为二手或新闻稿表述。");

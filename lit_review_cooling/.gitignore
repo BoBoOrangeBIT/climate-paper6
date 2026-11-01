@@ -1,0 +1,8 @@
+build/node_modules/
+build/package.json
+build/package-lock.json
+build/test.pptx
+build/test.pdf
+build/test_deck.js
+build/*.jpg
+build/*.pdf

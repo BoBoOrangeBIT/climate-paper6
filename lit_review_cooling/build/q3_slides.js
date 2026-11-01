@@ -36,7 +36,7 @@ module.exports = function addQ3(pres) {
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
   s.addText("Q3-a 全球 / IAM / 能源经济文献：成本参数只为空调而设", { placeholder: "title" });
   L.addLitTable(pres, s, ["文献 / DOI（核实）", "成本组分", "时空精细度", "关键数字（原文）"], [
-    ["IEA (2018) The Future of Cooling\n报告无 DOI；iea.org 报告页（PDF 被域名限制）", "电费（主体）、空调价格/效率、峰荷、排放；风扇仅并入用电份额", "全球+大区；年度至 2050；价格基年未见", "\"air conditioners and electric fans already account for about a fifth of the total electricity in buildings … or 10% of all global electricity\"；存量 1.6 → 5.6 billion（2050）[直接设定]"],
+    ["IEA (2018) The Future of Cooling\n报告无 DOI；iea.org 报告页（PDF 被域名限制）", "电费（主体）、空调价格/效率、峰荷、排放；风扇有存量与用电、无价格", "全球+大区；年度至 2050；价格基年未见", "空调+风扇占建筑用电 \"about a fifth … 10% of all global electricity\"；风扇 \"2.3 billion\" 台、\"more than 80 TWh in 2016, or nearly 1.5% of residential electricity\"、自 2000 年增 3.6 倍 [直接设定]；风扇价格未见"],
     ["IEA (2019) SE Asia；IEA (2023) Keeping cool 评论\n报告无 DOI；iea.org", "电费、峰荷、MEPS 对价格（定性）", "ASEAN 10 国/全球；年度", "\"Only 15% of households in Southeast Asia have an air conditioner\"；夏季电力需求可升 \"more than 50%\" [直接设定]"],
     ["Mastrucci et al. (2019) Energy Build；(2022) MASGC\n10.1016/j.enbuild.2019.01.015；10.1007/s11027-022-10032-7（Consensus）", "能耗（kWh，非货币）", "全球南方格网 / 22 特大城市；年度 VDD", "缺口能耗 \"14% of current global residential electricity\"；城市缺口人口 \"33% (SSP1) to 86% (SSP3)\" [直接设定]"],
     ["Randazzo, De Cian, Mistry (2020) Econ Model；De Cian et al. (2025) JEEM\n10.1016/j.econmod.2020.05.001；10.1016/j.jeem.2025.103122（Consensus）", "家庭电费支出；碳社会成本", "8 国 / 25 国家庭微观；年度（2011 调查）", "\"spend 35%–42% more on electricity when they adopt air conditioning\"；2050 \"social costs of $124–177 billion\" [直接设定]"],
@@ -44,14 +44,14 @@ module.exports = function addQ3(pres) {
     ["Falchetta & Mistry (2021) Energy Econ\n10.1016/j.eneco.2021.105307（Consensus）", "电气化投资（电网侧 capex）", "撒哈拉以南非洲格网；年度投资", "计入降温需求后投资 \"65.5% more\"；气候变化再加 \"4%\" [直接设定]；风扇并入 \"air circulation\""],
     ["Rode et al. (2021) Nature；Carleton et al. (2022) QJE\n10.1038/s41586-021-03883-8；10.1093/qje/qjac020（Consensus）", "能源支出 / 显示性偏好反推的适应成本", "全球 24,378 区域；年度至 2100；贴现敏感", "+1°C 使 2099 用电增 \"about 4.5 exajoules\"；死亡风险价值 \"3.2% of global GDP in 2100\" [直接设定]"],
   ], { fontSize: 10, colW: [3.4, 2.5, 2.5, 3.7] });
-  L.addSummary(pres, s, "全球与 IAM 文献能解释成本的异质性来源（度日、收入分位、城乡），但技术维度只有\"有/无空调\"；风扇最多并入\"10% 全球用电\"或\"空气流通\"情景，蒸发冷却器完全不出现。");
+  L.addSummary(pres, s, "全球与 IAM 文献能解释成本的异质性来源（度日、收入分位、城乡），但技术维度只有\"有/无空调\"；IEA 2018 给出风扇存量与用电（2.3 billion 台、>80 TWh）却无价格或成本曲线，蒸发冷却器完全不出现。");
 
   // (b) fan energy/power
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
   s.addText("Q3-b 风扇成本（一）：以功率与节能百分比为主的证据", { placeholder: "title" });
   L.addLitTable(pres, s, ["文献 / DOI（核实）", "成本组分", "时空精细度", "关键数字（原文）"], [
     ["Malik et al. (2022) Lancet Planet Health\n10.1016/s2542-5196(22)00042-0（Consensus）", "电量 GWh、排放 kt；无货币、无 capex", "澳大利亚 GIS 格网 + 人口普查；逐日", "1.2 m/s 风扇优先 \"76% reduction in energy use (from 5592 GWh to 1344 GWh)\"；排放 5091→1208 kt [直接设定]"],
-    ["Schiavon & Melikov (2008) Energy Build\nDOI 10.1016/j.enbuild.2008.05.001（WebSearch，核实强度中等）", "制冷能耗、峰值功率、风扇输入功率", "建筑模拟，多气候；年度", "\"cooling energy saving of 17% to 48% and a 10% to 28% reduction in peak cooling power\" [直接设定]"],
+    ["Schiavon & Melikov (2008) Energy Build\n10.1016/j.enbuild.2008.05.001（WebSearch: ScienceDirect）", "制冷能耗、峰值功率、风扇输入功率", "建筑模拟，多气候；年度", "\"cooling energy saving of 17% to 48% and a 10% to 28% reduction in peak cooling power\" [直接设定]"],
     ["Miller et al. (2021) Energy Build\n10.1016/j.enbuild.2021.111319（Consensus）", "压缩机能耗、峰时段、风扇功率", "加州 10 栋建筑 29 个月实测；制冷季/峰时段", "吊扇 \"2–4 °C cooling effect … (2–30 W)\"；压缩机节能 \"36% … (41% during summer peak billing hours)\" [直接设定]"],
     ["Zhai et al. (2013)；Lipczynska et al. (2018) Build Environ\n10.1016/j.buildenv.2013.03.022；10.1016/j.buildenv.2018.03.013（Consensus）", "风扇人均功率；单位面积年节电", "气候室 / 新加坡办公室", "\"lower than 10 W per person\"；设定点 23→26°C \"44 kWh/m2yr savings\" [直接设定]"],
     ["Gokarakonda et al. (2023) Energies；He et al. (2019) Energy Build\n10.3390/en16196807；10.1016/j.enbuild.2019.04.015（Consensus）", "住宅电耗；空调使用率", "印度 15 户实测 / 现场研究综述", "28/30°C 设定点节能 \"44 and 67%\"；风扇使空调使用率减 \"about 15%\" [直接设定]"],
@@ -95,7 +95,7 @@ module.exports = function addQ3(pres) {
     ["Alsilbi et al. (2026) Int Commun Heat Mass；Kousar et al. (2021) J Build Eng\n10.1016/j.icheatmasstransfer.2026.111507；10.1016/j.jobe.2021.103466", "年电费、LCC 节省、回收期；4E 含利率 13%", "伊拉克单机实测 / 巴基斯坦实验；年度/月度", "年电费节省 \"about USD 20.45\"，LCC 节省 \"USD 220 and USD 365\"；回收期 \"1.3 years and 1.96 years\" [直接设定]"],
     ["Sohani, Sayyaadi (2018a,b) Energy Convers Manag\n10.1016/j.enconman.2017.12.042；10.1016/j.enconman.2018.07.008（Consensus）", "LCC、年耗水、COP；\"水电价比\"作为经济维度", "Köppen 四类气候代表城市 / 全球多种水电价比；年度", "LCC、年耗水、COP 改善 \"64.4, 86.4, and 1039.0%\" [直接设定]；水价重要性取决于地区"],
     ["Rao & Datta (2020) Appl Therm Eng；Chen et al. (2022) Front Built Environ；Krarti et al. (2023) J Build Eng\n10.1016/j.applthermaleng.2019.114813；10.3389/fbuil.2022.1032961；10.1016/j.jobe.2023.106344", "LCC、CO2、回收期；IEC 水耗 L/hr；国家存量 TWh", "印度 21 城 / 沙特多城 / 沙特全国存量；逐时→年", "IEC-DEC-DX 节能 \"up to 25%\"；IEC 水耗 \"4–12 L/hr\"，混合成本 \"15%–35% lower\"；沙特存量 \"51 TWh\"，回收期 \"less than one year\" [直接设定]"],
-    ["印度蒸发冷却器购价：Pavanello 等 CPHS 工作论文；Prayas 2019；NSS 2020\nDOI 未找到 / 无 DOI", "购置价占收入比；拥有率", "印度全国 / 北方邦与马哈拉施特拉邦；2019–2020", "均价 \"between 3,000 and 15,000 rupees … about 2%-8% of annual household income in 2019\" [WP]；NSS 2020 空调 5%、空气冷却器 14% [转述]"],
+    ["印度蒸发冷却器购价：Pavanello & Sue Wing CESifo WP 12365；Prayas 2019；NSS 2020\n无 DOI", "购置价占收入比；拥有率", "印度全国 / 北方邦与马哈拉施特拉邦；2019–2020", "均价 \"between 3,000 and 15,000 rupees … about 2%-8% of annual household income in 2019\" [WP]；NSS 2020 空调 5%、空气冷却器 14% [转述]"],
   ], { fontSize: 10, colW: [3.5, 2.6, 2.5, 3.5] });
   L.addSummary(pres, s, "蒸发冷却器文献有完整的 LCC、回收期与利率设定，甚至把\"水电价比\"作为维度，但对象多为单机或单栋建筑，国家尺度仅沙特（Krarti 2023）与印度区级，购置价依赖工作论文与智库调查。");
 

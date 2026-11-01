@@ -35,7 +35,7 @@ module.exports = function addQ2(pres) {
   const part = (t) => ({ text: t, options: { color: T.accent2 } });
   const miss = (t) => ({ text: t, options: { color: T.accent5 } });
   L.addLitTable(pres, s, ["技术", "① → ② 暴露变化", "② → ④ 健康结局证据", "④ → ⑤ 货币化", "代表文献"], [
-    ["空调", ok("室温设定点；AC 普及率作为暴露代理"), ok("死亡 OR 0.2–0.3（病例对照）；归因份额 14–100%（meta 回归/经济学）；住院 RR；养老院/监狱准实验"), ok("消费者剩余 $85–185 bn（Barreca 2016）；避免死亡 ≈19 万/年（Lancet Countdown/IEA）"), "Semenza 1996; Bouchama 2007; Sera 2020; Barreca 2016; Katz 2025"],
+    ["空调", ok("室温设定点；AC 普及率作为暴露代理"), ok("死亡 OR 0.2–0.3（病例对照）；归因份额 14–100%（meta 回归/经济学）；住院 RR；养老院/监狱准实验"), ok("消费者剩余 $85–185 bn（Barreca 2016）；避免死亡 195 400 例（2019，Lancet Countdown 2021）"), "Semenza 1996; Bouchama 2007; Sera 2020; Barreca 2016; Katz 2025"],
     ["风扇", ok("核心温度、心率、出汗、速率-压力积（热舱）"), part("无 RCT/前瞻对照（Cochrane 2012）；唯一死亡 OR 0.60（CI 0.4–1.1）；生理终点随温湿与年龄正负反转"), miss("无；\"风扇优先\"把收益改写为空调节电 70–76%"), "Gupta 2012; Ravanelli 2015; O'Connor 2024; Meade 2024; Malik 2022"],
     ["蒸发冷却器", part("室温 −2.8 K、RH 升至 52%（气候舱）；WBGT 合规；舒适温度 28.8°C"), miss("无死亡/住院研究；综述明确指出健康结局数据缺失；仅皮肤湿润有核心温度收益"), miss("无"), "Rugani 2026; Tewari 2019; Johnston 2022; McKenna 2025"],
   ], { y: 2.7, fontSize: 10, colW: [1.3, 2.7, 3.7, 2.6, 1.8] });
@@ -92,7 +92,7 @@ module.exports = function addQ2(pres) {
     ["Miranda et al. (2024) Rev Bras Eng Agríc Ambient；Farnham et al. (2025) Clean Technol\n10.1590/1807-1929/agriambi.v29n3e280973；10.3390/cleantechnol7010009（Consensus）", "葡萄包装车间冷却器开/关；室外雾化风扇 vs 风扇，热人体模型", "WBGT 是否超职业限值；热通量、可接受 WBGT 提升", "冷却器开启时 WBGT 不超 NR15 限值；雾化风扇多散热 18.3–20.3 W/m²，可接受 WBGT 提高 >0.6°C [直接估计]"],
     ["Fukuzawa et al. (2025) Saf Health Work；Benyamine et al. (2024) Int J Low-Carbon Technol\n10.1016/j.shaw.2025.05.003；10.1093/ijlct/ctae191（Consensus）", "无风环境上身喷雾（9 人运动）；阿尔及利亚 EC 房 vs 分体空调房 + 300 人症状问卷", "直肠温峰值；室温/RH、自报症状", "热干喷雾组峰值 38.32 vs 38.14°C（p=0.074），无益；EC 房温湿均高于空调房，依赖通风 [直接估计]"],
     ["Parkes et al. (2022) Int J Biometeorol\n10.1007/s00484-022-02295-1（Consensus）", "非洲高分辨率气候模型 + 冷却器效率假设", "把热应激事件转为非热应激所需降温量", "蒸发冷却器历史上可预防热应激，热带效果低于副热带；高变暖下不足以恢复当前水平 [模型]"],
-    ["Pavanello & Sue Wing 印度工作论文（2023）；Cramer et al. (2020) J Appl Physiol\nDOI 未找到；10.1152/japplphysiol.00786.2019（Consensus）", "CPHS 面板分别估计 AC 与 EC 对热死亡的缓解；老年湿 T 恤实验 42.4°C/34% RH", "热死亡下降 %；Tcore 增幅", "适应技术合计降热死亡 21%，\"若 AC 普及达 EC 水平可避免 47%\"（WP 摘要，待正式发表）；湿 T 恤降低 Tcore 增幅，加风扇反增出汗 [直接估计]"],
+    ["Pavanello & Sue Wing (2025) CESifo WP 12365；Cramer et al. (2020) J Appl Physiol\n无 DOI（RePEc）；10.1152/japplphysiol.00786.2019（Consensus）", "CPHS 面板分别估计 AC 与 EC 对热死亡的缓解；老年湿 T 恤实验 42.4°C/34% RH", "热死亡下降 %；Tcore 增幅", "适应技术合计降热死亡 21%，\"若 AC 普及达 EC 水平可避免 47%\"（WP 摘要，待正式发表）；湿 T 恤降低 Tcore 增幅，加风扇反增出汗 [直接估计]"],
   ], { fontSize: 10, colW: [3.7, 3.0, 2.0, 3.4] });
   L.addSummary(pres, s, "蒸发冷却器的\"收益\"全部是物理量（−2.8 K、WBGT 合规、舒适温度）或模拟，综述明确指出健康结局数据缺失；唯一把 EC 与 AC 放进同一死亡率框架的是尚未正式发表的印度工作论文，而\"皮肤湿润\"这种个人蒸发冷却在干热下有一致的核心温度收益。");
 
@@ -102,10 +102,10 @@ module.exports = function addQ2(pres) {
   L.addLitTable(pres, s, ["文献 / DOI（核实）", "归因链", "收益度量", "效应量（原文）", "技术覆盖"], [
     ["Taylor et al. (2018) Environ Int；(2018) Atmosphere；(2021) Energy Build\n10.1016/j.envint.2017.11.005；10.3390/atmos9050190；10.1016/j.enbuild.2021.111233（均 Consensus）", "EnergyPlus 住宅原型 → UHI → 年龄结构 → 区域热-死亡暴露-反应函数", "热死亡变化 %", "外窗百叶 −30–60%；节能改造使热死亡 +3–4%；未来夏季百叶可避免 38–73% [直接估计]", "仅被动措施"],
     ["Ibbetson et al. (2021) Clim Risk Manag\n10.1016/j.crm.2021.100307（Consensus）", "建筑物理 → 室内均温 → 死亡 → YLL → £（20 年 3.5% 折现）", "避免死亡、YLL、货币", "外遮阳降均温 0.9°C；50 人养老院避免热死亡 0.07/0.47/0.28 例，收益约 £90,000/£230,000/£44,000（三种寿命假设）[直接估计]", "被动（遮阳）"],
-    ["Bao et al. (2025) Environ Res Health\nDOI 待复核（Consensus 所列前缀与期刊不符）", "建筑物理 + 暴露-反应 + 生命表 → QALY vs 资本/能耗/维护成本", "QALY 货币价值 vs 成本", "小型低保温院\"休息室便携式空调\"最具成本效益；大型高保温院\"热质+开窗规则\"最优 [摘要无数值]", "便携 AC / 被动 / 行为"],
+    ["Ibbetson et al. (2025) Environ Res Health\n10.1088/2752-5309/ae25c8（WebSearch: IOP/PMC；原检索工具误列为 Bao 2025）", "建筑物理 + 暴露-反应 + 生命表 → QALY vs 资本/能耗/维护成本", "QALY 货币价值 vs 成本", "小型低保温院\"休息室便携式空调\"最具成本效益；大型高保温院\"热质+开窗规则\"最优 [摘要无数值]", "便携 AC / 被动 / 行为"],
     ["Moreno-Pestaña et al. (2026) Build Environ\n10.1016/j.buildenv.2025.114094（Consensus）", "模拟室温累积热过载 IATO → 超额死亡，纳入区域 HVAC 普及率，与西班牙 MoMo 校准", "累积超额死亡", "平均误差 13%，R² 0.5–0.9；敏感性分析确认 HVAC 可及性重要 [直接估计]", "AC 作为参数"],
     ["Kouis et al. (2021) Environ Res\n10.1016/j.envres.2021.111285（Consensus）", "SSP 情景 HIA + AC 用电污染反事实（塞萨洛尼基）", "避免热死亡 vs 污染额外死亡", "2080–99 超额热死亡 2.4（SSP1-2.6）–433.7（SSP5-8.5）；AC 收益可能被污染死亡抵消 [直接估计]", "AC"],
-    ["Lancet Countdown（Romanello et al. 2021）；IEA (2023) Sustainable, Affordable Cooling\n10.1016/S0140-6736(21)01787-6（WebSearch，指标年份待复核）；IEA 报告无 DOI", "国家 AC 普及率 × 65+ 热死亡暴露-反应（指标法）", "65+ 因 AC 可及避免的热死亡数", "2019 年避免约 195,000 例；IEA：2019–2021 年均约 190,000 例 [引用 / IEA 分析]", "AC"],
+    ["Lancet Countdown 2021（Romanello et al.）；IEA (2023) Sustainable, Affordable Cooling\n10.1016/S0140-6736(21)01787-6（WebSearch，二次复核确认）；IEA 报告无 DOI", "国家 AC 普及率 × 65+ 热死亡暴露-反应（指标法）", "65+ 因 AC 可及避免的热死亡数", "2021 报告原文：2019 年无空调将多 \"195 400\" 例 65+ 热死亡；IEA：2019–2021 年均约 190,000 例 [直接估计 / IEA 分析]", "AC"],
   ], { fontSize: 10, colW: [3.6, 2.9, 1.5, 3.0, 1.1] });
   L.addSummary(pres, s, "\"建筑物理 → 室温 → 暴露-反应 → 死亡 → YLL/QALY → 货币\"的链条已成熟，但几乎只用于被动遮阳；空调只以普及率参数或指标法进入，没有一项研究把\"安装空调 / 风扇 / 蒸发冷却器\"作为情景跑完整条链。");
 
@@ -132,7 +132,7 @@ module.exports = function addQ2(pres) {
     ["生态效应修饰 / 纵向 meta 回归", "Sera 2020；Achebak 2023；Bobb 2014（阴性）", "解释脆弱性下降 14–20%；28.6%；不显著", "需要风扇/EC 普及率的时空面板，目前缺失（印度 Agarwal 2026 刚提供 EC 拥有率）"],
     ["经济学面板交互", "Barreca 2016", "\"几乎全部\"", "无"],
     ["HIA / 城市气候耦合", "Chua 2023；Kouis 2021", "可避免 36–47%，减排热 3.1–3.5%", "原则上可行，尚无"],
-    ["指标法", "Lancet Countdown；IEA 2023", "≈19 万例/年（65+）", "无风扇/EC 指标"],
+    ["指标法", "Lancet Countdown；IEA 2023", "195 400 例（2019，65+）", "无风扇/EC 指标"],
     ["热舱生理终点", "Jay / Kenny 团队 2015–2025", "—", "风扇：丰富但正负反转；EC 设备：无；皮肤湿润：有"],
   ], { fontSize: 10, colW: [2.6, 3.0, 3.0, 3.5] });
   L.addSummary(pres, s, "空调的健康收益有多条独立证据线但份额估计相差一个数量级；风扇与蒸发冷却的收益停留在生理与物理终点，无法与空调在同一健康经济框架内比较——这是替代/组合分析的核心瓶颈。", { y: 5.9, h: 0.85 });

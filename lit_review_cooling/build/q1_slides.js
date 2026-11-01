@@ -85,7 +85,7 @@ module.exports = function addQ1(pres) {
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
   s.addText("Q1-d 能源系统 / IAM / 建筑存量模型：技术组合如何被决定", { placeholder: "title" });
   L.addLitTable(pres, s, ["文献 / DOI（核实）", "决定机制", "关键数字（原文）", "技术覆盖"], [
-    ["IEA (2018) The Future of Cooling\n报告无 DOI；已核实（iea.org 报告页）", "全球建筑存量-能耗情景（Baseline vs Efficient Cooling）", "空调存量 \"1.6 billion → 5.6 billion by 2050\"；空调+风扇占建筑用电 \"about a fifth\"", "AC / 风扇为背景；蒸发冷却未见"],
+    ["IEA (2018) The Future of Cooling\n报告无 DOI；已核实（iea.org 报告页/PDF 摘录）", "全球建筑存量-能耗情景（Baseline vs Efficient Cooling）", "空调存量 \"1.6 billion → 5.6 billion by 2050\"；风扇 \"2.3 billion residential electric fans\"、\"more than 80 TWh in 2016, or nearly 1.5% of residential electricity\"", "AC 为主；风扇有存量/用电但无价格或情景；蒸发冷却未见"],
     ["Mastrucci et al. (2019) Energy Build\n10.1016/j.enbuild.2019.01.015（Consensus）", "格网 variable degree days：室内目标温度 × 暴露天数 → \"需要空调\"", "\"1.8 to 4.1 billion … may need AC\"；弥补缺口能耗 \"14% of current global residential electricity\"", "AC / 风扇（分配规则未能核实）"],
     ["Pavanello et al. (2021) Nat Commun\n10.1038/s41467-021-26592-2（Consensus）", "离散选择：收入 + \"humidity-adjusted temperature\"", "2040 年采用增 \"twofold to sixteen-fold\"；\"64 to 100 million families\" 无法满足舒适", "AC（风扇描述性）"],
     ["Davis & Gertler (2015) PNAS；Davis et al. (2021) Glob Environ Change\n10.1073/pnas.1423558112；10.1016/j.gloenvcha.2021.102299（Consensus）", "采用（extensive）与使用（intensive）边际分开估计", "暖区采用随收入每千美元增 \"2.7%\"；饱和近 \"80%\"", "仅 AC"],
@@ -100,7 +100,7 @@ module.exports = function addQ1(pres) {
   s.addText("Q1-d 续：蒸发冷却何时被当作独立选项（少数文献）", { placeholder: "title" });
   L.addLitTable(pres, s, ["文献 / DOI（核实）", "判别变量与方法", "关键数字（原文）", "说明"], [
     ["Agarwal et al. (2026) Environ Sci Technol\n10.1021/acs.est.6c05101（Consensus）", "印度 400+ 区家庭调查 + 随机森林 + 倾向得分匹配；AC vs 蒸发冷却器（EC）选择取决于 \"local humidity and air temperature in addition to income\"", "2022 年户均拥有率 \"EC-only 18%, AC-plus-EC 3%, AC-only 4%\"；最高收入户 AC \"178 kWh/capita/year\" vs EC \"56\"", "检索到的唯一把 EC 与 AC 并列、以温湿+收入判别的实证模型"],
-    ["Pavanello & Sue Wing (2023) 工作论文\nDOI 未找到；已核实（作者主页/SIE 摘要）", "印度 CPHS 面板，分别估计空调与蒸发冷却器对高温死亡率的缓解", "适应技术合计使高温死亡降 \"21%\"，年福利 \"$32 billion\"；\"subsidising air-conditioning is a cost-effective way\"；EC 保护效果 \"reduced\"", "尚未见期刊版；蒸发冷却器集中于干燥地区"],
+    ["Pavanello & Sue Wing (2025) CESifo WP 12365（早期题为印度降温可及性）\n无 DOI；已核实（RePEc/ifo.de）", "印度 CPHS 面板，分别估计空调与蒸发冷却器对高温死亡率的缓解", "适应技术合计使高温死亡降 \"21%\"，年福利 \"$32 billion\"；\"subsidising air-conditioning is a cost-effective way\"；EC 保护效果 \"reduced\"", "尚未见期刊版；蒸发冷却器集中于干燥地区"],
     ["Naderi et al. (2020) J Build Eng\n10.1016/j.jobe.2020.101514（WebSearch）", "EnergyPlus 模拟伊朗四个柯本气候区的直接蒸发冷却器（DEC）vs PTAC 空调", "PTAC 比 80% 效率 DEC 多耗电 \"234%–265%\"；湿帘效率 +30% 可减电 \"up to 50.0%\"、减水 \"29.6%\"", "以气候区（湿球温度）作判别变量"],
     ["Al-Jubainawi et al. (2026) Sci Rep\n10.1038/s41598-026-43175-7（Consensus）", "柯本分类 + 本地舒适指数，逐时模拟伊拉克三城 DEC vs 机械通风", "舒适小时增加 \"41.28% (Baghdad), 54.48% (Basrah), 30.55% (Mosul)\"", "对照为通风，不含空调"],
     ["Meade et al. (2024) Lancet Planet Health\n10.1016/s2542-5196(24)00030-5（Consensus）", "批判性综述：把 \"air conditioning or evaporative coolers\" 列为环境降温，\"skin wetting or fan use\" 列为个人降温", "无数值", "层级式论述，非定量判别"],
@@ -114,7 +114,7 @@ module.exports = function addQ1(pres) {
   L.addLitTable(pres, s, ["文献 / DOI（核实）", "方法", "关键数字（原文）", "设定 / 引用"], [
     ["ASHRAE Standard 55（提高风速条款）；Arens et al. (2009) ASHRAE J\n标准无 DOI；已核实（ashrae.org addenda）", "用 SET 折算等效降温，允许更高操作温度", "无人控且操作温度 >25.5°C 时风速上限 \"0.8 m/s (160 fpm)\"", "直接设定（ASHRAE）"],
     ["de Dear & Brager (2002) Energy Build\n10.1016/S0378-7788(02)00005-1（WebSearch）", "自适应舒适模型：室外月均温 → 可接受室内温度", "（奠基文，早于 15 年窗口）", "直接设定"],
-    ["Schiavon & Melikov (2008) Energy Build\nDOI 未找到（DTU Orbit 无 DOI）", "提高风速允许更高室温，评估制冷节能", "制冷节能 \"17–48%\"、峰值功率降 \"10–28%\"；风扇功率 >\"about 20 W\" 时节能可能消失", "直接设定"],
+    ["Schiavon & Melikov (2008) Energy Build\n10.1016/j.enbuild.2008.05.001（WebSearch: ScienceDirect）", "提高风速允许更高室温，评估制冷节能", "制冷节能 \"17–48%\"、峰值功率降 \"10–28%\"；风扇功率 >\"about 20 W\" 时节能可能消失", "直接设定"],
     ["Zhai et al. (2013) Build Environ；Zhou et al. (2023) Energy Build\n10.1016/j.buildenv.2013.03.022；10.1016/j.enbuild.2023.112953（Consensus）", "受试者可控气流舒适实验", "舒适可维持到 \"30 °C and 60% RH\"，风扇 \"<10 W per person\"；最高可接受操作温度 \"31.3 (RH 40–60%)\"/\"28.6 °C (RH 70–90%)\"", "直接设定"],
     ["He et al. (2019) Energy Build；He et al. (2018) Build Environ\n10.1016/j.enbuild.2019.04.015；10.1016/j.buildenv.2018.03.049（Consensus）", "Probit 风扇使用率模型；桌扇 + 可调温控实验", "风扇使中性温度上限提高约 \"3 K\"（27.5→30.7°C）；混合模式建筑空调使用率可减 \"about 15%\"", "直接设定"],
     ["ISO 7243:2017 WBGT 热应激评估\n标准无 DOI；已核实（标准机构页面）", "WBGT 参考值按代谢率与热适应分级", "风速只隐含在自然湿球中；Foster 2021 证明 WBGT 不反映风扇效应", "直接设定（ISO）"],

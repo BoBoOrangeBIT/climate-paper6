@@ -32,11 +32,11 @@ function addFront(pres) {
   ] });
   L.addLitTable(pres, s, ["DOI 核实状态", "条数", "说明"], [
     ["已核实（Consensus 结果中逐字出现）", String(REFS.filter(r => r[2] === "C").length), "最高置信度"],
-    ["已核实（WebSearch 出版社/PubMed/机构库页面）", String(REFS.filter(r => r[2] === "W").length), "其中 Schiavon & Melikov 2008、Romanello 2021 标注为中等强度"],
+    ["已核实（WebSearch 出版社/PubMed/机构库页面）", String(REFS.filter(r => r[2] === "W").length), "17 条经独立二次复核全部确认；Ibbetson 2025 由错误记录更正后归入"],
     ["报告/标准/机构网页，无 DOI", String(REFS.filter(r => r[2] === "R").length), "IEA、WHO、UNEP、EPA、CDC、UKHSA、ASHRAE、ISO"],
-    ["DOI 未找到或待复核", String(REFS.filter(r => r[2] === "N").length), "Pavanello & Sue Wing 工作论文；Bao et al. 2025（Consensus 所列前缀与期刊不符）"],
+    ["无 DOI 的工作论文", String(REFS.filter(r => r[2] === "N").length), "Pavanello & Sue Wing CESifo WP 12365；另 Agarwal 2026、Sabater-Mezquita 2026 的 DOI 二次复核未见页面，待 doi.org 核验"],
   ], { y: 3.95, fontSize: 10, colW: [4.3, 1.0, 6.8] });
-  L.addSummary(pres, s, "本综述对每条信息标注了可核实的出处与 DOI 核实状态；凡未能核实的数字（如 Malik 2022 的 28°C 阈值、Jay 2021 的\"1/50 电耗\"）均在相应页面明示\"未核实\"而非沿用。", { y: 6.2 });
+  L.addSummary(pres, s, "本综述对每条信息标注了出处与 DOI 核实状态，并对 31 条做了独立二次复核（25 条确认、1 条更正、5 条待 doi.org 核验）；凡未能核实的数字（如 Jay 2021 的\"1/50 电耗\"）均明示\"未核实\"而非沿用。", { y: 6.2 });
 
   // Executive summary
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
@@ -79,7 +79,7 @@ function addGaps(pres) {
     ["2", "\"先风扇后空调\"等顺序/组合规则极少被形式化", "仅 Malik 2022（澳大利亚）、UNEP 2025（混合系统 −30%）、O'Connor 2025（fan-first + 环境降温）、WHO 新版（27°C + 风扇）", "组合策略的能耗与健康收益缺乏可复用的建模范式"],
     ["3", "风扇与蒸发冷却器没有死亡率层面的效应量", "Gupta 2012 Cochrane 无 RCT；Bouchama 2007 风扇 OR 0.60（CI 0.4–1.1）；Johnston 2022 指出蒸发冷却器健康结局数据缺失", "健康经济模型无法为两者赋值，只能假定\"舒适不变\""],
     ["4", "热舱实验从未测试真正的蒸发冷却器", "(c) 类 20 余项实验只测风扇与皮肤湿润/喷水（McKenna 2025、Chaseling 2024、Cramer 2020）；Rugani 2026 仅用热人体模型", "蒸发冷却器的安全上限（湿度副作用）与人群分层完全未知"],
-    ["5", "链式 HIA 只跑被动措施情景", "Taylor 2018/2021、Ibbetson 2021 评估遮阳与保温；Bao 2025 纳入便携空调但无数值；Moreno-Pestaña 2026 仅把 HVAC 普及率作参数", "没有\"安装空调/风扇/蒸发冷却器\"的室温→死亡→货币完整估计"],
+    ["5", "链式 HIA 只跑被动措施情景", "Taylor 2018/2021、Ibbetson 2021 评估遮阳与保温；Ibbetson 2025 纳入便携空调但摘要无数值；Moreno-Pestaña 2026 仅把 HVAC 普及率作参数", "没有\"安装空调/风扇/蒸发冷却器\"的室温→死亡→货币完整估计"],
     ["6", "\"空调份额\"估计相差一个数量级且未被调和", "Sera 2020 约 1/6、Achebak 2023 28.6%、Barreca 2016\"几乎全部\"、Bobb 2014 阴性", "任何以空调为基准的替代分析都继承这一不确定性"],
     ["7", "机构阈值内部不一致，且被文献并列转引", "WHO 35°C（旧）与 40°C（新）并存；CDC 从\"high 90s°F\"改为模糊表述；EPA 沿用 2006 年热指数 99°F", "政策与模型采用的\"安全条件\"彼此矛盾"],
   ], { fontSize: 10, colW: [0.4, 2.9, 5.2, 3.6] });

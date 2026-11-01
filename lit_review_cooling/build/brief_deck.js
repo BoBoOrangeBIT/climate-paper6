@@ -15,7 +15,7 @@ const REFS = require("./refs.js");
   s.addText("空调、风扇与蒸发冷却：成本收益替代与组合关系 · 文献结论精炼版", { placeholder: "title" });
   s.addText([
     { text: "三个核心问题的结论、文献空白与研究建议 · 9 页", options: { breakLine: true } },
-    { text: "基于 160 条文献/报告（130 条 DOI 经 Consensus 核实、17 条经出版社/机构库页面核实、11 条为无 DOI 报告、2 条待复核）· 2026 年 11 月", options: {} },
+    { text: "基于 160 条文献/报告（130 条 DOI 经 Consensus 核实、18 条经出版社/机构库页面核实、11 条为无 DOI 报告、1 条无 DOI 工作论文；31 条已独立二次复核）· 2026 年 11 月", options: {} },
   ], { placeholder: "body" });
 
   // 2 one-page conclusion + coverage matrix
@@ -25,7 +25,7 @@ const REFS = require("./refs.js");
   const part = (t) => ({ text: t, options: { color: T.accent2 } });
   const miss = (t) => ({ text: t, options: { color: T.accent5 } });
   L.addLitTable(pres, s, ["", "Q1 何时用哪种措施（判定方法）", "Q2 收益度量与健康归因", "Q3 成本度量与精细度"], [
-    [{ text: "空调", options: { bold: true } }, part("经济模型中的\"有/无空调\"二元选择，驱动变量为收入与度日（Davis 2015；Pavanello 2021）"), ok("唯一有死亡效应量：OR 0.2–0.3；归因份额 14%–\"几乎全部\"；≈19 万例/年避免死亡"), ok("电费 +35–42%、碳社会成本、消费者剩余均有；价格基年多不透明")],
+    [{ text: "空调", options: { bold: true } }, part("经济模型中的\"有/无空调\"二元选择，驱动变量为收入与度日（Davis 2015；Pavanello 2021）"), ok("唯一有死亡效应量：OR 0.2–0.3；归因份额 14%–\"几乎全部\"；2019 年避免 195 400 例（Lancet Countdown 2021）"), ok("电费 +35–42%、碳社会成本、消费者剩余均有；价格基年多不透明")],
     [{ text: "风扇", options: { bold: true } }, ok("阈值最丰富：WHO 35→40°C；模型 39/38/37°C；青年实验 ~43°C；老年 36°C 无效"), part("无 RCT；唯一死亡 OR 0.60（CI 跨 1）；终点为核心温度、心率，正负随温湿与年龄反转"), part("功率 2–30 W、节能 17–76%；完整 CBA 仅 2 项；零售价靠行业报道")],
     [{ text: "蒸发冷却器", options: { bold: true } }, miss("仅 5–6 项研究作为独立选项，判别变量为湿度 + 收入（Agarwal 2026；Naderi 2020）"), miss("无任何死亡/住院研究；收益为室温 −2.8 K、WBGT 合规、舒适温度"), part("LCC、回收期齐全但单机尺度；水耗 ~250 L/d 仅 1 项货币化（$1.82/yr）")],
     [{ text: "组合/顺序规则", options: { bold: true } }, part("仅 Malik 2022（fan-first，空调节电 76%）、WHO 新版（27°C + 风扇）、UNEP 2025（混合 −30%）"), part("fan-first 把收益改写为\"舒适不变下的节电\"，健康收益由空调兜底（Bone 2025）"), miss("无组合策略的成本-收益评估")],
@@ -63,7 +63,7 @@ const REFS = require("./refs.js");
     valAxisMinVal: 0, valAxisMaxVal: 110, valGridLine: { color: "E3E9EC", size: 0.5 }, catGridLine: { style: "none" }, objectName: "AC share chart",
   });
   L.addCard(pres, s, { x: 7.5, y: 1.3, w: 5.2, h: 4.0, title: "三类技术的收益证据等级", color: T.accent2, fontSize: 10.5, titleSize: 12, lines: [
-    "空调：病例对照 OR 0.2–0.3（Semenza 1996；Bouchama 2007 合并 0.23）；养老院/监狱准实验（Katz 2025 相对 OR 1.08；Skarha 2022）；指标法 ≈19 万例/年（Lancet Countdown/IEA）",
+    "空调：病例对照 OR 0.2–0.3（Semenza 1996；Bouchama 2007 合并 0.23）；养老院/监狱准实验（Katz 2025 相对 OR 1.08；Skarha 2022）；指标法 2019 年 195 400 例（Lancet Countdown 2021）",
     "风扇：Cochrane 2012 无 RCT；合并 OR 0.60（0.4–1.1）；热舱终点湿热 ≤40°C 有益、极热干 45–47°C 有害、老年 36°C 全天无效；\"症状改善 ≠ 生理改善\"（O'Connor 2025）",
     "蒸发冷却器：无死亡/住院研究（Johnston 2022 明示空白）；仅室温 −2.8 K（Rugani 2026）、舒适温度 28.8°C（Tewari 2019）；皮肤湿润在干热下 −0.24°C 有效",
     "链式模型（建筑→室温→死亡→£/QALY）成熟（Taylor 2018；Ibbetson 2021）但只跑被动遮阳情景",
@@ -75,7 +75,7 @@ const REFS = require("./refs.js");
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
   s.addText("Q3 结论：空调\"全而粗\"、风扇\"多而不货币化\"、蒸发冷却\"细而小\"", { placeholder: "title" });
   L.addLitTable(pres, s, ["成本组分", "空调", "风扇", "蒸发冷却器"], [
-    ["购置", ok("价格/效率曲线（IEA 2018）；收入门槛"), part("增量成本仅 Shah 2015；零售价 Rs 1,000 vs 2,500–3,500 来自行业报道"), part("LCC 初投资（Gupta 2023）；购价 Rs 3,000–15,000 = 收入 2–8% 来自工作论文")],
+    ["购置", ok("价格/效率曲线（IEA 2018）；收入门槛"), part("增量成本仅 Shah 2015；IEA 2018 有存量 2.3 billion 台但无价格；零售价 Rs 1,000 vs 2,500–3,500 来自行业报道"), part("LCC 初投资（Gupta 2023）；购价 Rs 3,000–15,000 = 收入 2–8% 来自工作论文")],
     ["电费/能耗", ok("+35–42%（Randazzo 2020）；+36%（De Cian 2025）"), ok("2–30 W（Miller 2021）；<10 W/人（Zhai 2013）；节能 17–48%（Schiavon 2008）；76% GWh（Malik 2022）"), ok("PTAC 比 DEC 多耗电 234–265%（Naderi 2020）；EC 56 vs AC 178 kWh/人/年（Agarwal 2026）")],
     ["水费", part("仅发电间接用水（Pistochini 2011）"), miss("不适用"), part("~250 L/d = 户用水 15%（Karpiscak 1998）；总体为空调 5–8 倍（Ponnamperuma 2025）；货币化仅 $1.82/yr（Harby 2019）")],
     ["维护/安装/健康联带", miss("少见 / 未货币化"), miss("无"), miss("维护仅常数系数；湿度/霉菌（Johnston 2022）未货币化")],
@@ -95,8 +95,8 @@ const REFS = require("./refs.js");
   silo.forEach((c, i) => L.addCard(pres, s, { x: 0.6 + i * 4.1, y: 1.3, w: 3.9, h: 2.3, title: c.t, lines: c.l, color: c.c, fontSize: 10.5, titleSize: 12.5 }));
   L.addLitTable(pres, s, ["接口", "现状", "少数例外（可作为起点）"], [
     ["生理阈值 → 经济模型", "无模型内生人群阈值", "Malik 2022 用舒适上限触发空调；Parsons 2023 把阈值转为\"不安全小时数\""],
-    ["效应量 → 风扇/蒸发冷却", "无死亡/住院效应量", "Pavanello & Sue Wing 工作论文（印度，AC vs EC 对热死亡）；Smallcombe 2025 同舱比较风扇/屋顶/空调"],
-    ["成本 → 健康经济评价", "CBA 只评价预警系统与\"机械制冷\"", "Bao 2025 养老院便携空调 vs 被动措施的 QALY 成本效益；Knudsen 2023 风扇办公楼 CBA"],
+    ["效应量 → 风扇/蒸发冷却", "无死亡/住院效应量", "Pavanello & Sue Wing CESifo WP 12365（印度，AC vs EC 对热死亡）；Smallcombe 2025 同舱比较风扇/屋顶/空调"],
+    ["成本 → 健康经济评价", "CBA 只评价预警系统与\"机械制冷\"", "Ibbetson 2025 养老院便携空调 vs 被动措施的 QALY 成本效益；Knudsen 2023 风扇办公楼 CBA"],
     ["蒸发冷却 → 任一路线", "几乎缺位", "Agarwal 2026（印度区级 AC/EC 选择）；Naderi 2020（伊朗气候区 DEC vs PTAC）；Johnston 2022（健康面综述）"],
   ], { y: 3.8, fontSize: 10, colW: [2.4, 3.2, 6.5] });
   L.addSummary(pres, s, "三条路线之间的接口几乎为空，仅有的例外多为 2022 年后的单篇研究或尚未正式发表的工作论文，说明这是一个刚刚开始被填补的空白。");
@@ -107,7 +107,7 @@ const REFS = require("./refs.js");
   L.addLitTable(pres, s, ["#", "空白", "依据"], [
     ["1", "生理阈值未进入能源-经济模型；组合/顺序规则极少被形式化", "Morris 2021 / Mihalcin 2025 阈值未进入 IEA、MESSAGEix、Falchetta 2024；顺序规则仅 Malik 2022、UNEP 2025、WHO 新版"],
     ["2", "风扇与蒸发冷却器没有死亡率层面效应量；热舱实验从未测试真正的蒸发冷却器", "Gupta 2012；Bouchama 2007 风扇 OR 0.60（CI 跨 1）；Johnston 2022；(c) 类实验只测风扇与皮肤湿润"],
-    ["3", "链式 HIA 只跑被动措施，未评估\"安装空调/风扇/蒸发冷却器\"情景", "Taylor 2018/2021；Ibbetson 2021；Bao 2025 无数值；Moreno-Pestaña 2026 仅参数化 HVAC"],
+    ["3", "链式 HIA 只跑被动措施，未评估\"安装空调/风扇/蒸发冷却器\"情景", "Taylor 2018/2021；Ibbetson 2021；Ibbetson 2025 摘要无数值；Moreno-Pestaña 2026 仅参数化 HVAC"],
     ["4", "无按气候区 × 收入统一口径的三技术成本曲线；水费、维护、健康联带不入账", "水费仅 Harby 2019；维护仅 Gupta 2023 常数；Johnston 2022 湿度副作用未货币化"],
     ["5", "健康经济评价从未把风扇或蒸发冷却器作为独立干预；无小时电价/峰值视角", "Sabater-Mezquita 2026 综述 17 项均为预警或\"机械制冷\"；逐时仅工程模拟"],
     ["6", "\"空调份额\"相差一个数量级未被调和；机构阈值内部不一致", "Sera 1/6、Achebak 29%、Barreca \"几乎全部\"、Bobb 阴性；WHO 35 vs 40°C"],
@@ -123,10 +123,10 @@ const REFS = require("./refs.js");
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });
   s.addText("核实状态与局限", { placeholder: "title" });
   L.addLitTable(pres, s, ["DOI 核实状态", "条数", "说明"], [
-    ["已核实（Consensus 结果中逐字出现）", String(REFS.filter(r => r[2] === "C").length), "最高置信度；Consensus 月度额度在 29 次检索后耗尽"],
-    ["已核实（WebSearch 出版社/PubMed/机构库页面）", String(REFS.filter(r => r[2] === "W").length), "正在进行独立二次复核（结果见 research/DOI_recheck.md）"],
+    ["已核实（Consensus 结果中逐字出现）", String(REFS.filter(r => r[2] === "C").length), "随机抽检 10 条：8 条确认，Agarwal 2026 与 Sabater-Mezquita 2026 的 DOI 页面未见，待 doi.org 核验"],
+    ["已核实（WebSearch 出版社/PubMed/机构库页面）", String(REFS.filter(r => r[2] === "W").length), "17 条独立二次复核全部确认（research/DOI_recheck.md）；Ibbetson 2025 由错误记录 Bao 2025 更正后归入"],
     ["报告/标准/机构网页，无 DOI", String(REFS.filter(r => r[2] === "R").length), "IEA、WHO、UNEP、EPA、CDC、UKHSA、ASHRAE、ISO；原文因域名阻断依赖搜索摘要"],
-    ["DOI 未找到或待复核", String(REFS.filter(r => r[2] === "N").length), "Pavanello & Sue Wing 工作论文；Bao et al. 2025（检索工具所列 DOI 前缀与期刊不符）"],
+    ["无 DOI 的工作论文", String(REFS.filter(r => r[2] === "N").length), "Pavanello & Sue Wing (2025) CESifo WP 12365（早期题为印度降温可及性）"],
   ], { fontSize: 10.5, colW: [4.3, 1.0, 6.8] });
   L.addCard(pres, s, { x: 0.6, y: 3.6, w: 5.9, h: 2.4, title: "本会话被网络策略阻断的域名", color: T.accent5, fontSize: 10.5, titleSize: 12.5, lines: [
     "doi.org、api.crossref.org、api.openalex.org、api.semanticscholar.org、pubmed.ncbi.nlm.nih.gov",
@@ -134,12 +134,12 @@ const REFS = require("./refs.js");
     "放行方式：云环境设置 → Network access → Allowed domains 添加上述域名后可批量解析 160 条 DOI",
   ] });
   L.addCard(pres, s, { x: 6.8, y: 3.6, w: 5.9, h: 2.4, title: "明示\"未核实\"而未沿用的数字", color: T.accent6, fontSize: 10.5, titleSize: 12.5, lines: [
-    "Malik 2022 的 28°C 空调启动阈值（摘要未出现）",
+    "Malik 2022 无固定 28°C 启动阈值：原文为 ASHRAE 55-2017 自适应模型逐日上限，风扇可将其提高约 3–4°C（二次复核）",
     "Jay 2021 Lancet 的\"风扇耗电为空调 1/30–1/50\"（仅见新闻稿）",
     "Aynsley 2005 的\"空调运行成本是吊扇 11 倍\"（转引自不明来源）",
-    "IEA 2018 中风扇单独的存量、用电与价格（仅得风扇+空调合并的 10% 全球用电）",
+    "IEA 2018 风扇价格（存量 2.3 billion 台、2016 年 >80 TWh 已核实，价格未见）",
   ] });
-  L.addSummary(pres, s, "所有数字均按摘要或页面原文抄录并区分\"直接设定\"与\"引用自\"；凡无法核实者在页面明示，不以推测补足。");
+  L.addSummary(pres, s, "所有数字均按摘要或页面原文抄录并区分\"直接设定\"与\"引用自\"；31 条独立二次复核：25 条确认、1 条更正（Bao→Ibbetson 2025）、5 条待 doi.org 放行后核验。");
 
   // 9 key references
   s = pres.addSlide({ masterName: "CONTENT", sectionTitle: SEC });

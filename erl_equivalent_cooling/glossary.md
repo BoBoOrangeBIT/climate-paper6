@@ -12,7 +12,7 @@
 | exposure degree-hours removed | cooling degree-hours (reserve for AC energy), degree hours | Σ over hours of ΔT inside the window, K h | |
 | equivalence ratio | relative effectiveness | exposure degree-hours removed by a technology divided by those removed by air conditioning under the same rule | |
 | Default rule | default scenario | air conditioning operates above 23 °C and holds 23 °C, 55 % RH | |
-| DLS rule | DLS scenario | air conditioning operates above 26 °C and holds 26 °C, 60 % RH [[AUTHOR TO CONFIRM: expand DLS]] | DLS |
+| DLS rule | DLS scenario | air conditioning operates above 26 °C and holds 26 °C, 60 % RH (decent living standards) | DLS |
 | saturation effectiveness | efficiency, pad efficiency | ε = (T_db − T_supply)/(T_db − T_wb) | ε |
 | wet-bulb depression | | T_db − T_wb | |
 | relative humidity | RH% | | RH |

@@ -1,0 +1,8 @@
+# Table 1 draft. Common exposure-reduction form for the four technologies (writer: reproduce as a markdown table in Methods)
+
+| Technology | Equivalent temperature reduction ΔT | Operating window | Primary parameters | Sensitivity range |
+|---|---|---|---|---|
+| Air conditioning | T_out − T_set (model as already implemented). SET-consistent variant solves SET(T_out − ΔT, RH_out, still air) = SET(T_set, RH_set, still air) | T_out > T_set | Default rule 23 °C, 55 % RH. DLS rule 26 °C, 60 % RH | SET-consistent variant |
+| Electric fan | ASHRAE 55 cooling effect. ΔT solves SET(T_out − ΔT, RH_out, 0.1 m/s) = SET(T_out, RH_out, v_fan). Gagge two-node model, met 1.1, clo 0.5, tr = ta | T_out > T_set and T_out < 38 °C (Morris 2021, older adults). Outside the window ΔT = 0 | v_fan 1.2 m/s (ASHRAE 55 upper limit with occupant control) | v_fan 0.8 and 2.0 m/s. Window 35, 37, 39 °C, Foster 2021 rule (no benefit at ≥ 35 °C when RH < 50 %), no window. Negative ΔT outside the window from the two-node core temperature with sweating limits |
+| Direct evaporative cooler | Supply state T_s = T_out − ε (T_out − T_wb), humidity ratio from adiabatic saturation. ΔT solves SET(T_out − ΔT, RH_out, 0.1 m/s) = SET(T_s, RH_s, 0.1 m/s) | T_out > T_set, ΔT > 0 and RH_s ≤ 80 % | ε = 0.75 | ε 0.6 and 0.85. RH_s ≤ 70 %, no cap, T_wb ≤ 24 °C. Occupant in the 0.5 m/s supply airstream. Conversion step checked against Rugani et al. 2026 |
+| Fan plus air conditioning | AC threshold and setpoint raised by 3 K. Fan ΔT applies below the raised threshold, AC holds T_set + 3 K with the fan running above it | Fan as above, AC when T_out > T_set + 3 K | 3 K (ASHRAE 55 elevated air speed allowance, Hoyt 2015, Malik 2022) | Benefit ratio relative to AC alone reported |

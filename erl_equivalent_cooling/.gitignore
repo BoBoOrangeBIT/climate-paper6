@@ -1,0 +1,3 @@
+results/derived/era5_2020_checkpoint.npz
+__pycache__/
+*.pyc

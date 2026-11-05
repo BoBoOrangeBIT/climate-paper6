@@ -1,0 +1,10 @@
+# One colour per technology across all figures (Okabe-Ito based)
+colors:
+  AC Default: "#000000"
+  AC DLS: "#999999"
+  fan: "#0072B2"
+  evaporative: "#E69F00"
+  fan plus AC: "#009E73"
+  window: "#D55E00"
+sequential_cmap: viridis
+diverging_cmap: RdBu_r

@@ -1,0 +1,2 @@
+id,value,unit,ci_low,ci_high,decimals,scenario,region,period,source_file,how,status
+K001,,,,,,,,,results/,"how the number is computed",draft

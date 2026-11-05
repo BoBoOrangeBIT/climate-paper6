@@ -1,0 +1,18 @@
+# Paper project settings
+short_name: P6EQ
+title_working: "Equivalent cooling of fans and evaporative coolers relative to air conditioning: a common exposure-reduction form for heat-health models"
+journal: erl                   # id of a profile in ~/.claude/paper-kit/journals/
+backup_journals: [envres, ncomms]
+kit_dir: ~/.claude/paper-kit
+
+zotero:
+  collection: "P6EQ_main"       # not used in this session (no Zotero API key); refs.bib is built from verified DOIs via Crossref
+  inbox_collection: "P6EQ_inbox_agent"
+  bib_export: refs.bib
+
+compute:
+  language: python
+  conda_env: none                # system python3 in this container (pythermalcomfort 4.8, xarray, zarr)
+  results_dir: results
+
+csl: /home/user/climate-paper6/erl_equivalent_cooling/institute-of-physics-harvard.csl

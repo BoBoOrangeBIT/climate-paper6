@@ -2,7 +2,7 @@
 
 ## Data availability
 
-ERA5 hourly 2 m temperature and 2 m dew point temperature for 2020 were read from the public Analysis-Ready Cloud-Optimized ERA5 archive on Google Cloud (bucket gs://gcp-public-data-arco-era5). The equivalent temperature reduction lookup tables, the operating window tables, the aggregated global and city results and the sensitivity tables are provided in the repository folder erl_equivalent_cooling/results.
+ERA5 hourly 2 m temperature and 2 m dew point temperature for 2020 were read from the public Analysis-Ready Cloud-Optimized ERA5 archive on Google Cloud (the public Google Cloud bucket gcp-public-data-arco-era5). The equivalent temperature reduction lookup tables, the operating window tables, the aggregated global and city results and the sensitivity tables are provided in the repository folder erl_equivalent_cooling/results.
 
 ## Code availability
 

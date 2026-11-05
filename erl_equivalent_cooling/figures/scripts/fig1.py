@@ -37,8 +37,8 @@ cb.set_label("Fan equivalent $\\Delta T$ at 1.2 m s$^{-1}$ (K)")
 cb.ax.tick_params(width=0.5, length=2)
 for t, ls in zip([37, 38, 39], [":", "-", "--"]):
     ax_a.axvline(t, color="white", lw=0.8, ls=ls)
-    ax_a.text(t, 91, f"{t}", ha="center", va="bottom", fontsize=5.5, color=COL["fan"])
-ax_a.text(38, 95.5, "Morris window upper bound (°C)", ha="center", va="bottom", fontsize=5.5, color=COL["fan"])
+    ax_a.text(t, 88.5, f"{t}", ha="center", va="top", fontsize=5.5, color="white")
+ax_a.text(36.6, 83, "Morris window\nupper bound (°C)", ha="right", va="top", fontsize=5.5, color="white")
 ax_a.fill_between([35, 46], 10, 50, facecolor="none", edgecolor=COL["window"], hatch="////", lw=0)
 ax_a.plot([35, 35, 46], [10, 50, 50], color=COL["window"], lw=0.8)
 ax_a.text(40.5, 47, "Foster exclusion", ha="center", va="top", fontsize=5.5, color=COL["window"],
@@ -99,14 +99,15 @@ ax_d.text(45.5, -1.2, "negative $\\Delta T$\n(fan heats the body)", ha="right", 
 ax_d.axhline(0, color="0.6", lw=0.5)
 for t, ls in zip([37, 38, 39], [":", "-", "--"]):
     ax_d.axvline(t, color="0.7", lw=0.6, ls=ls)
-ax_d.legend(loc="lower left", handlelength=2.2)
+ax_d.legend(loc="upper right", handlelength=2.2, framealpha=0.9, frameon=True, edgecolor="none")
 ax_d.set_xlabel("Outdoor air temperature (°C)")
 ax_d.set_ylabel("Fan equivalent $\\Delta T$ at RH 50 % (K)")
-ax_d.set_xlim(24, 46); ax_d.set_ylim(-2, 5)
+ax_d.set_xlim(24, 46); ax_d.set_ylim(-2, 6.5)
 
 ps.panel_labels(axs, style="nature", x=-0.14, y=1.02)
 for ax in axs.flat:
     ax.tick_params(width=0.5, length=2.5)
+    ax.set_xticks([25, 30, 35, 40, 45])
 ps.save(fig, "fig1")
 
 # source data

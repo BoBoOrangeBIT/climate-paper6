@@ -1,2 +1,236 @@
 id,value,unit,ci_low,ci_high,decimals,scenario,region,period,source_file,how,status
-K001,,,,,,,,,results/,"how the number is computed",draft
+K001,3.6,K,,,1,Default,global land,2020,results/derived/global_summary.json,Default.fan_mean_dT_T38: area-weighted mean fan dT (1.2 m/s) over AC hours inside the 38 C window,draft
+K002,96.0,%,,,0,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_cov_T38: share of AC hours with T<38 C,draft
+K003,61.0,%,,,0,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_ratio_T38: fan degree-hours / AC degree-hours,draft
+K004,34.0,%,,,0,Default,global land,2020,results/derived/global_summary.json,100*Default.ac_hours_avoided_frac: 1 - hours(T>26)/hours(T>23),draft
+K005,9.9,%,,,1,,lookup grid,,results/derived/lookup_tables.npz,"share of (T 20-50, RH 5-100) grid cells with negative SET cooling effect at 1.2 m/s",draft
+K005a,41.5,°C,,,1,,lookup grid,,results/derived/lookup_tables.npz,lowest T with negative SET cooling effect at 1.2 m/s,draft
+K005b,49.0,%,,,0,,lookup grid,,results/derived/lookup_tables.npz,lowest RH with negative SET cooling effect at 1.2 m/s,draft
+K006,0.6,K,,,1,Rugani 2026 room state,chamber,,results/derived/rugani_check.csv,"RH_out 17.5, v_room 0.1: equivalent dT of measured room state 29.2 C/52 % vs 32 C/17.5 %",draft
+K007,2.4,K,,,1,Rugani 2026 room state,chamber,,results/derived/rugani_check.csv,same with 0.3 m/s at the occupant,draft
+K008,3.7,K,,,1,Rugani 2026 room state,chamber,,results/derived/rugani_check.csv,same with 0.5 m/s at the occupant,draft
+K009,11.6,K,,,1,supply-state model eps 0.75,chamber,,results/derived/rugani_check.csv,dry-bulb supply drop predicted by the supply-state model at 32 C/17.5 %,draft
+K010,3.6,K,,,1,,lookup,,results/derived/lookup_summary.json,"fan 1.2 m/s at 30 C, 50 %",draft
+K011,3.5,K,,,1,,lookup,,results/derived/lookup_summary.json,"fan 1.2 m/s at 35 C, 50 %",draft
+K012,3.3,K,,,1,,lookup,,results/derived/lookup_summary.json,"fan 1.2 m/s at 38 C, 50 %",draft
+K013,4.1,K,,,1,,lookup,,results/derived/lookup_summary.json,"fan 1.2 m/s at 35 C, 20 %",draft
+K014,2.6,K,,,1,,lookup,,results/derived/lookup_summary.json,"fan 1.2 m/s at 35 C, 80 %",draft
+K015,3.0,K,,,1,,lookup,,results/derived/lookup_summary.json,"fan 0.8 m/s at 35 C, 50 %",draft
+K016,4.1,K,,,1,,lookup,,results/derived/lookup_summary.json,"fan 2.0 m/s at 35 C, 50 %",draft
+K017,0.7,K,,,1,,lookup,,results/derived/lookup_summary.json,"minimum fan 1.2 m/s dT over T 26-38 C, all RH",draft
+K018,4.4,K,,,1,,lookup,,results/derived/lookup_summary.json,"maximum fan 1.2 m/s dT over T 26-38 C, all RH",draft
+K019,-1.5,K,,,1,,lookup,,results/derived/lookup_summary.json,"core-temperature variant, 1.2 m/s at 45 C, 15 %",draft
+K019a,0.5,K,,,1,,lookup,,results/derived/lookup_summary.json,"core-temperature variant, 1.2 m/s at 38 C, 80 %",draft
+K020,11.2,K,,,1,,lookup,,results/derived/lookup_summary.json,"evaporative eps 0.75 at 35 C, 20 %",draft
+K021,3.8,K,,,1,,lookup,,results/derived/lookup_summary.json,"eps 0.75 at 35 C, 50 %",draft
+K022,0.7,K,,,1,,lookup,,results/derived/lookup_summary.json,"eps 0.75 at 35 C, 80 %",draft
+K023,13.1,K,,,1,,lookup,,results/derived/lookup_summary.json,"eps 0.75 at 40 C, 15 %",draft
+K024,2.1,K,,,1,,lookup,,results/derived/lookup_summary.json,"eps 0.75 at 30 C, 70 %",draft
+K027,11.9,K,,,1,,lookup,,results/derived/lookup_summary.json,"SET-consistent AC Default dT at 35 C, 50 %",draft
+K028,12.3,K,,,1,,lookup,,results/derived/lookup_summary.json,"SET-consistent AC Default dT at 35 C, 80 %",draft
+K025,66.0,%,,,0,,lookup,,results/derived/lookup_tables.npz,"supply RH for eps 0.75 at 35 C, 20 %",draft
+K025a,81.0,%,,,0,,lookup,,results/derived/lookup_tables.npz,"supply RH for eps 0.75 at 35 C, 50 %",draft
+K026,1.3,%,,,1,,lookup grid,,results/derived/lookup_tables.npz,share of grid cells with evaporative dT <= 0 at eps 0.75,draft
+K026a,11.8,K,,,1,,lookup,,results/derived/lookup_evap.csv,"dry-bulb supply drop at 35 C, 20 %, eps 0.75 (compare K020 after humidity penalty)",draft
+K026b,19.3,°C,,,1,,lookup,,results/derived/lookup_evap.csv,"wet-bulb at 35 C, 20 %",draft
+K030,76.0,%,,,0,Default,global land,2020,results/derived/global_summary.json,100*Default.land_share_ac_ge100h,draft
+K031,2870.0,h,,,0,Default,global land,2020,results/derived/global_summary.json,Default.mean_ac_hours_per_land_point (area-weighted),draft
+K032,95.8,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_cov_T38,draft
+K033,60.6,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_ratio_T38,draft
+K034,81.0,%,,,0,Default,"global land, >=100 AC h",2020,results/derived/global_summary.json,100*Default.area_share_fan_cov_ge95,draft
+K034a,69.0,%,,,0,Default,"global land, >=100 AC h",2020,results/derived/global_summary.json,100*Default.area_share_fan_cov_ge99,draft
+K035,82.0,%,,,0,Default,"global land, >=100 AC h",2020,results/derived/global_summary.json,100*Default.pt_fan_ratio_p50 (area-weighted median across points),draft
+K036,42.0,%,,,0,Default,"global land, >=100 AC h",2020,results/derived/global_summary.json,100*Default.pt_fan_ratio_p10,draft
+K037,147.0,%,,,0,Default,"global land, >=100 AC h",2020,results/derived/global_summary.json,100*Default.pt_fan_ratio_p90,draft
+K038,5.6,K,,,1,Default,global land,2020,results/derived/global_summary.json,Default.mean_dT_ac_when_on,draft
+K039,90.3,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_cov_T38foster,draft
+K040,1884.0,h,,,0,DLS,global land,2020,results/derived/global_summary.json,DLS.mean_ac_hours_per_land_point,draft
+K041,93.6,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.fan_cov_T38,draft
+K042,69.6,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.fan_ratio_T38,draft
+K043,3.6,K,,,1,DLS,global land,2020,results/derived/global_summary.json,DLS.fan_mean_dT_T38,draft
+K044,4.8,K,,,1,DLS,global land,2020,results/derived/global_summary.json,DLS.mean_dT_ac_when_on,draft
+K045,69.0,%,,,0,DLS,global land,2020,results/derived/global_summary.json,100*DLS.land_share_ac_ge100h,draft
+K050,42.5,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.evap_cov_rh80,draft
+K051,72.8,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.evap_ratio_rh80,draft
+K052,44.0,%,,,0,Default,"global land, >=100 AC h",2020,results/derived/global_summary.json,100*Default.area_share_evap_ratio_ge1,draft
+K053,22.0,%,,,0,Default,"global land, >=100 AC h",2020,results/derived/global_summary.json,100*Default.area_share_evap_ratio_lt0.25,draft
+K054,112.0,%,,,0,Default,dry class,2020,results/derived/global_summary.json,100*Default.class_dry_evap_ratio,draft
+K054a,56.0,%,,,0,Default,dry class,2020,results/derived/global_summary.json,100*Default.class_dry_fan_ratio,draft
+K054b,68.0,%,,,0,Default,dry class,2020,results/derived/global_summary.json,100*Default.class_dry_area_share (of land with >=100 AC h),draft
+K054c,93.5,%,,,1,Default,dry class,2020,results/derived/global_summary.json,100*Default.class_dry_fan_cov,draft
+K055,9.0,%,,,0,Default,humid class,2020,results/derived/global_summary.json,100*Default.class_humid_evap_ratio,draft
+K055a,72.0,%,,,0,Default,humid class,2020,results/derived/global_summary.json,100*Default.class_humid_fan_ratio,draft
+K055b,10.0,%,,,0,Default,humid class,2020,results/derived/global_summary.json,100*Default.class_humid_area_share (of land with >=100 AC h),draft
+K055c,99.2,%,,,1,Default,humid class,2020,results/derived/global_summary.json,100*Default.class_humid_fan_cov,draft
+K056,45.0,%,,,0,Default,intermediate class,2020,results/derived/global_summary.json,100*Default.class_intermediate_evap_ratio,draft
+K056a,63.0,%,,,0,Default,intermediate class,2020,results/derived/global_summary.json,100*Default.class_intermediate_fan_ratio,draft
+K056b,22.0,%,,,0,Default,intermediate class,2020,results/derived/global_summary.json,100*Default.class_intermediate_area_share (of land with >=100 AC h),draft
+K056c,96.8,%,,,1,Default,intermediate class,2020,results/derived/global_summary.json,100*Default.class_intermediate_fan_cov,draft
+K057,9.6,K,,,1,Default,global land,2020,results/derived/global_summary.json,Default.evap_mean_dT_rh80: mean evaporative dT inside its window,draft
+K058,110.8,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.evap_ratio_rh80,draft
+K059,53.1,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.evap_cov_rh80,draft
+K060,88.0,%,,,0,Default,"global land, >=100 AC h",2020,results/derived/global_summary.json,100*Default.pt_evap_ratio_p50,draft
+K061,5.0,%,,,0,Default,"global land, >=100 AC h",2020,results/derived/global_summary.json,100*Default.pt_evap_ratio_p10,draft
+K062,178.0,%,,,0,Default,"global land, >=100 AC h",2020,results/derived/global_summary.json,100*Default.pt_evap_ratio_p90,draft
+K070,34.4,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.ac_hours_avoided_frac,draft
+K071,44.1,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.ac_dh_avoided_frac: cooling degree-hours avoided,draft
+K072,118.0,%,,,0,Default,global land,2020,results/derived/global_summary.json,100*Default.fanac_benefit_ratio,draft
+K073,41.1,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.ac_hours_avoided_frac,draft
+K074,49.0,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.ac_dh_avoided_frac,draft
+K075,122.0,%,,,0,DLS,global land,2020,results/derived/global_summary.json,100*DLS.fanac_benefit_ratio,draft
+K076,3.4,K,,,1,Default,,,results/derived/era5_meta.json,"fan 1.2 m/s dT at 26 C, 55 % RH",draft
+K077,32.0,%,,,0,Default,dry class,2020,results/derived/global_summary.json,100*Default.class_dry_ac_hours_avoided_frac,draft
+K078,37.0,%,,,0,Default,humid class,2020,results/derived/global_summary.json,100*Default.class_humid_ac_hours_avoided_frac,draft
+K079,36.0,%,,,0,Default,intermediate class,2020,results/derived/global_summary.json,100*Default.class_intermediate_ac_hours_avoided_frac,draft
+K080,56.6,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_ratio_T35: window 35 C,draft
+K081,59.5,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_ratio_T37: window 37 C,draft
+K082,61.6,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_ratio_T39: window 39 C,draft
+K083,56.7,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_ratio_foster: Foster rule,draft
+K084,56.7,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_ratio_T38foster: 38 C and Foster rule,draft
+K085,64.0,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_ratio_none: no window,draft
+K086,60.4,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_ratio_neg_outside: negative dT outside 38 C window,draft
+K087,28.0,%,,,1,Default,global land,2020,results/derived/global_summary.json,"100*Default.fan_ratio_core_all: core-temperature dT, no window",draft
+K088,50.3,%,,,1,Default,global land,2020,results/derived/global_summary.json,"100*Default.fan_ratio_v0.8_T38: 0.8 m/s, 38 C window",draft
+K089,72.4,%,,,1,Default,global land,2020,results/derived/global_summary.json,"100*Default.fan_ratio_v2.0_T38: 2.0 m/s, 38 C window",draft
+K090,48.4,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.evap_ratio_rh70: evap RH_s<=70,draft
+K091,95.9,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.evap_ratio_nocap: evap no cap,draft
+K092,87.4,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.evap_ratio_twb24: evap T_wb<=24 rule,draft
+K093,64.9,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.evap_ratio_eps0.6_rh80: eps 0.6,draft
+K094,54.3,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.evap_ratio_eps0.85_rh80: eps 0.85,draft
+K095,92.7,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.evap_ratio_air_rh80: evap airstream 0.5 m/s,draft
+K096,99.4,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.acset_ratio: SET-consistent AC dT over nominal,draft
+K097,90.2,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_cov_T35: coverage window 35 C,draft
+K098,90.3,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_cov_foster: coverage Foster rule,draft
+K099,97.0,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_cov_T39: coverage window 39 C,draft
+K099a,94.3,%,,,1,Default,global land,2020,results/derived/global_summary.json,100*Default.fan_cov_T37: coverage window 37 C,draft
+K080d,62.4,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.fan_ratio_T35: window 35 C,draft
+K086d,69.3,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.fan_ratio_neg_outside: negative outside,draft
+K088d,58.6,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.fan_ratio_v0.8_T38: 0.8 m/s,draft
+K089d,81.9,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.fan_ratio_v2.0_T38: 2.0 m/s,draft
+K093d,96.2,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.evap_ratio_eps0.6_rh80: eps 0.6,draft
+K094d,95.2,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.evap_ratio_eps0.85_rh80: eps 0.85,draft
+K097d,85.0,%,,,1,DLS,global land,2020,results/derived/global_summary.json,100*DLS.fan_cov_T35: coverage 35 C,draft
+K100,282.0,h,,,0,,global land,2020,results/derived/global_summary.json,context.mean_hours_T_gt35 (area-weighted mean per land point),draft
+K101,35.0,%,,,0,,global land,2020,results/derived/global_summary.json,100*context.land_share_any_hour_gt38,draft
+K102,157163.0,points,,,0,,global land,2020,results/derived/era5_meta.json,n_land,draft
+K103,542080.0,points,,,0,,global,2020,results/derived/era5_meta.json,n_points,draft
+K200,4595.0,h,,,0,Default,Phoenix,2020,results/derived/cities.csv,Default_ac_h for Phoenix (ac_h),draft
+K201,78.0,%,,,0,Default,Phoenix,2020,results/derived/cities.csv,Default_fan_cov for Phoenix (fan_cov),draft
+K202,30.0,%,,,0,Default,Phoenix,2020,results/derived/cities.csv,Default_fan_ratio for Phoenix (fan_ratio),draft
+K203,111.0,%,,,0,Default,Phoenix,2020,results/derived/cities.csv,Default_evap_ratio for Phoenix (evap_ratio),draft
+K204,12.0,%,,,0,Default,Phoenix,2020,results/derived/cities.csv,Default_ac_hours_avoided_frac for Phoenix (ac_avoided),draft
+K205,4049.0,h,,,0,DLS,Phoenix,2020,results/derived/cities.csv,DLS_ac_h for Phoenix (dls_ac_h),draft
+K206,35.0,%,,,0,DLS,Phoenix,2020,results/derived/cities.csv,DLS_fan_ratio for Phoenix (dls_fan_ratio),draft
+K207,140.0,%,,,0,DLS,Phoenix,2020,results/derived/cities.csv,DLS_evap_ratio for Phoenix (dls_evap_ratio),draft
+K208,17.0,%,,,0,DLS,Phoenix,2020,results/derived/cities.csv,DLS_ac_hours_avoided_frac for Phoenix (dls_ac_avoided),draft
+K209,1015.0,h,,,0,Default,Phoenix,2020,results/derived/cities.csv,hours_T_gt38 for Phoenix (hours_gt38),draft
+K210,5765.0,h,,,0,Default,Riyadh,2020,results/derived/cities.csv,Default_ac_h for Riyadh (ac_h),draft
+K211,74.0,%,,,0,Default,Riyadh,2020,results/derived/cities.csv,Default_fan_cov for Riyadh (fan_cov),draft
+K212,27.0,%,,,0,Default,Riyadh,2020,results/derived/cities.csv,Default_fan_ratio for Riyadh (fan_ratio),draft
+K213,112.0,%,,,0,Default,Riyadh,2020,results/derived/cities.csv,Default_evap_ratio for Riyadh (evap_ratio),draft
+K214,14.0,%,,,0,Default,Riyadh,2020,results/derived/cities.csv,Default_ac_hours_avoided_frac for Riyadh (ac_avoided),draft
+K215,4980.0,h,,,0,DLS,Riyadh,2020,results/derived/cities.csv,DLS_ac_h for Riyadh (dls_ac_h),draft
+K216,31.0,%,,,0,DLS,Riyadh,2020,results/derived/cities.csv,DLS_fan_ratio for Riyadh (dls_fan_ratio),draft
+K217,141.0,%,,,0,DLS,Riyadh,2020,results/derived/cities.csv,DLS_evap_ratio for Riyadh (dls_evap_ratio),draft
+K218,17.0,%,,,0,DLS,Riyadh,2020,results/derived/cities.csv,DLS_ac_hours_avoided_frac for Riyadh (dls_ac_avoided),draft
+K219,1527.0,h,,,0,Default,Riyadh,2020,results/derived/cities.csv,hours_T_gt38 for Riyadh (hours_gt38),draft
+K220,4278.0,h,,,0,Default,Cairo,2020,results/derived/cities.csv,Default_ac_h for Cairo (ac_h),draft
+K221,98.0,%,,,0,Default,Cairo,2020,results/derived/cities.csv,Default_fan_cov for Cairo (fan_cov),draft
+K222,59.0,%,,,0,Default,Cairo,2020,results/derived/cities.csv,Default_fan_ratio for Cairo (fan_ratio),draft
+K223,76.0,%,,,0,Default,Cairo,2020,results/derived/cities.csv,Default_evap_ratio for Cairo (evap_ratio),draft
+K224,33.0,%,,,0,Default,Cairo,2020,results/derived/cities.csv,Default_ac_hours_avoided_frac for Cairo (ac_avoided),draft
+K225,2874.0,h,,,0,DLS,Cairo,2020,results/derived/cities.csv,DLS_ac_h for Cairo (dls_ac_h),draft
+K226,66.0,%,,,0,DLS,Cairo,2020,results/derived/cities.csv,DLS_fan_ratio for Cairo (dls_fan_ratio),draft
+K227,112.0,%,,,0,DLS,Cairo,2020,results/derived/cities.csv,DLS_evap_ratio for Cairo (dls_evap_ratio),draft
+K228,31.0,%,,,0,DLS,Cairo,2020,results/derived/cities.csv,DLS_ac_hours_avoided_frac for Cairo (dls_ac_avoided),draft
+K229,82.0,h,,,0,Default,Cairo,2020,results/derived/cities.csv,hours_T_gt38 for Cairo (hours_gt38),draft
+K230,3005.0,h,,,0,Default,Tehran,2020,results/derived/cities.csv,Default_ac_h for Tehran (ac_h),draft
+K231,97.0,%,,,0,Default,Tehran,2020,results/derived/cities.csv,Default_fan_cov for Tehran (fan_cov),draft
+K232,54.0,%,,,0,Default,Tehran,2020,results/derived/cities.csv,Default_fan_ratio for Tehran (fan_ratio),draft
+K233,150.0,%,,,0,Default,Tehran,2020,results/derived/cities.csv,Default_evap_ratio for Tehran (evap_ratio),draft
+K234,25.0,%,,,0,Default,Tehran,2020,results/derived/cities.csv,Default_ac_hours_avoided_frac for Tehran (ac_avoided),draft
+K235,2255.0,h,,,0,DLS,Tehran,2020,results/derived/cities.csv,DLS_ac_h for Tehran (dls_ac_h),draft
+K236,64.0,%,,,0,DLS,Tehran,2020,results/derived/cities.csv,DLS_fan_ratio for Tehran (dls_fan_ratio),draft
+K237,197.0,%,,,0,DLS,Tehran,2020,results/derived/cities.csv,DLS_evap_ratio for Tehran (dls_evap_ratio),draft
+K238,28.0,%,,,0,DLS,Tehran,2020,results/derived/cities.csv,DLS_ac_hours_avoided_frac for Tehran (dls_ac_avoided),draft
+K239,100.0,h,,,0,Default,Tehran,2020,results/derived/cities.csv,hours_T_gt38 for Tehran (hours_gt38),draft
+K240,5289.0,h,,,0,Default,Delhi,2020,results/derived/cities.csv,Default_ac_h for Delhi (ac_h),draft
+K241,97.0,%,,,0,Default,Delhi,2020,results/derived/cities.csv,Default_fan_cov for Delhi (fan_cov),draft
+K242,46.0,%,,,0,Default,Delhi,2020,results/derived/cities.csv,Default_fan_ratio for Delhi (fan_ratio),draft
+K243,23.0,%,,,0,Default,Delhi,2020,results/derived/cities.csv,Default_evap_ratio for Delhi (evap_ratio),draft
+K244,17.0,%,,,0,Default,Delhi,2020,results/derived/cities.csv,Default_ac_hours_avoided_frac for Delhi (ac_avoided),draft
+K245,4413.0,h,,,0,DLS,Delhi,2020,results/derived/cities.csv,DLS_ac_h for Delhi (dls_ac_h),draft
+K246,62.0,%,,,0,DLS,Delhi,2020,results/derived/cities.csv,DLS_fan_ratio for Delhi (dls_fan_ratio),draft
+K247,35.0,%,,,0,DLS,Delhi,2020,results/derived/cities.csv,DLS_evap_ratio for Delhi (dls_evap_ratio),draft
+K248,31.0,%,,,0,DLS,Delhi,2020,results/derived/cities.csv,DLS_ac_hours_avoided_frac for Delhi (dls_ac_avoided),draft
+K249,177.0,h,,,0,Default,Delhi,2020,results/derived/cities.csv,hours_T_gt38 for Delhi (hours_gt38),draft
+K250,6458.0,h,,,0,Default,Karachi,2020,results/derived/cities.csv,Default_ac_h for Karachi (ac_h),draft
+K251,100.0,%,,,0,Default,Karachi,2020,results/derived/cities.csv,Default_fan_cov for Karachi (fan_cov),draft
+K252,49.0,%,,,0,Default,Karachi,2020,results/derived/cities.csv,Default_fan_ratio for Karachi (fan_ratio),draft
+K253,24.0,%,,,0,Default,Karachi,2020,results/derived/cities.csv,Default_evap_ratio for Karachi (evap_ratio),draft
+K254,14.0,%,,,0,Default,Karachi,2020,results/derived/cities.csv,Default_ac_hours_avoided_frac for Karachi (ac_avoided),draft
+K255,5566.0,h,,,0,DLS,Karachi,2020,results/derived/cities.csv,DLS_ac_h for Karachi (dls_ac_h),draft
+K256,70.0,%,,,0,DLS,Karachi,2020,results/derived/cities.csv,DLS_fan_ratio for Karachi (dls_fan_ratio),draft
+K257,32.0,%,,,0,DLS,Karachi,2020,results/derived/cities.csv,DLS_evap_ratio for Karachi (dls_evap_ratio),draft
+K258,29.0,%,,,0,DLS,Karachi,2020,results/derived/cities.csv,DLS_ac_hours_avoided_frac for Karachi (dls_ac_avoided),draft
+K259,21.0,h,,,0,Default,Karachi,2020,results/derived/cities.csv,hours_T_gt38 for Karachi (hours_gt38),draft
+K260,5080.0,h,,,0,Default,Guangzhou,2020,results/derived/cities.csv,Default_ac_h for Guangzhou (ac_h),draft
+K261,100.0,%,,,0,Default,Guangzhou,2020,results/derived/cities.csv,Default_fan_cov for Guangzhou (fan_cov),draft
+K262,67.0,%,,,0,Default,Guangzhou,2020,results/derived/cities.csv,Default_fan_ratio for Guangzhou (fan_ratio),draft
+K263,3.0,%,,,0,Default,Guangzhou,2020,results/derived/cities.csv,Default_evap_ratio for Guangzhou (evap_ratio),draft
+K264,27.0,%,,,0,Default,Guangzhou,2020,results/derived/cities.csv,Default_ac_hours_avoided_frac for Guangzhou (ac_avoided),draft
+K265,3705.0,h,,,0,DLS,Guangzhou,2020,results/derived/cities.csv,DLS_ac_h for Guangzhou (dls_ac_h),draft
+K266,105.0,%,,,0,DLS,Guangzhou,2020,results/derived/cities.csv,DLS_fan_ratio for Guangzhou (dls_fan_ratio),draft
+K267,4.0,%,,,0,DLS,Guangzhou,2020,results/derived/cities.csv,DLS_evap_ratio for Guangzhou (dls_evap_ratio),draft
+K268,56.0,%,,,0,DLS,Guangzhou,2020,results/derived/cities.csv,DLS_ac_hours_avoided_frac for Guangzhou (dls_ac_avoided),draft
+K269,0.0,h,,,0,Default,Guangzhou,2020,results/derived/cities.csv,hours_T_gt38 for Guangzhou (hours_gt38),draft
+K270,8784.0,h,,,0,Default,Singapore,2020,results/derived/cities.csv,Default_ac_h for Singapore (ac_h),draft
+K271,100.0,%,,,0,Default,Singapore,2020,results/derived/cities.csv,Default_fan_cov for Singapore (fan_cov),draft
+K272,75.0,%,,,0,Default,Singapore,2020,results/derived/cities.csv,Default_fan_ratio for Singapore (fan_ratio),draft
+K273,0.0,%,,,0,Default,Singapore,2020,results/derived/cities.csv,Default_evap_ratio for Singapore (evap_ratio),draft
+K274,36.0,%,,,0,Default,Singapore,2020,results/derived/cities.csv,Default_ac_hours_avoided_frac for Singapore (ac_avoided),draft
+K275,5634.0,h,,,0,DLS,Singapore,2020,results/derived/cities.csv,DLS_ac_h for Singapore (dls_ac_h),draft
+K276,125.0,%,,,0,DLS,Singapore,2020,results/derived/cities.csv,DLS_fan_ratio for Singapore (dls_fan_ratio),draft
+K277,0.0,%,,,0,DLS,Singapore,2020,results/derived/cities.csv,DLS_evap_ratio for Singapore (dls_evap_ratio),draft
+K278,61.0,%,,,0,DLS,Singapore,2020,results/derived/cities.csv,DLS_ac_hours_avoided_frac for Singapore (dls_ac_avoided),draft
+K279,0.0,h,,,0,Default,Singapore,2020,results/derived/cities.csv,hours_T_gt38 for Singapore (hours_gt38),draft
+K280,8689.0,h,,,0,Default,Lagos,2020,results/derived/cities.csv,Default_ac_h for Lagos (ac_h),draft
+K281,100.0,%,,,0,Default,Lagos,2020,results/derived/cities.csv,Default_fan_cov for Lagos (fan_cov),draft
+K282,74.0,%,,,0,Default,Lagos,2020,results/derived/cities.csv,Default_fan_ratio for Lagos (fan_ratio),draft
+K283,5.0,%,,,0,Default,Lagos,2020,results/derived/cities.csv,Default_evap_ratio for Lagos (evap_ratio),draft
+K284,33.0,%,,,0,Default,Lagos,2020,results/derived/cities.csv,Default_ac_hours_avoided_frac for Lagos (ac_avoided),draft
+K285,5843.0,h,,,0,DLS,Lagos,2020,results/derived/cities.csv,DLS_ac_h for Lagos (dls_ac_h),draft
+K286,121.0,%,,,0,DLS,Lagos,2020,results/derived/cities.csv,DLS_fan_ratio for Lagos (dls_fan_ratio),draft
+K287,12.0,%,,,0,DLS,Lagos,2020,results/derived/cities.csv,DLS_evap_ratio for Lagos (dls_evap_ratio),draft
+K288,64.0,%,,,0,DLS,Lagos,2020,results/derived/cities.csv,DLS_ac_hours_avoided_frac for Lagos (dls_ac_avoided),draft
+K289,0.0,h,,,0,Default,Lagos,2020,results/derived/cities.csv,hours_T_gt38 for Lagos (hours_gt38),draft
+K290,6878.0,h,,,0,Default,Miami,2020,results/derived/cities.csv,Default_ac_h for Miami (ac_h),draft
+K291,100.0,%,,,0,Default,Miami,2020,results/derived/cities.csv,Default_fan_cov for Miami (fan_cov),draft
+K292,80.0,%,,,0,Default,Miami,2020,results/derived/cities.csv,Default_fan_ratio for Miami (fan_ratio),draft
+K293,2.0,%,,,0,Default,Miami,2020,results/derived/cities.csv,Default_evap_ratio for Miami (evap_ratio),draft
+K294,34.0,%,,,0,Default,Miami,2020,results/derived/cities.csv,Default_ac_hours_avoided_frac for Miami (ac_avoided),draft
+K295,4515.0,h,,,0,DLS,Miami,2020,results/derived/cities.csv,DLS_ac_h for Miami (dls_ac_h),draft
+K296,129.0,%,,,0,DLS,Miami,2020,results/derived/cities.csv,DLS_fan_ratio for Miami (dls_fan_ratio),draft
+K297,5.0,%,,,0,DLS,Miami,2020,results/derived/cities.csv,DLS_evap_ratio for Miami (dls_evap_ratio),draft
+K298,64.0,%,,,0,DLS,Miami,2020,results/derived/cities.csv,DLS_ac_hours_avoided_frac for Miami (dls_ac_avoided),draft
+K299,0.0,h,,,0,Default,Miami,2020,results/derived/cities.csv,hours_T_gt38 for Miami (hours_gt38),draft
+K300,2545.0,h,,,0,Default,Beijing,2020,results/derived/cities.csv,Default_ac_h for Beijing (ac_h),draft
+K301,99.0,%,,,0,Default,Beijing,2020,results/derived/cities.csv,Default_fan_cov for Beijing (fan_cov),draft
+K302,71.0,%,,,0,Default,Beijing,2020,results/derived/cities.csv,Default_fan_ratio for Beijing (fan_ratio),draft
+K303,66.0,%,,,0,Default,Beijing,2020,results/derived/cities.csv,Default_evap_ratio for Beijing (evap_ratio),draft
+K304,35.0,%,,,0,Default,Beijing,2020,results/derived/cities.csv,Default_ac_hours_avoided_frac for Beijing (ac_avoided),draft
+K305,1650.0,h,,,0,DLS,Beijing,2020,results/derived/cities.csv,DLS_ac_h for Beijing (dls_ac_h),draft
+K306,90.0,%,,,0,DLS,Beijing,2020,results/derived/cities.csv,DLS_fan_ratio for Beijing (dls_fan_ratio),draft
+K307,106.0,%,,,0,DLS,Beijing,2020,results/derived/cities.csv,DLS_evap_ratio for Beijing (dls_evap_ratio),draft
+K308,45.0,%,,,0,DLS,Beijing,2020,results/derived/cities.csv,DLS_ac_hours_avoided_frac for Beijing (dls_ac_avoided),draft
+K309,22.0,h,,,0,Default,Beijing,2020,results/derived/cities.csv,hours_T_gt38 for Beijing (hours_gt38),draft
+K310,797.0,h,,,0,Default,Paris,2020,results/derived/cities.csv,Default_ac_h for Paris (ac_h),draft
+K311,100.0,%,,,0,Default,Paris,2020,results/derived/cities.csv,Default_fan_cov for Paris (fan_cov),draft
+K312,103.0,%,,,0,Default,Paris,2020,results/derived/cities.csv,Default_fan_ratio for Paris (fan_ratio),draft
+K313,115.0,%,,,0,Default,Paris,2020,results/derived/cities.csv,Default_evap_ratio for Paris (evap_ratio),draft
+K314,57.0,%,,,0,Default,Paris,2020,results/derived/cities.csv,Default_ac_hours_avoided_frac for Paris (ac_avoided),draft
+K315,343.0,h,,,0,DLS,Paris,2020,results/derived/cities.csv,DLS_ac_h for Paris (dls_ac_h),draft
+K316,103.0,%,,,0,DLS,Paris,2020,results/derived/cities.csv,DLS_fan_ratio for Paris (dls_fan_ratio),draft
+K317,165.0,%,,,0,DLS,Paris,2020,results/derived/cities.csv,DLS_evap_ratio for Paris (dls_evap_ratio),draft
+K318,56.0,%,,,0,DLS,Paris,2020,results/derived/cities.csv,DLS_ac_hours_avoided_frac for Paris (dls_ac_avoided),draft
+K319,0.0,h,,,0,Default,Paris,2020,results/derived/cities.csv,hours_T_gt38 for Paris (hours_gt38),draft

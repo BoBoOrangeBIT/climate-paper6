@@ -1,0 +1,41 @@
+rule,variant,coverage,equivalence_ratio
+Default,"fan 1.2 m/s, window 38 C (primary)",0.9578,0.6064
+Default,"fan 1.2 m/s, window 35 C",0.9016,0.5658
+Default,"fan 1.2 m/s, window 37 C",0.9429,0.5954
+Default,"fan 1.2 m/s, window 39 C",0.9699,0.6155
+Default,"fan 1.2 m/s, Foster rule",0.9028,0.5665
+Default,"fan 1.2 m/s, 38 C and Foster rule",0.9028,0.5665
+Default,"fan 1.2 m/s, no window",1.0000,0.6396
+Default,"fan 1.2 m/s, negative dT outside 38 C window",0.9578,0.6044
+Default,"fan 1.2 m/s, core-temperature dT, no window",1.0000,0.2803
+Default,"fan 0.8 m/s, window 38 C",0.9578,0.5027
+Default,"fan 2.0 m/s, window 38 C",0.9578,0.7244
+Default,"evaporative eps 0.75, RH_s <= 80 % (primary)",0.4250,0.7279
+Default,"evaporative eps 0.75, RH_s <= 70 %",0.2344,0.4842
+Default,"evaporative eps 0.75, no RH cap",0.9980,0.9589
+Default,"evaporative eps 0.75, T_wb <= 24 C rule",0.7627,0.8742
+Default,"evaporative eps 0.6, RH_s <= 80 %",0.5461,0.6486
+Default,"evaporative eps 0.85, RH_s <= 80 %",0.2322,0.5434
+Default,"evaporative eps 0.75, airstream 0.5 m/s",0.4250,0.9269
+Default,"AC, SET-consistent dT",1.0000,0.9945
+Default,"fan + AC, benefit ratio",1.0000,1.1774
+DLS,"fan 1.2 m/s, window 38 C (primary)",0.9357,0.6964
+DLS,"fan 1.2 m/s, window 35 C",0.8501,0.6238
+DLS,"fan 1.2 m/s, window 37 C",0.9130,0.6767
+DLS,"fan 1.2 m/s, window 39 C",0.9541,0.7127
+DLS,"fan 1.2 m/s, Foster rule",0.8520,0.6251
+DLS,"fan 1.2 m/s, 38 C and Foster rule",0.8519,0.6251
+DLS,"fan 1.2 m/s, no window",1.0000,0.7558
+DLS,"fan 1.2 m/s, negative dT outside 38 C window",0.9357,0.6928
+DLS,"fan 1.2 m/s, core-temperature dT, no window",1.0000,0.3479
+DLS,"fan 0.8 m/s, window 38 C",0.9357,0.5859
+DLS,"fan 2.0 m/s, window 38 C",0.9357,0.8188
+DLS,"evaporative eps 0.75, RH_s <= 80 % (primary)",0.5314,1.1084
+DLS,"evaporative eps 0.75, RH_s <= 70 %",0.3217,0.7938
+DLS,"evaporative eps 0.75, no RH cap",0.9999,1.3694
+DLS,"evaporative eps 0.75, T_wb <= 24 C rule",0.6964,1.2232
+DLS,"evaporative eps 0.6, RH_s <= 80 %",0.6633,0.9624
+DLS,"evaporative eps 0.85, RH_s <= 80 %",0.3454,0.9525
+DLS,"evaporative eps 0.75, airstream 0.5 m/s",0.5314,1.3917
+DLS,"AC, SET-consistent dT",1.0000,0.8956
+DLS,"fan + AC, benefit ratio",1.0000,1.2242

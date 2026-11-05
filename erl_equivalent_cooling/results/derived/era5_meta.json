@@ -1,0 +1,66 @@
+{
+ "year": 2020,
+ "start_index": 359400,
+ "n_hours": 8784,
+ "n_points": 542080,
+ "n_land": 157163,
+ "cities": {
+  "Phoenix": {
+   "lat": 33.58312658166939,
+   "lon": 248.0
+  },
+  "Riyadh": {
+   "lat": 24.59015594517284,
+   "lon": 46.8
+  },
+  "Cairo": {
+   "lat": 29.929732337925568,
+   "lon": 31.25
+  },
+  "Tehran": {
+   "lat": 35.550338812257614,
+   "lon": 51.333333333333336
+  },
+  "Delhi": {
+   "lat": 28.524580675332878,
+   "lon": 77.1875
+  },
+  "Karachi": {
+   "lat": 24.871186286341437,
+   "lon": 67.2
+  },
+  "Guangzhou": {
+   "lat": 23.18500423251539,
+   "lon": 113.4
+  },
+  "Singapore": {
+   "lat": 1.5456669762291972,
+   "lon": 103.78125
+  },
+  "Lagos": {
+   "lat": 6.604213435417251,
+   "lon": 3.375
+  },
+  "Miami": {
+   "lat": 25.714277306975344,
+   "lon": 279.6
+  },
+  "Beijing": {
+   "lat": 39.76579343475757,
+   "lon": 116.3671875
+  },
+  "Paris": {
+   "lat": 48.75876228829437,
+   "lon": 2.4
+  }
+ },
+ "fan_dT_at_shifted_setpoint": {
+  "Default": 3.4373394921413336,
+  "DLS": 3.4432083406546
+ },
+ "lookup_file": "lookup_tables.npz",
+ "source": "gs://gcp-public-data-arco-era5/co/single-level-reanalysis.zarr (t2m, d2m)",
+ "land_mask": "gs://gcp-public-data-arco-era5/ar/1959-2022-6h-1440x721.zarr land_sea_mask >= 0.5, nearest neighbour",
+ "rh_formula": "Magnus (Alduchov & Eskridge 1996), clipped 1-100 %",
+ "runtime_min": 10.972057127952576
+}

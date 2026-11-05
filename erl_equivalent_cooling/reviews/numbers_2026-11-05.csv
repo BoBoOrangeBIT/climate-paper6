@@ -1,0 +1,841 @@
+file,line,number,kind,context,result_tag,citekeys,key_value
+sections/01_abstract.md,4,2020,year,perature by humidity grid and apply it hour by hour to ERA5 2020 over global land and in 12 cities.,,,
+sections/01_abstract.md,4,12,value,apply it hour by hour to ERA5 2020 over global land and in 12 cities.,,,
+sections/01_abstract.md,4,23 °C,value,"Under the Default rule (23 °C, 55 % RH), a 1.2 m/s fan provides a mean equivalent tempera",K001,,K001=3.6
+sections/01_abstract.md,4,55 %,value,"Under the Default rule (23 °C, 55 % RH), a 1.2 m/s fan provides a mean equivalent temperature r",K001,,K001=3.6
+sections/01_abstract.md,4,1.2,value,"Under the Default rule (23 °C, 55 % RH), a 1.2 m/s fan provides a mean equivalent temperature reduction of",K001,,K001=3.6
+sections/01_abstract.md,4,3.6,value,m/s fan provides a mean equivalent temperature reduction of 3.6 K and its window covers 96 %,K001,,K001=3.6
+sections/01_abstract.md,4,96 %,value,re reduction of 3.6 K and its window covers 96 % of the hours in which air conditioning woul,K002,,K002=96.0
+sections/01_abstract.md,4,61 %,value,"the hours in which air conditioning would operate, removing 61 % of the exposure degree-hours that air condi",K003,,K003=61.0
+sections/01_abstract.md,4,3,value,Raising the air-conditioning threshold by 3 K when a fan runs avoids 34 % of air-condit,K004,,K004=34.0
+sections/01_abstract.md,4,34 %,value,he air-conditioning threshold by 3 K when a fan runs avoids 34 % of air-conditioning operating hours with no,K004,,K004=34.0
+sections/01_abstract.md,4,72.8 %,value,"Direct evaporative coolers reach an equivalence ratio of 72.8 % globally, 112 % in dry clim",K051,,K051=72.8
+sections/01_abstract.md,4,112 %,value,"ch an equivalence ratio of 72.8 % globally, 112 % in dry climates and 9 % in",K054,,K054=112.0
+sections/01_abstract.md,4,9 %,value,"globally, 112 % in dry climates and 9 % in humid climates.",K055,,K055=9.0
+sections/02_introduction.md,7,2.3,value,About 2.3 billion residential fans were in use in 2016,,[@iea2018future];[@agarwal2026spatializing],
+sections/02_introduction.md,7,2016,year,"About 2.3 billion residential fans were in use in 2016 , and in India in 2022 households owning a",,[@iea2018future];[@agarwal2026spatializing],
+sections/02_introduction.md,7,2022,year,"fans were in use in 2016 , and in India in 2022 households owning a direct evaporative cooler alone outnumb",,[@iea2018future];[@agarwal2026spatializing],
+sections/02_introduction.md,7,76 %,value,n estimated to cut residential cooling electricity by about 76 % .,,[@ravanelli2016electric];[@malik2022potential; @dedear2002thermal],
+sections/02_introduction.md,10,35 °C,value,Biophysical analyses show that fans help above 35 °C in humid air but harm in very dry heat,,[@jay2015should; @brode2023temperature];[@morris2019effects; @ravanelli2015heart],
+sections/02_introduction.md,10,40 °C,value,", and crossover trials found benefit at 40 °C and 51 % RH but harm at 47 °C and 15 % RH",,[@jay2015should; @brode2023temperature];[@morris2019effects; @ravanelli2015heart],
+sections/02_introduction.md,10,51 %,value,", and crossover trials found benefit at 40 °C and 51 % RH but harm at 47 °C and 15 % RH",,[@jay2015should; @brode2023temperature];[@morris2019effects; @ravanelli2015heart],
+sections/02_introduction.md,10,47 °C,value,sover trials found benefit at 40 °C and 51 % RH but harm at 47 °C and 15 % RH .,,[@jay2015should; @brode2023temperature];[@morris2019effects; @ravanelli2015heart],
+sections/02_introduction.md,10,15 %,value,ls found benefit at 40 °C and 51 % RH but harm at 47 °C and 15 % RH .,,[@jay2015should; @brode2023temperature];[@morris2019effects; @ravanelli2015heart],
+sections/02_introduction.md,10,39 °C,value,"Model-derived upper limits for safe fan use are 39 °C for healthy young adults, 38 °C for older adults and 37 °C",,[@morris2021electric];[@foster2021quantifying];[@meade2024critical],
+sections/02_introduction.md,10,38 °C,value,"limits for safe fan use are 39 °C for healthy young adults, 38 °C for older adults and 37 °C for people on anticholinergic me",,[@morris2021electric];[@foster2021quantifying];[@meade2024critical],
+sections/02_introduction.md,10,37 °C,value,"39 °C for healthy young adults, 38 °C for older adults and 37 °C for people on anticholinergic medication",,[@morris2021electric];[@foster2021quantifying];[@meade2024critical],
+sections/02_introduction.md,10,35 °C,value,", whereas another analysis places the limit at 35 °C when RH is below 50 % , and a criti",,[@morris2021electric];[@foster2021quantifying];[@meade2024critical],
+sections/02_introduction.md,10,50 %,value,"another analysis places the limit at 35 °C when RH is below 50 % , and a critical review still advis",,[@morris2021electric];[@foster2021quantifying];[@meade2024critical],
+sections/02_introduction.md,10,35 °C,value,", and a critical review still advises against fans above 35 °C for older people .",,[@morris2021electric];[@foster2021quantifying];[@meade2024critical],
+sections/02_introduction.md,10,38 °C,value,Trials in older adults found minimal benefit at 38 °C and 60 % RH and a rise in core temperature at 45 °C and 15,,[@oconnor2024effect; @chaseling2025thermal],
+sections/02_introduction.md,10,60 %,value,Trials in older adults found minimal benefit at 38 °C and 60 % RH and a rise in core temperature at 45 °C and 15 % RH,,[@oconnor2024effect; @chaseling2025thermal],
+sections/02_introduction.md,10,45 °C,value,efit at 38 °C and 60 % RH and a rise in core temperature at 45 °C and 15 % RH .,,[@oconnor2024effect; @chaseling2025thermal],
+sections/02_introduction.md,10,15 %,value,°C and 60 % RH and a rise in core temperature at 45 °C and 15 % RH .,,[@oconnor2024effect; @chaseling2025thermal],
+sections/02_introduction.md,13,55,value,ASHRAE Standard 55 expresses the effect of elevated air speed as a shift of th,,[@ashrae2020thermal; @gagge1986standard; @arens2009moving],
+sections/02_introduction.md,13,0.8,value,"e (SET), the index of the Gagge two-node model, and permits 0.8 m/s without and 1.2 m/s with occupant control",,[@ashrae2020thermal; @gagge1986standard; @arens2009moving],
+sections/02_introduction.md,13,1.2,value,"f the Gagge two-node model, and permits 0.8 m/s without and 1.2 m/s with occupant control",,[@ashrae2020thermal; @gagge1986standard; @arens2009moving],
+sections/02_introduction.md,13,22.2,value,", and used to justify higher setpoints, with a rise from 22.2 to 25 °C saving about 29 % of cooling energy",,[@schiavon2008energy; @zhang2015review];[@zhai2013comfort; @zhou2023effects];[@hoyt2015extending],
+sections/02_introduction.md,13,25 °C,value,"used to justify higher setpoints, with a rise from 22.2 to 25 °C saving about 29 % of cooling energy .",,[@schiavon2008energy; @zhang2015review];[@zhai2013comfort; @zhou2023effects];[@hoyt2015extending],
+sections/02_introduction.md,13,29 %,value,"gher setpoints, with a rise from 22.2 to 25 °C saving about 29 % of cooling energy .",,[@schiavon2008energy; @zhang2015review];[@zhai2013comfort; @zhou2023effects];[@hoyt2015extending],
+sections/02_introduction.md,16,2020,year,"ourly comparison of the three technologies on ERA5 data for 2020, and sensitivity analyses over air speed, fan-window thresh",,,
+sections/02_introduction.md,16,96 %,value,"Under the Default air-conditioning rule, 96 % of the hours in which air conditioning woul",K002,,K002=96.0
+sections/02_introduction.md,16,38 °C,value,"e hours in which air conditioning would run fall inside the 38 °C fan window, a 1.2 m/s fan removes 61 % of t",K003,,K003=61.0
+sections/02_introduction.md,16,1.2,value,"conditioning would run fall inside the 38 °C fan window, a 1.2 m/s fan removes 61 % of the exposure degree",K003,,K003=61.0
+sections/02_introduction.md,16,61 %,value,"run fall inside the 38 °C fan window, a 1.2 m/s fan removes 61 % of the exposure degree-hours that air condi",K003,,K003=61.0
+sections/02_introduction.md,16,3,value,"ning removes, and raising the air-conditioning threshold by 3 K with a fan avoids 34 % of air-conditionin",K004,,K004=34.0
+sections/02_introduction.md,16,34 %,value,ing the air-conditioning threshold by 3 K with a fan avoids 34 % of air-conditioning operating hours.,K004,,K004=34.0
+sections/03_methods.md,8,1,value,"T_exp = T_out − ΔT_k(T_out, RH_out) · 1[window_k],",,,
+sections/03_methods.md,10,1,value,are outdoor dry-bulb temperature and relative humidity and 1[·] is the indicator function.,,,
+sections/03_methods.md,10,23 °C,value,"The Default rule holds 23 °C and 55 % RH, and the DLS rule holds 26 °C and 60 % RH, foll",,[@kikstra2021decent; @mastrucci2019improving],
+sections/03_methods.md,10,55 %,value,"The Default rule holds 23 °C and 55 % RH, and the DLS rule holds 26 °C and 60 % RH, following the",,[@kikstra2021decent; @mastrucci2019improving],
+sections/03_methods.md,10,26 °C,value,"efault rule holds 23 °C and 55 % RH, and the DLS rule holds 26 °C and 60 % RH, following the decent living standards cooling",,[@kikstra2021decent; @mastrucci2019improving],
+sections/03_methods.md,10,60 %,value,"e holds 23 °C and 55 % RH, and the DLS rule holds 26 °C and 60 % RH, following the decent living standards cooling literatur",,[@kikstra2021decent; @mastrucci2019improving],
+sections/03_methods.md,16,23 °C,value,"ET(T_set, RH_set, still air) | T_out > T_set | Default rule 23 °C, 55 % RH.",,,
+sections/03_methods.md,16,55 %,value,"t, RH_set, still air) | T_out > T_set | Default rule 23 °C, 55 % RH.",,,
+sections/03_methods.md,16,26 °C,value,"DLS rule 26 °C, 60 % RH | SET-consistent variant |",,,
+sections/03_methods.md,16,60 %,value,"DLS rule 26 °C, 60 % RH | SET-consistent variant |",,,
+sections/03_methods.md,17,55,value,"| Electric fan | ASHRAE 55 cooling effect. ΔT solves SET(T_out − ΔT, RH_out, 0.1 m/s)",,,
+sections/03_methods.md,17,0.1,value,"ASHRAE 55 cooling effect. ΔT solves SET(T_out − ΔT, RH_out, 0.1 m/s) = SET(T_out, RH_out, v_fan).",,,
+sections/03_methods.md,17,1.1,value,"Gagge two-node model, met 1.1, clo 0.5, t_r = t_a | T_out > T_set and T_out < 38 °C (Morr",,,
+sections/03_methods.md,17,0.5,value,"Gagge two-node model, met 1.1, clo 0.5, t_r = t_a | T_out > T_set and T_out < 38 °C (Morris et al",,,
+sections/03_methods.md,17,38 °C,value,"el, met 1.1, clo 0.5, t_r = t_a | T_out > T_set and T_out < 38 °C (Morris et al 2021, older adults).",,,
+sections/03_methods.md,17,2021,year,", t_r = t_a | T_out > T_set and T_out < 38 °C (Morris et al 2021, older adults).",,,
+sections/03_methods.md,17,0,value,Outside the window ΔT = 0 | v_fan 1.2 m/s (ASHRAE 55 upper limit with occupant contro,,,
+sections/03_methods.md,17,1.2,value,Outside the window ΔT = 0 | v_fan 1.2 m/s (ASHRAE 55 upper limit with occupant control) | v_fan 0,,,
+sections/03_methods.md,17,55,value,Outside the window ΔT = 0 | v_fan 1.2 m/s (ASHRAE 55 upper limit with occupant control) | v_fan 0.8 and 2.0 m/s.,,,
+sections/03_methods.md,17,0.8,value,2 m/s (ASHRAE 55 upper limit with occupant control) | v_fan 0.8 and 2.0 m/s.,,,
+sections/03_methods.md,17,2.0,value,SHRAE 55 upper limit with occupant control) | v_fan 0.8 and 2.0 m/s.,,,
+sections/03_methods.md,17,35,value,"Window 35, 37, 39 °C, Foster et al 2021 rule (no benefit at ≥ 35 °C w",,,
+sections/03_methods.md,17,37,value,"Window 35, 37, 39 °C, Foster et al 2021 rule (no benefit at ≥ 35 °C when",,,
+sections/03_methods.md,17,39 °C,value,"Window 35, 37, 39 °C, Foster et al 2021 rule (no benefit at ≥ 35 °C when RH < 50",,,
+sections/03_methods.md,17,2021,year,"Window 35, 37, 39 °C, Foster et al 2021 rule (no benefit at ≥ 35 °C when RH < 50 %), no window.",,,
+sections/03_methods.md,17,35 °C,value,"ndow 35, 37, 39 °C, Foster et al 2021 rule (no benefit at ≥ 35 °C when RH < 50 %), no window.",,,
+sections/03_methods.md,17,50 %,value,"°C, Foster et al 2021 rule (no benefit at ≥ 35 °C when RH < 50 %), no window.",,,
+sections/03_methods.md,18,0.1,value,"rom adiabatic saturation. ΔT solves SET(T_out − ΔT, RH_out, 0.1 m/s) = SET(T_s, RH_s, 0.1 m/s) | T_out > T_set, ΔT > 0 and",,,
+sections/03_methods.md,18,0.1,value,"ΔT solves SET(T_out − ΔT, RH_out, 0.1 m/s) = SET(T_s, RH_s, 0.1 m/s) | T_out > T_set, ΔT > 0 and RH_s ≤ 80 % | ε = 0.75 | ε",,,
+sections/03_methods.md,18,0,value,"t, 0.1 m/s) = SET(T_s, RH_s, 0.1 m/s) | T_out > T_set, ΔT > 0 and RH_s ≤ 80 % | ε = 0.75 | ε 0.6 and 0.85.",,,
+sections/03_methods.md,18,80 %,value,"SET(T_s, RH_s, 0.1 m/s) | T_out > T_set, ΔT > 0 and RH_s ≤ 80 % | ε = 0.75 | ε 0.6 and 0.85.",,,
+sections/03_methods.md,18,0.75,value,"H_s, 0.1 m/s) | T_out > T_set, ΔT > 0 and RH_s ≤ 80 % | ε = 0.75 | ε 0.6 and 0.85.",,,
+sections/03_methods.md,18,0.6,value,"m/s) | T_out > T_set, ΔT > 0 and RH_s ≤ 80 % | ε = 0.75 | ε 0.6 and 0.85.",,,
+sections/03_methods.md,18,0.85,value,"_out > T_set, ΔT > 0 and RH_s ≤ 80 % | ε = 0.75 | ε 0.6 and 0.85.",,,
+sections/03_methods.md,18,70 %,value,"RH_s ≤ 70 %, no cap, T_wb ≤ 24 °C.",,,
+sections/03_methods.md,18,24 °C,value,"RH_s ≤ 70 %, no cap, T_wb ≤ 24 °C.",,,
+sections/03_methods.md,18,0.5,value,Occupant in the 0.5 m/s supply airstream.,,,
+sections/03_methods.md,18,2026,year,Conversion step checked against Rugani et al 2026 |,,,
+sections/03_methods.md,19,3,value,plus air conditioning | AC threshold and setpoint raised by 3 K.,,,
+sections/03_methods.md,19,3,value,"Fan ΔT applies below the raised threshold, AC holds T_set + 3 K with the fan running above it | Fan as above, AC when T_o",,,
+sections/03_methods.md,19,3,value,"an running above it | Fan as above, AC when T_out > T_set + 3 K | 3 K (ASHRAE 55 elevated air speed allowance, Hoyt et al",,,
+sections/03_methods.md,19,3,value,"ning above it | Fan as above, AC when T_out > T_set + 3 K | 3 K (ASHRAE 55 elevated air speed allowance, Hoyt et al 2015,",,,
+sections/03_methods.md,19,55,value,"t | Fan as above, AC when T_out > T_set + 3 K | 3 K (ASHRAE 55 elevated air speed allowance, Hoyt et al 2015, Malik et al",,,
+sections/03_methods.md,19,2015,year,"K | 3 K (ASHRAE 55 elevated air speed allowance, Hoyt et al 2015, Malik et al 2022) | Benefit ratio relative to AC alone rep",,,
+sections/03_methods.md,19,2022,year,"elevated air speed allowance, Hoyt et al 2015, Malik et al 2022) | Benefit ratio relative to AC alone reported |",,,
+sections/03_methods.md,24,55,value,defined the fan ΔT with the cooling effect method of ASHRAE 55 . ΔT_fan is the dry-b,,[@ashrae2020thermal; @arens2009moving],
+sections/03_methods.md,24,0.1,value,. ΔT_fan is the dry-bulb reduction at still air (0.1 m/s) and unchanged humidity that yields the same SET as the,,[@ashrae2020thermal; @arens2009moving],
+sections/03_methods.md,24,4.8,value,with the two-node model as implemented in pythermalcomfort 4.8 for a,,[@tartarini2020pythermalcomfort; @gagge1986standard],
+sections/03_methods.md,24,1.1,value,"for a seated, lightly clothed adult (metabolic rate 1.1 met, clothing 0.5 clo, mean radiant temperature equal to ai",,[@tartarini2020pythermalcomfort; @gagge1986standard],
+sections/03_methods.md,24,0.5,value,"ed, lightly clothed adult (metabolic rate 1.1 met, clothing 0.5 clo, mean radiant temperature equal to air temperature).",,[@tartarini2020pythermalcomfort; @gagge1986standard],
+sections/03_methods.md,24,1.2,value,"The primary air speed was 1.2 m/s, the ASHRAE 55 limit with occupant control, with 0.8 m/",,[@morris2019effects; @oconnor2024effect],
+sections/03_methods.md,24,55,value,"The primary air speed was 1.2 m/s, the ASHRAE 55 limit with occupant control, with 0.8 m/s (the limit withou",,[@morris2019effects; @oconnor2024effect],
+sections/03_methods.md,24,0.8,value,"as 1.2 m/s, the ASHRAE 55 limit with occupant control, with 0.8 m/s (the limit without occupant control) and 2.0 m/s (chamb",,[@morris2019effects; @oconnor2024effect],
+sections/03_methods.md,24,2.0,value,"trol, with 0.8 m/s (the limit without occupant control) and 2.0 m/s (chamber trials",,[@morris2019effects; @oconnor2024effect],
+sections/03_methods.md,27,9.9 %,value,Only 9.9 % of cells on the temperature by humidity gri,K005,[@oconnor2024effect; @wang2022biophysical; @brode2023temperature],K005=9.9
+sections/03_methods.md,27,1.2,value,"perature by humidity grid have a negative cooling effect at 1.2 m/s, all hot and very dry, whereas physiological trials sho",,[@oconnor2024effect; @wang2022biophysical; @brode2023temperature],
+sections/03_methods.md,27,38 °C,value,"The primary window is T_out < 38 °C, the threshold derived for healthy older adults by Morris e",,[@morris2021electric],
+sections/03_methods.md,27,39 °C,value,Sensitivity windows were 39 °C (healthy young adults) and 37 °C (adults on anticholinergic,,[@meade2024critical];[@foster2021quantifying],
+sections/03_methods.md,27,37 °C,value,"Sensitivity windows were 39 °C (healthy young adults) and 37 °C (adults on anticholinergic medication) from the same study,",,[@meade2024critical];[@foster2021quantifying],
+sections/03_methods.md,27,35 °C,value,"(adults on anticholinergic medication) from the same study, 35 °C from older public guidance , and the ru",,[@meade2024critical];[@foster2021quantifying],
+sections/03_methods.md,27,35 °C,value,rule of Foster et al that fans are ineffective at or above 35 °C when RH is below 50 % .,,[@meade2024critical];[@foster2021quantifying],
+sections/03_methods.md,27,50 %,value,hat fans are ineffective at or above 35 °C when RH is below 50 % .,,[@meade2024critical];[@foster2021quantifying],
+sections/03_methods.md,27,0,value,"Outside the window ΔT_fan = 0 in the main analysis, so the benefit is lost but no harm is",,,
+sections/03_methods.md,32,0.75,value,"We used ε = 0.75 as the primary value and 0.6 and 0.85 as bounds, a range co",,[@camargo2005experimental; @harby2019investigation];[@lo2023optimal],
+sections/03_methods.md,32,0.6,value,"We used ε = 0.75 as the primary value and 0.6 and 0.85 as bounds, a range consistent with measured pad pe",,[@camargo2005experimental; @harby2019investigation];[@lo2023optimal],
+sections/03_methods.md,32,0.85,value,"We used ε = 0.75 as the primary value and 0.6 and 0.85 as bounds, a range consistent with measured pad performance",,[@camargo2005experimental; @harby2019investigation];[@lo2023optimal],
+sections/03_methods.md,32,65,value,and with the 65 to 80 % efficiency assumed in a recent heat-mortality study,,[@camargo2005experimental; @harby2019investigation];[@lo2023optimal],
+sections/03_methods.md,32,80 %,value,and with the 65 to 80 % efficiency assumed in a recent heat-mortality study,,[@camargo2005experimental; @harby2019investigation];[@lo2023optimal],
+sections/03_methods.md,32,0,value,"The operating window requires ΔT_DEC > 0 and RH_s ≤ 80 %, with 70 %, no cap, exclusion of hours with",,,
+sections/03_methods.md,32,80 %,value,"The operating window requires ΔT_DEC > 0 and RH_s ≤ 80 %, with 70 %, no cap, exclusion of hours with T_wb > 24 °C an",,,
+sections/03_methods.md,32,70 %,value,"operating window requires ΔT_DEC > 0 and RH_s ≤ 80 %, with 70 %, no cap, exclusion of hours with T_wb > 24 °C and an occupa",,,
+sections/03_methods.md,32,24 °C,value,"s ≤ 80 %, with 70 %, no cap, exclusion of hours with T_wb > 24 °C and an occupant in the 0.5 m/s supply airstream as sensitiv",,,
+sections/03_methods.md,32,0.5,value,exclusion of hours with T_wb > 24 °C and an occupant in the 0.5 m/s supply airstream as sensitivity cases.,,,
+sections/03_methods.md,35,32 °C,value,", who ran a direct evaporative cooler at 32 °C and 15 to 20 % RH and recorded room cooling of 2.8 K, room",,[@rugani2026creating],
+sections/03_methods.md,35,15,value,", who ran a direct evaporative cooler at 32 °C and 15 to 20 % RH and recorded room cooling of 2.8 K, room RH of 5",,[@rugani2026creating],
+sections/03_methods.md,35,20 %,value,", who ran a direct evaporative cooler at 32 °C and 15 to 20 % RH and recorded room cooling of 2.8 K, room RH of 52 % and",,[@rugani2026creating],
+sections/03_methods.md,35,2.8,value,"ler at 32 °C and 15 to 20 % RH and recorded room cooling of 2.8 K, room RH of 52 % and a manikin cooling effect of about 3",,[@rugani2026creating],
+sections/03_methods.md,35,52 %,value,"5 to 20 % RH and recorded room cooling of 2.8 K, room RH of 52 % and a manikin cooling effect of about 3 K.",,[@rugani2026creating],
+sections/03_methods.md,35,3,value,".8 K, room RH of 52 % and a manikin cooling effect of about 3 K.",,[@rugani2026creating],
+sections/03_methods.md,35,17.5 %,value,Applying our SET conversion to the measured room state at 17.5 % outdoor RH gives an equivalent reduction of 0.6 K,K006,,K006=0.6
+sections/03_methods.md,35,0.6,value,"state at 17.5 % outdoor RH gives an equivalent reduction of 0.6 K at still air, 2.4 K at 0.",K006,,K006=0.6
+sections/03_methods.md,35,2.4,value,"equivalent reduction of 0.6 K at still air, 2.4 K at 0.3 m/s and 3.7 K at 0",K007,,K007=2.4
+sections/03_methods.md,35,0.3,value,".6 K at still air, 2.4 K at 0.3 m/s and 3.7 K at 0.5 m/s, which brackets th",K008,,K008=3.7
+sections/03_methods.md,35,3.7,value,"at still air, 2.4 K at 0.3 m/s and 3.7 K at 0.5 m/s, which brackets the manikin va",K008,,K008=3.7
+sections/03_methods.md,35,0.5,value,"4 K at 0.3 m/s and 3.7 K at 0.5 m/s, which brackets the manikin value once the supply jet i",,,
+sections/03_methods.md,35,11.6,value,The supply-state model predicts a dry-bulb drop of 11.6 K for that chamber because it describes pad,K009,,K009=11.6
+sections/03_methods.md,40,3,value,"n as air conditioning with threshold and setpoint raised by 3 K, the ASHRAE 55 comfort-zone allowance for 1.2 m/s",,[@ashrae2020thermal; @hoyt2015extending; @zhou2023effects];[@malik2022potential],
+sections/03_methods.md,40,55,value,"oning with threshold and setpoint raised by 3 K, the ASHRAE 55 comfort-zone allowance for 1.2 m/s",,[@ashrae2020thermal; @hoyt2015extending; @zhou2023effects];[@malik2022potential],
+sections/03_methods.md,40,1.2,value,"int raised by 3 K, the ASHRAE 55 comfort-zone allowance for 1.2 m/s",,[@ashrae2020thermal; @hoyt2015extending; @zhou2023effects];[@malik2022potential],
+sections/03_methods.md,40,3,value,"s the original setpoint, and air conditioning holds T_set + 3 K above the raised threshold.",,,
+sections/03_methods.md,40,3.4,value,"At the raised Default setpoint the fan lookup gives 3.4 K , so inside the fan window the exposure be",K076,,K076=3.4
+sections/03_methods.md,45,2,value,r rules hour by hour to ERA5 reanalysis 2 m temperature and 2 m dew point for 2020 on the native redu,K103,[@hersbach2020era5],K103=542080.0
+sections/03_methods.md,45,2,value,to ERA5 reanalysis 2 m temperature and 2 m dew point for 2020 on the native reduced Gaussian N320 gr,K103,[@hersbach2020era5],K103=542080.0
+sections/03_methods.md,45,2020,year,"s 2 m temperature and 2 m dew point for 2020 on the native reduced Gaussian N320 grid of about 31 km, wh",K103,[@hersbach2020era5],K103=542080.0
+sections/03_methods.md,45,20,value,"and 2 m dew point for 2020 on the native reduced Gaussian N320 grid of about 31 km, which has 542 080 poin",K103,[@hersbach2020era5],K103=542080.0
+sections/03_methods.md,45,31,value,"for 2020 on the native reduced Gaussian N320 grid of about 31 km, which has 542 080 points globally, of w",K103,[@hersbach2020era5],K103=542080.0
+sections/03_methods.md,45,542,value,"native reduced Gaussian N320 grid of about 31 km, which has 542 080 points globally, of which 157 163",K103,[@hersbach2020era5],K103=542080.0
+sections/03_methods.md,45,080,value,"ve reduced Gaussian N320 grid of about 31 km, which has 542 080 points globally, of which 157 163",K103,[@hersbach2020era5],K103=542080.0
+sections/03_methods.md,45,157,value,"which has 542 080 points globally, of which 157 163 are land points under the ERA5 land-sea",K102,[@hersbach2020era5],K102=157163.0
+sections/03_methods.md,45,163,value,"h has 542 080 points globally, of which 157 163 are land points under the ERA5 land-sea mas",K102,[@hersbach2020era5],K102=157163.0
+sections/03_methods.md,45,0.5,value,land points under the ERA5 land-sea mask (fraction at least 0.5).,,[@hersbach2020era5],
+sections/03_methods.md,45,2011,year,RM: pythermalcomfort psychrometric routine versus the Stull 2011 formula]].,,[@alduchov1996improved];[@tartarini2020pythermalcomfort],
+sections/03_methods.md,45,20,value,We precomputed ΔT and the windows on a grid from 20 to 50 °C in 0.25 K steps and 5 to 100 % RH in 1 % steps and,,,
+sections/03_methods.md,45,50 °C,value,We precomputed ΔT and the windows on a grid from 20 to 50 °C in 0.25 K steps and 5 to 100 % RH in 1 % steps and interpol,,,
+sections/03_methods.md,45,0.25,value,recomputed ΔT and the windows on a grid from 20 to 50 °C in 0.25 K steps and 5 to 100 % RH in 1 % steps and interpolated bil,,,
+sections/03_methods.md,45,5,value,the windows on a grid from 20 to 50 °C in 0.25 K steps and 5 to 100 % RH in 1 % steps and interpolated bilinearly in the,,,
+sections/03_methods.md,45,100 %,value,windows on a grid from 20 to 50 °C in 0.25 K steps and 5 to 100 % RH in 1 % steps and interpolated bilinearly in the hourly p,,,
+sections/03_methods.md,45,1 %,value,grid from 20 to 50 °C in 0.25 K steps and 5 to 100 % RH in 1 % steps and interpolated bilinearly in the hourly pass.,,,
+sections/03_methods.md,45,1,value,"Exposure degree-hours removed are Σ_h ΔT_k(h)·1[window_k(h)] over the AC hours of the rule, in K h per year",,,
+sections/03_methods.md,45,1,value,"AC hours avoided under fan plus air conditioning are 1 − hours(T_out > T_set + 3 K)/hours(T_out > T_set), with the",,,
+sections/03_methods.md,45,3,value,"der fan plus air conditioning are 1 − hours(T_out > T_set + 3 K)/hours(T_out > T_set), with the analogous ratio for cooli",,,
+sections/03_methods.md,45,100,value,"), and maps and distributions use land points with at least 100 AC hours per year aggregated to 0.5°.",,,
+sections/03_methods.md,45,0.5,value,nd points with at least 100 AC hours per year aggregated to 0.5°.,,,
+sections/03_methods.md,45,23 °C,value,"We classified land points by the share of hours above 23 °C that have T_wb > 24 °C, namely dry below 10 %, intermediate",,,
+sections/03_methods.md,45,24 °C,value,"d points by the share of hours above 23 °C that have T_wb > 24 °C, namely dry below 10 %, intermediate 10 to 50 % and humid 5",,,
+sections/03_methods.md,45,10 %,value,"hours above 23 °C that have T_wb > 24 °C, namely dry below 10 %, intermediate 10 to 50 % and humid 50 % or more.",,,
+sections/03_methods.md,45,10,value,"that have T_wb > 24 °C, namely dry below 10 %, intermediate 10 to 50 % and humid 50 % or more.",,,
+sections/03_methods.md,45,50 %,value,"ave T_wb > 24 °C, namely dry below 10 %, intermediate 10 to 50 % and humid 50 % or more.",,,
+sections/03_methods.md,45,50 %,value,"C, namely dry below 10 %, intermediate 10 to 50 % and humid 50 % or more.",,,
+sections/03_results.md,6,1.2,value,e equivalent temperature reduction ΔT of an electric fan at 1.2 m/s across the outdoor temperature and humidity grid.,,,
+sections/03_results.md,6,50 %,value,"At 50 % RH the fan is worth 3.6 K at 30 °C, 3.5 K",K010,,K010=3.6
+sections/03_results.md,6,3.6,value,"At 50 % RH the fan is worth 3.6 K at 30 °C, 3.5 K at 35 °C",K010,,K010=3.6
+sections/03_results.md,6,30 °C,value,"At 50 % RH the fan is worth 3.6 K at 30 °C, 3.5 K at 35 °C and 3.3 K a",K011,,K011=3.5
+sections/03_results.md,6,3.5,value,"At 50 % RH the fan is worth 3.6 K at 30 °C, 3.5 K at 35 °C and 3.3 K at 38",K011,,K011=3.5
+sections/03_results.md,6,35 °C,value,"th 3.6 K at 30 °C, 3.5 K at 35 °C and 3.3 K at 38 °C, the edge of the primary",K012,,K012=3.3
+sections/03_results.md,6,3.3,value,"at 30 °C, 3.5 K at 35 °C and 3.3 K at 38 °C, the edge of the primary operati",K012,,K012=3.3
+sections/03_results.md,6,38 °C,value,"3.5 K at 35 °C and 3.3 K at 38 °C, the edge of the primary operating window.",,,
+sections/03_results.md,6,35 °C,value,At 35 °C the fan delivers 4.1 K at 20 % RH but 2.6 K,K013,,K013=4.1
+sections/03_results.md,6,4.1,value,At 35 °C the fan delivers 4.1 K at 20 % RH but 2.6 K at 8,K013,,K013=4.1
+sections/03_results.md,6,20 %,value,"At 35 °C the fan delivers 4.1 K at 20 % RH but 2.6 K at 80 % RH, because the two-no",K014,,K014=2.6
+sections/03_results.md,6,2.6,value,"35 °C the fan delivers 4.1 K at 20 % RH but 2.6 K at 80 % RH, because the two-node model cr",K014,,K014=2.6
+sections/03_results.md,6,80 %,value,"1 K at 20 % RH but 2.6 K at 80 % RH, because the two-node model credits air speed mainly thr",,,
+sections/03_results.md,6,26,value,Over 26 to 38 °C and all humidities ΔT stays between 0.7 K,K017,,K017=0.7
+sections/03_results.md,6,38 °C,value,Over 26 to 38 °C and all humidities ΔT stays between 0.7 K a,K017,,K017=0.7
+sections/03_results.md,6,0.7,value,Over 26 to 38 °C and all humidities ΔT stays between 0.7 K and 4.4 K .,K017,,K017=0.7
+sections/03_results.md,6,4.4,value,d all humidities ΔT stays between 0.7 K and 4.4 K .,K018,,K018=4.4
+sections/03_results.md,6,3.0,value,"eed scales the surface almost uniformly ( (d)), from 3.0 K at 0.8 m/s to 4.1 K at 2.",K015,,K015=3.0
+sections/03_results.md,6,0.8,value,"most uniformly ( (d)), from 3.0 K at 0.8 m/s to 4.1 K at 2.0 m/s for 35 °C and 50 %",K016,,K016=4.1
+sections/03_results.md,6,4.1,value,"mly ( (d)), from 3.0 K at 0.8 m/s to 4.1 K at 2.0 m/s for 35 °C and 50 % RH.",K016,,K016=4.1
+sections/03_results.md,6,2.0,value,.0 K at 0.8 m/s to 4.1 K at 2.0 m/s for 35 °C and 50 % RH.,,,
+sections/03_results.md,6,35 °C,value,at 0.8 m/s to 4.1 K at 2.0 m/s for 35 °C and 50 % RH.,,,
+sections/03_results.md,6,50 %,value,t 0.8 m/s to 4.1 K at 2.0 m/s for 35 °C and 50 % RH.,,,
+sections/03_results.md,6,−1.5,value,"The core-temperature variant does, reaching −1.5 K at 45 °C and 15 % RH, which is why the ma",K019,[@morris2021electric],K019=-1.5
+sections/03_results.md,6,45 °C,value,"emperature variant does, reaching −1.5 K at 45 °C and 15 % RH, which is why the main analysis applies the ext",,[@morris2021electric],
+sections/03_results.md,6,15 %,value,"variant does, reaching −1.5 K at 45 °C and 15 % RH, which is why the main analysis applies the external 38",,[@morris2021electric],
+sections/03_results.md,6,38 °C,value,"5 % RH, which is why the main analysis applies the external 38 °C window of Morris et al .",,[@morris2021electric],
+sections/03_results.md,9,35 °C,value,At 35 °C and 20 % RH the supply air is 11.8 K coole,K026a,,K026a=11.8
+sections/03_results.md,9,20 %,value,At 35 °C and 20 % RH the supply air is 11.8 K cooler in dry-,K026a,,K026a=11.8
+sections/03_results.md,9,11.8,value,At 35 °C and 20 % RH the supply air is 11.8 K cooler in dry-bulb terms and the equival,K026a,,K026a=11.8
+sections/03_results.md,9,11.2,value,"and the equivalent reduction after the humidity penalty is 11.2 K , with a supply RH of 66 %",K020,,K020=11.2
+sections/03_results.md,9,66 %,value,"dity penalty is 11.2 K , with a supply RH of 66 % .",K025,,K025=66.0
+sections/03_results.md,9,3.8,value,"At the same temperature the value falls to 3.8 K at 50 % RH, where the supply air reaches",K021,,K021=3.8
+sections/03_results.md,9,50 %,value,"ame temperature the value falls to 3.8 K at 50 % RH, where the supply air reaches 81 % RH a",K025a,,K025a=81.0
+sections/03_results.md,9,81 %,value,"K at 50 % RH, where the supply air reaches 81 % RH and leaves the window, and to 0.7 K",K025a,,K025a=81.0
+sections/03_results.md,9,0.7,value,"ches 81 % RH and leaves the window, and to 0.7 K at 80 % RH.",K022,,K022=0.7
+sections/03_results.md,9,80 %,value,"RH and leaves the window, and to 0.7 K at 80 % RH.",,,
+sections/03_results.md,9,13.1,value,The largest value is 13.1 K at 40 °C and 15 % RH.,K023,,K023=13.1
+sections/03_results.md,9,40 °C,value,The largest value is 13.1 K at 40 °C and 15 % RH.,,,
+sections/03_results.md,9,15 %,value,The largest value is 13.1 K at 40 °C and 15 % RH.,,,
+sections/03_results.md,9,1.3 %,value,"Only 1.3 % of grid cells have ΔT at or below zero, so",K026,,K026=1.3
+sections/03_results.md,9,3,value,"or temperature, while the fan contributes a nearly constant 3 to 4 K and the evaporative cooler crosses the air-condition",,,
+sections/03_results.md,9,4,value,"mperature, while the fan contributes a nearly constant 3 to 4 K and the evaporative cooler crosses the air-conditioning l",,,
+sections/03_results.md,9,11.9,value,"The SET-consistent air-conditioning variant gives 11.9 K at 35 °C and 50 % RH, close to the nomina",K027,,K027=11.9
+sections/03_results.md,9,35 °C,value,"nt air-conditioning variant gives 11.9 K at 35 °C and 50 % RH, close to the nominal 12 K.",,,
+sections/03_results.md,9,50 %,value,"ditioning variant gives 11.9 K at 35 °C and 50 % RH, close to the nominal 12 K.",,,
+sections/03_results.md,9,12,value,"at 35 °C and 50 % RH, close to the nominal 12 K.",,,
+sections/03_results.md,9,0.6,value,"state measured by Rugani et al gives 0.6 K at still air, 2.4 K at 0.",K006,[@rugani2026creating],K006=0.6
+sections/03_results.md,9,2.4,value,"gives 0.6 K at still air, 2.4 K at 0.3 m/s and 3.7 K at 0",K007,[@rugani2026creating],K007=2.4
+sections/03_results.md,9,0.3,value,".6 K at still air, 2.4 K at 0.3 m/s and 3.7 K at 0.5 m/s, which brackets th",K008,[@rugani2026creating],K008=3.7
+sections/03_results.md,9,3.7,value,"at still air, 2.4 K at 0.3 m/s and 3.7 K at 0.5 m/s, which brackets the manikin co",K008,[@rugani2026creating],K008=3.7
+sections/03_results.md,9,0.5,value,"4 K at 0.3 m/s and 3.7 K at 0.5 m/s, which brackets the manikin cooling effect of about 3 K",,[@rugani2026creating],
+sections/03_results.md,9,3,value,"0.5 m/s, which brackets the manikin cooling effect of about 3 K reported in that study once the airstream at the occupant",,[@rugani2026creating],
+sections/03_results.md,14,2020,year,"In ERA5 2020, air conditioning under the Default rule would run for at l",K030,,K030=76.0
+sections/03_results.md,14,100,value,"conditioning under the Default rule would run for at least 100 hours per year on 76 % of land area, for an",K030,,K030=76.0
+sections/03_results.md,14,76 %,value,"e Default rule would run for at least 100 hours per year on 76 % of land area, for an area-weighted mean of",K030,,K030=76.0
+sections/03_results.md,14,2870,value,"of land area, for an area-weighted mean of 2870 h per land point with a mean ΔT when on of",K031,,K031=2870.0
+sections/03_results.md,14,5.6,value,h per land point with a mean ΔT when on of 5.6 K ( (a)).,K038,,K038=5.6
+sections/03_results.md,14,95.8 %,value,Of those hours 95.8 % fall below 38 °C and inside the primary fan,K032,,K032=95.8
+sections/03_results.md,14,38 °C,value,Of those hours 95.8 % fall below 38 °C and inside the primary fan window ( (b)).,,,
+sections/03_results.md,14,100,value,"Among land points with at least 100 air-conditioning hours, 81 % of the area ha",K034,,K034=81.0
+sections/03_results.md,14,81 %,value,"Among land points with at least 100 air-conditioning hours, 81 % of the area has coverage of 95 % or more, a",K034,,K034=81.0
+sections/03_results.md,14,95 %,value,"ing hours, 81 % of the area has coverage of 95 % or more, and the losses are confined to hot deserts, consis",K101,,K101=35.0
+sections/03_results.md,14,35 %,value,"he losses are confined to hot deserts, consistent with only 35 % of land seeing any hour above 38 °C.",K101,,K101=35.0
+sections/03_results.md,14,38 °C,value,ith only 35 % of land seeing any hour above 38 °C.,,,
+sections/03_results.md,14,3.6,value,"Inside its window the fan delivers a mean ΔT of 3.6 K , giving a global fan equivalence ratio of",K001,,K001=3.6
+sections/03_results.md,14,60.6 %,value,"K , giving a global fan equivalence ratio of 60.6 % ( (c)).",K033,,K033=60.6
+sections/03_results.md,14,82 %,value,"level distribution is wide, with an area-weighted median of 82 % and a 10th to 90th percentile range of 42 %",K035,,K035=82.0
+sections/03_results.md,14,10,value,with an area-weighted median of 82 % and a 10th to 90th percentile range of 42 % to 147 %,K036,,K036=42.0
+sections/03_results.md,14,90,value,area-weighted median of 82 % and a 10th to 90th percentile range of 42 % to 147 %,K036,,K036=42.0
+sections/03_results.md,14,42 %,value,82 % and a 10th to 90th percentile range of 42 % to 147 % .,K036,,K036=42.0
+sections/03_results.md,14,147 %,value,a 10th to 90th percentile range of 42 % to 147 % .,K037,,K037=147.0
+sections/03_results.md,14,100 %,value,"Ratios above 100 % occur where air conditioning runs mostly just above 23 °C,",,,
+sections/03_results.md,14,23 °C,value,"e 100 % occur where air conditioning runs mostly just above 23 °C, so the fan removes more than the small excess.",,,
+sections/03_results.md,14,1884,value,"Under the DLS rule air conditioning runs for 1884 h , fan coverage is 93.6 % a",K040,,K040=1884.0
+sections/03_results.md,14,93.6 %,value,"nditioning runs for 1884 h , fan coverage is 93.6 % and the equivalence ratio rises to 69.6 %",K041,,K041=93.6
+sections/03_results.md,14,69.6 %,value,s 93.6 % and the equivalence ratio rises to 69.6 % because the higher setpoint shrinks the air,K042,,K042=69.6
+sections/03_results.md,17,42.5 %,value,"Globally they are inside their window during 42.5 % of Default air-conditioning hours, yet with",K050,,K050=42.5
+sections/03_results.md,17,9.6,value,"of Default air-conditioning hours, yet with a mean ΔT of 9.6 K they reach an equivalence ratio of 72.8 %",K057,,K057=9.6
+sections/03_results.md,17,72.8 %,value,of 9.6 K they reach an equivalence ratio of 72.8 % .,K051,,K051=72.8
+sections/03_results.md,17,100,value,"Among land points with at least 100 air-conditioning hours, 44 % of the area ha",K052,,K052=44.0
+sections/03_results.md,17,44 %,value,"Among land points with at least 100 air-conditioning hours, 44 % of the area has a ratio at or above 100 % a",K052,,K052=44.0
+sections/03_results.md,17,100 %,value,"s, 44 % of the area has a ratio at or above 100 % and 22 % has a ratio below 25 %, with a 10t",K053,,K053=22.0
+sections/03_results.md,17,22 %,value,"of the area has a ratio at or above 100 % and 22 % has a ratio below 25 %, with a 10th to 90th",K053,,K053=22.0
+sections/03_results.md,17,25 %,value,"t or above 100 % and 22 % has a ratio below 25 %, with a 10th to 90th percentile range from 5 %",K061,,K061=5.0
+sections/03_results.md,17,10,value,"0 % and 22 % has a ratio below 25 %, with a 10th to 90th percentile range from 5 % to 178",K061,,K061=5.0
+sections/03_results.md,17,90,value,"22 % has a ratio below 25 %, with a 10th to 90th percentile range from 5 % to 178 %",K061,,K061=5.0
+sections/03_results.md,17,5 %,value,"ratio below 25 %, with a 10th to 90th percentile range from 5 % to 178 % .",K061,,K061=5.0
+sections/03_results.md,17,178 %,value,a 10th to 90th percentile range from 5 % to 178 % .,K062,,K062=178.0
+sections/03_results.md,17,68 %,value,"The dry class, 68 % of the area with meaningful air-conditioni",K054b,,K054b=68.0
+sections/03_results.md,17,112 %,value,"ingful air-conditioning demand, has an evaporative ratio of 112 % against a fan ratio of 56 %",K054,,K054=112.0
+sections/03_results.md,17,56 %,value,ative ratio of 112 % against a fan ratio of 56 % .,K054a,,K054a=56.0
+sections/03_results.md,17,10 %,value,"The humid class, 10 % of that area, reverses the ranking with 9",K055b,,K055b=10.0
+sections/03_results.md,17,9 %,value,"% of that area, reverses the ranking with 9 % for the evaporative cooler and 72 %",K055,,K055=9.0
+sections/03_results.md,17,72 %,value,ing with 9 % for the evaporative cooler and 72 % for the fan.,K055a,,K055a=72.0
+sections/03_results.md,17,45 %,value,The intermediate class sits between with 45 % and 63 % .,K056,,K056=45.0
+sections/03_results.md,17,63 %,value,termediate class sits between with 45 % and 63 % .,K056a,,K056a=63.0
+sections/03_results.md,17,110.8 %,value,"Under the DLS rule the global evaporative ratio rises to 110.8 % , because the hours removed by the higher se",K058,,K058=110.8
+sections/03_results.md,22,3,value,"r-conditioning combination raises threshold and setpoint by 3 K, less than the fan ΔT of 3.4 K at the 26",K076,,K076=3.4
+sections/03_results.md,22,3.4,value,"ises threshold and setpoint by 3 K, less than the fan ΔT of 3.4 K at the 26 °C and 55 % RH boundary, so exp",K076,,K076=3.4
+sections/03_results.md,22,26 °C,value,"y 3 K, less than the fan ΔT of 3.4 K at the 26 °C and 55 % RH boundary, so exposure inside the fan window is",,,
+sections/03_results.md,22,55 %,value,"s than the fan ΔT of 3.4 K at the 26 °C and 55 % RH boundary, so exposure inside the fan window is never hig",,,
+sections/03_results.md,22,34.4 %,value,Globally the combination avoids 34.4 % of Default air-conditioning hours and 44.1,K070,,K070=34.4
+sections/03_results.md,22,44.1 %,value,"4.4 % of Default air-conditioning hours and 44.1 % of cooling degree-hours, while the exposure",K071,,K071=44.1
+sections/03_results.md,22,118 %,value,"degree-hours, while the exposure degree-hours removed reach 118 % of air conditioning alone because the fan k",K072,,K072=118.0
+sections/03_results.md,22,41.1 %,value,Under the DLS rule the avoided shares are 41.1 % of hours and 49.0 % of cool,K073,,K073=41.1
+sections/03_results.md,22,49.0 %,value,the avoided shares are 41.1 % of hours and 49.0 % of cooling degree-hours.,K074,,K074=49.0
+sections/03_results.md,22,32 %,value,"The avoided share varies little by humidity class, from 32 % in the dry class to 37 % in",K077,,K077=32.0
+sections/03_results.md,22,37 %,value,"midity class, from 32 % in the dry class to 37 % in the humid class, because it depends on t",K078,,K078=37.0
+sections/03_results.md,22,23,value,"in the humid class, because it depends on the hours between 23 and 26 °C rather than on humidity.",,,
+sections/03_results.md,22,26 °C,value,"humid class, because it depends on the hours between 23 and 26 °C rather than on humidity.",,,
+sections/03_results.md,22,75 %,value,"window covers every air-conditioning hour, the fan ratio is 75 % , 74 % and 80 %",K272,,K272=75.0
+sections/03_results.md,22,74 %,value,"r-conditioning hour, the fan ratio is 75 % , 74 % and 80 % and the evaporativ",K282,,K282=74.0
+sections/03_results.md,22,80 %,value,"fan ratio is 75 % , 74 % and 80 % and the evaporative ratio is at or below 5",K292,,K292=80.0
+sections/03_results.md,22,5 %,value,% and the evaporative ratio is at or below 5 %.,,,
+sections/03_results.md,22,1015,value,"In Phoenix and Riyadh, 1015 h and 1527 h exceed 38 °C,",K209,,K209=1015.0
+sections/03_results.md,22,1527,value,"In Phoenix and Riyadh, 1015 h and 1527 h exceed 38 °C, fan coverage falls to 78 %",K219,,K219=1527.0
+sections/03_results.md,22,38 °C,value,"h, 1015 h and 1527 h exceed 38 °C, fan coverage falls to 78 % and 74 %",K201,,K201=78.0
+sections/03_results.md,22,78 %,value,"1527 h exceed 38 °C, fan coverage falls to 78 % and 74 % , and the evaporati",K201,,K201=78.0
+sections/03_results.md,22,74 %,value,"xceed 38 °C, fan coverage falls to 78 % and 74 % , and the evaporative cooler exceeds air con",K211,,K211=74.0
+sections/03_results.md,22,111 %,value,", and the evaporative cooler exceeds air conditioning with 111 % and 112 % .",K203,,K203=111.0
+sections/03_results.md,22,112 %,value,ler exceeds air conditioning with 111 % and 112 % .,K213,,K213=112.0
+sections/03_results.md,22,23 %,value,"rachi keep high fan coverage but evaporative ratios of only 23 % and 24 % , because their hot",K243,,K243=23.0
+sections/03_results.md,22,24 %,value,"age but evaporative ratios of only 23 % and 24 % , because their hot hours are dry while thei",K253,,K253=24.0
+sections/03_results.md,22,12 %,value,The Default avoided share ranges from 12 % in Phoenix to 57 % in Paris,K204,,K204=12.0
+sections/03_results.md,22,57 %,value,"voided share ranges from 12 % in Phoenix to 57 % in Paris, and under the DLS rule reaches 64",K314,,K314=57.0
+sections/03_results.md,22,64 %,value,"% in Paris, and under the DLS rule reaches 64 % in Lagos.",K288,,K288=64.0
+sections/03_results.md,24,2020,year,"** .** Twelve cities, ERA5 2020.",,,
+sections/03_results.md,24,23 °C,value,"Air-conditioning hours under the Default (T > 23 °C) and DLS (T > 26 °C) rules, share of Default air-conditioni",,,
+sections/03_results.md,24,26 °C,value,"nditioning hours under the Default (T > 23 °C) and DLS (T > 26 °C) rules, share of Default air-conditioning hours inside the",,,
+sections/03_results.md,24,38 °C,value,"f Default air-conditioning hours inside the fan window (T < 38 °C), equivalence ratios of the fan (1.2 m/s) and the direct ev",,,
+sections/03_results.md,24,1.2,value,"the fan window (T < 38 °C), equivalence ratios of the fan (1.2 m/s) and the direct evaporative cooler (ε = 0.75) relative",,,
+sections/03_results.md,24,0.75,value,"of the fan (1.2 m/s) and the direct evaporative cooler (ε = 0.75) relative to air conditioning under the Default rule, and s",,,
+sections/03_results.md,28,4595,value,| Phoenix | 4595 | 4049 | 78,K200,,K200=4595.0
+sections/03_results.md,28,4049,value,| Phoenix | 4595 | 4049 | 78 | 30 |,K205,,K205=4049.0
+sections/03_results.md,28,78,value,| Phoenix | 4595 | 4049 | 78 | 30 | 111,K201,,K201=78.0
+sections/03_results.md,28,30,value,| 4049 | 78 | 30 | 111 | 12,K202,,K202=30.0
+sections/03_results.md,28,111,value,| 78 | 30 | 111 | 12 |,K203,,K203=111.0
+sections/03_results.md,28,12,value,| 30 | 111 | 12 |,K204,,K204=12.0
+sections/03_results.md,29,5765,value,| Riyadh | 5765 | 4980 | 74,K210,,K210=5765.0
+sections/03_results.md,29,4980,value,| Riyadh | 5765 | 4980 | 74 | 27 |,K215,,K215=4980.0
+sections/03_results.md,29,74,value,| Riyadh | 5765 | 4980 | 74 | 27 | 112,K211,,K211=74.0
+sections/03_results.md,29,27,value,| 4980 | 74 | 27 | 112 | 14,K212,,K212=27.0
+sections/03_results.md,29,112,value,| 74 | 27 | 112 | 14 |,K213,,K213=112.0
+sections/03_results.md,29,14,value,| 27 | 112 | 14 |,K214,,K214=14.0
+sections/03_results.md,30,4278,value,| Cairo | 4278 | 2874 | 98,K220,,K220=4278.0
+sections/03_results.md,30,2874,value,| Cairo | 4278 | 2874 | 98 | 59 |,K225,,K225=2874.0
+sections/03_results.md,30,98,value,| Cairo | 4278 | 2874 | 98 | 59 | 76 |,K221,,K221=98.0
+sections/03_results.md,30,59,value,| 2874 | 98 | 59 | 76 | 33 |,K222,,K222=59.0
+sections/03_results.md,30,76,value,| 98 | 59 | 76 | 33 |,K223,,K223=76.0
+sections/03_results.md,30,33,value,| 59 | 76 | 33 |,K224,,K224=33.0
+sections/03_results.md,31,3005,value,| Tehran | 3005 | 2255 | 97,K230,,K230=3005.0
+sections/03_results.md,31,2255,value,| Tehran | 3005 | 2255 | 97 | 54 |,K235,,K235=2255.0
+sections/03_results.md,31,97,value,| Tehran | 3005 | 2255 | 97 | 54 | 150,K231,,K231=97.0
+sections/03_results.md,31,54,value,| 2255 | 97 | 54 | 150 | 25,K232,,K232=54.0
+sections/03_results.md,31,150,value,| 97 | 54 | 150 | 25 |,K233,,K233=150.0
+sections/03_results.md,31,25,value,| 54 | 150 | 25 |,K234,,K234=25.0
+sections/03_results.md,32,5289,value,| Delhi | 5289 | 4413 | 97,K240,,K240=5289.0
+sections/03_results.md,32,4413,value,| Delhi | 5289 | 4413 | 97 | 46 |,K245,,K245=4413.0
+sections/03_results.md,32,97,value,| Delhi | 5289 | 4413 | 97 | 46 | 23 |,K241,,K241=97.0
+sections/03_results.md,32,46,value,| 4413 | 97 | 46 | 23 | 17 |,K242,,K242=46.0
+sections/03_results.md,32,23,value,| 97 | 46 | 23 | 17 |,K243,,K243=23.0
+sections/03_results.md,32,17,value,| 46 | 23 | 17 |,K244,,K244=17.0
+sections/03_results.md,33,6458,value,| Karachi | 6458 | 5566 | 100,K250,,K250=6458.0
+sections/03_results.md,33,5566,value,| Karachi | 6458 | 5566 | 100 | 49,K255,,K255=5566.0
+sections/03_results.md,33,100,value,| Karachi | 6458 | 5566 | 100 | 49 | 24 |,K251,,K251=100.0
+sections/03_results.md,33,49,value,| 5566 | 100 | 49 | 24 | 14 |,K252,,K252=49.0
+sections/03_results.md,33,24,value,| 100 | 49 | 24 | 14 |,K253,,K253=24.0
+sections/03_results.md,33,14,value,| 49 | 24 | 14 |,K254,,K254=14.0
+sections/03_results.md,34,5080,value,| Guangzhou | 5080 | 3705 | 100,K260,,K260=5080.0
+sections/03_results.md,34,3705,value,| Guangzhou | 5080 | 3705 | 100 | 67,K265,,K265=3705.0
+sections/03_results.md,34,100,value,| Guangzhou | 5080 | 3705 | 100 | 67 | 3 |,K261,,K261=100.0
+sections/03_results.md,34,67,value,| 3705 | 100 | 67 | 3 | 27 |,K262,,K262=67.0
+sections/03_results.md,34,3,value,| 100 | 67 | 3 | 27 |,K263,,K263=3.0
+sections/03_results.md,34,27,value,| 67 | 3 | 27 |,K264,,K264=27.0
+sections/03_results.md,35,8784,value,| Singapore | 8784 | 5634 | 100,K270,,K270=8784.0
+sections/03_results.md,35,5634,value,| Singapore | 8784 | 5634 | 100 | 75,K275,,K275=5634.0
+sections/03_results.md,35,100,value,| Singapore | 8784 | 5634 | 100 | 75 | 0 |,K271,,K271=100.0
+sections/03_results.md,35,75,value,| 5634 | 100 | 75 | 0 | 36 |,K272,,K272=75.0
+sections/03_results.md,35,0,value,| 100 | 75 | 0 | 36 |,K273,,K273=0.0
+sections/03_results.md,35,36,value,| 75 | 0 | 36 |,K274,,K274=36.0
+sections/03_results.md,36,8689,value,| Lagos | 8689 | 5843 | 100,K280,,K280=8689.0
+sections/03_results.md,36,5843,value,| Lagos | 8689 | 5843 | 100 | 74,K285,,K285=5843.0
+sections/03_results.md,36,100,value,| Lagos | 8689 | 5843 | 100 | 74 | 5 |,K281,,K281=100.0
+sections/03_results.md,36,74,value,| 5843 | 100 | 74 | 5 | 33 |,K282,,K282=74.0
+sections/03_results.md,36,5,value,| 100 | 74 | 5 | 33 |,K283,,K283=5.0
+sections/03_results.md,36,33,value,| 74 | 5 | 33 |,K284,,K284=33.0
+sections/03_results.md,37,6878,value,| Miami | 6878 | 4515 | 100,K290,,K290=6878.0
+sections/03_results.md,37,4515,value,| Miami | 6878 | 4515 | 100 | 80,K295,,K295=4515.0
+sections/03_results.md,37,100,value,| Miami | 6878 | 4515 | 100 | 80 | 2 |,K291,,K291=100.0
+sections/03_results.md,37,80,value,| 4515 | 100 | 80 | 2 | 34 |,K292,,K292=80.0
+sections/03_results.md,37,2,value,| 100 | 80 | 2 | 34 |,K293,,K293=2.0
+sections/03_results.md,37,34,value,| 80 | 2 | 34 |,K294,,K294=34.0
+sections/03_results.md,38,2545,value,| Beijing | 2545 | 1650 | 99,K300,,K300=2545.0
+sections/03_results.md,38,1650,value,| Beijing | 2545 | 1650 | 99 | 71 |,K305,,K305=1650.0
+sections/03_results.md,38,99,value,| Beijing | 2545 | 1650 | 99 | 71 | 66 |,K301,,K301=99.0
+sections/03_results.md,38,71,value,| 1650 | 99 | 71 | 66 | 35 |,K302,,K302=71.0
+sections/03_results.md,38,66,value,| 99 | 71 | 66 | 35 |,K303,,K303=66.0
+sections/03_results.md,38,35,value,| 71 | 66 | 35 |,K304,,K304=35.0
+sections/03_results.md,39,797,value,| Paris | 797 | 343 | 100,K310,,K310=797.0
+sections/03_results.md,39,343,value,| Paris | 797 | 343 | 100 | 103,K315,,K315=343.0
+sections/03_results.md,39,100,value,| Paris | 797 | 343 | 100 | 103 | 115,K311,,K311=100.0
+sections/03_results.md,39,103,value,| 343 | 100 | 103 | 115 | 57,K312,,K312=103.0
+sections/03_results.md,39,115,value,| 100 | 103 | 115 | 57 |,K313,,K313=115.0
+sections/03_results.md,39,57,value,| 103 | 115 | 57 |,K314,,K314=57.0
+sections/03_results.md,44,35,value,"Moving the threshold to 35, 37 or 39 °C changes the Default equivalence ratio from 60.",K033,,K033=60.6
+sections/03_results.md,44,37,value,"Moving the threshold to 35, 37 or 39 °C changes the Default equivalence ratio from 60.6 %",K033,,K033=60.6
+sections/03_results.md,44,39 °C,value,"Moving the threshold to 35, 37 or 39 °C changes the Default equivalence ratio from 60.6 %",K033,,K033=60.6
+sections/03_results.md,44,60.6 %,value,"35, 37 or 39 °C changes the Default equivalence ratio from 60.6 % to 56.6 % , 59.5 %",K033,,K033=60.6
+sections/03_results.md,44,56.6 %,value,"he Default equivalence ratio from 60.6 % to 56.6 % , 59.5 % and 61.6 %",K080,,K080=56.6
+sections/03_results.md,44,59.5 %,value,"atio from 60.6 % to 56.6 % , 59.5 % and 61.6 % , with coverage o",K081,,K081=59.5
+sections/03_results.md,44,61.6 %,value,"to 56.6 % , 59.5 % and 61.6 % , with coverage of 90.2 % , 9",K082,,K082=61.6
+sections/03_results.md,44,90.2 %,value,"and 61.6 % , with coverage of 90.2 % , 94.3 % and 97.0 %",K097,,K097=90.2
+sections/03_results.md,44,94.3 %,value,"% , with coverage of 90.2 % , 94.3 % and 97.0 % .",K099a,,K099a=94.3
+sections/03_results.md,44,97.0 %,value,"rage of 90.2 % , 94.3 % and 97.0 % .",K099,,K099=97.0
+sections/03_results.md,44,56.7 %,value,The Foster rule gives 56.7 % with coverage of 90.3 % .,K083,,K083=56.7
+sections/03_results.md,44,90.3 %,value,e Foster rule gives 56.7 % with coverage of 90.3 % .,K098,,K098=90.3
+sections/03_results.md,44,64.0 %,value,Removing the window raises the ratio only to 64.0 % and allowing negative ΔT outside the window,K085,,K085=64.0
+sections/03_results.md,44,60.4 %,value,"d allowing negative ΔT outside the window lowers it only to 60.4 % , because hours above 38 °C are few.",K086,,K086=60.4
+sections/03_results.md,44,38 °C,value,"wers it only to 60.4 % , because hours above 38 °C are few.",,,
+sections/03_results.md,44,28.0 %,value,"ndow is the one assumption that changes the picture, giving 28.0 % , since it credits the fan with much less co",K087,,K087=28.0
+sections/03_results.md,44,50.3 %,value,"Air speed matters more than the window, with 50.3 % at 0.8 m/s and 72.4 % at 2.",K088,,K088=50.3
+sections/03_results.md,44,0.8,value,"atters more than the window, with 50.3 % at 0.8 m/s and 72.4 % at 2.0 m/s.",K089,,K089=72.4
+sections/03_results.md,44,72.4 %,value,"than the window, with 50.3 % at 0.8 m/s and 72.4 % at 2.0 m/s.",K089,,K089=72.4
+sections/03_results.md,44,2.0,value,% at 0.8 m/s and 72.4 % at 2.0 m/s.,,,
+sections/03_results.md,44,70 %,value,A supply RH cap of 70 % lowers the Default ratio from 72.8 % to 48.,K051,,K051=72.8
+sections/03_results.md,44,72.8 %,value,"A supply RH cap of 70 % lowers the Default ratio from 72.8 % to 48.4 % , no cap raises it",K051,,K051=72.8
+sections/03_results.md,44,48.4 %,value,"0 % lowers the Default ratio from 72.8 % to 48.4 % , no cap raises it to 95.9 %",K090,,K090=48.4
+sections/03_results.md,44,95.9 %,value,"to 48.4 % , no cap raises it to 95.9 % , and a wet-bulb rule of 24 °C gives 87.4 %",K091,,K091=95.9
+sections/03_results.md,44,24 °C,value,"raises it to 95.9 % , and a wet-bulb rule of 24 °C gives 87.4 % .",K092,,K092=87.4
+sections/03_results.md,44,87.4 %,value,"95.9 % , and a wet-bulb rule of 24 °C gives 87.4 % .",K092,,K092=87.4
+sections/03_results.md,44,0.6,value,Saturation effectiveness of 0.6 and 0.85 gives 64.9 % and 54.3 %,K093,,K093=64.9
+sections/03_results.md,44,0.85,value,"Saturation effectiveness of 0.6 and 0.85 gives 64.9 % and 54.3 % , wh",K093,,K093=64.9
+sections/03_results.md,44,64.9 %,value,"Saturation effectiveness of 0.6 and 0.85 gives 64.9 % and 54.3 % , where the highe",K093,,K093=64.9
+sections/03_results.md,44,54.3 %,value,"ectiveness of 0.6 and 0.85 gives 64.9 % and 54.3 % , where the higher effectiveness lowers the",K094,,K094=54.3
+sections/03_results.md,44,0.5,value,Crediting a 0.5 m/s airstream at the occupant raises the ratio to 92.7 %,K095,,K095=92.7
+sections/03_results.md,44,92.7 %,value,ing a 0.5 m/s airstream at the occupant raises the ratio to 92.7 % .,K095,,K095=92.7
+sections/03_results.md,44,1 %,value,"SET-consistent variant changes the denominator by less than 1 % (ratio 99.4 % ), so the equivalence ratios a",K096,,K096=99.4
+sections/03_results.md,44,99.4 %,value,"ent variant changes the denominator by less than 1 % (ratio 99.4 % ), so the equivalence ratios are insensitive",K096,,K096=99.4
+sections/04_results.md,6,1.2,value,nt temperature reduction ΔT delivered by an electric fan at 1.2 m/s across the outdoor temperature and humidity grid.,,,
+sections/04_results.md,6,50 %,value,"At 50 % RH the fan is worth 3.6 K at 30 °C, 3.5 K",K010,,K010=3.6
+sections/04_results.md,6,3.6,value,"At 50 % RH the fan is worth 3.6 K at 30 °C, 3.5 K at 35 °C",K010,,K010=3.6
+sections/04_results.md,6,30 °C,value,"At 50 % RH the fan is worth 3.6 K at 30 °C, 3.5 K at 35 °C and 3.3 K a",K011,,K011=3.5
+sections/04_results.md,6,3.5,value,"At 50 % RH the fan is worth 3.6 K at 30 °C, 3.5 K at 35 °C and 3.3 K at 38",K011,,K011=3.5
+sections/04_results.md,6,35 °C,value,"th 3.6 K at 30 °C, 3.5 K at 35 °C and 3.3 K at 38 °C, the upper edge of the p",K012,,K012=3.3
+sections/04_results.md,6,3.3,value,"at 30 °C, 3.5 K at 35 °C and 3.3 K at 38 °C, the upper edge of the primary o",K012,,K012=3.3
+sections/04_results.md,6,38 °C,value,"3.5 K at 35 °C and 3.3 K at 38 °C, the upper edge of the primary operating window.",,,
+sections/04_results.md,6,35 °C,value,At 35 °C the fan delivers 4.1 K at 20 % RH but 2.6 K,K013,,K013=4.1
+sections/04_results.md,6,4.1,value,At 35 °C the fan delivers 4.1 K at 20 % RH but 2.6 K at 8,K013,,K013=4.1
+sections/04_results.md,6,20 %,value,"At 35 °C the fan delivers 4.1 K at 20 % RH but 2.6 K at 80 % RH, because the two-no",K014,,K014=2.6
+sections/04_results.md,6,2.6,value,"35 °C the fan delivers 4.1 K at 20 % RH but 2.6 K at 80 % RH, because the two-node model cr",K014,,K014=2.6
+sections/04_results.md,6,80 %,value,"1 K at 20 % RH but 2.6 K at 80 % RH, because the two-node model credits elevated air speed m",,,
+sections/04_results.md,6,26,value,"Over the whole range 26 to 38 °C and all humidities, ΔT at 1.2 m/s stays between 0.",K017,,K017=0.7
+sections/04_results.md,6,38 °C,value,"Over the whole range 26 to 38 °C and all humidities, ΔT at 1.2 m/s stays between 0.7 K",K017,,K017=0.7
+sections/04_results.md,6,1.2,value,"Over the whole range 26 to 38 °C and all humidities, ΔT at 1.2 m/s stays between 0.7 K and 4.4 K",K017,,K017=0.7
+sections/04_results.md,6,0.7,value,"26 to 38 °C and all humidities, ΔT at 1.2 m/s stays between 0.7 K and 4.4 K .",K017,,K017=0.7
+sections/04_results.md,6,4.4,value,"ties, ΔT at 1.2 m/s stays between 0.7 K and 4.4 K .",K018,,K018=4.4
+sections/04_results.md,6,35 °C,value,At 35 °C and 50 % RH the fan is worth 3.0 K at 0.8 m,K015,,K015=3.0
+sections/04_results.md,6,50 %,value,At 35 °C and 50 % RH the fan is worth 3.0 K at 0.8 m/s and 4.,K015,,K015=3.0
+sections/04_results.md,6,3.0,value,At 35 °C and 50 % RH the fan is worth 3.0 K at 0.8 m/s and 4.1 K at 2,K015,,K015=3.0
+sections/04_results.md,6,0.8,value,35 °C and 50 % RH the fan is worth 3.0 K at 0.8 m/s and 4.1 K at 2.0 m/s.,K016,,K016=4.1
+sections/04_results.md,6,4.1,value,% RH the fan is worth 3.0 K at 0.8 m/s and 4.1 K at 2.0 m/s.,K016,,K016=4.1
+sections/04_results.md,6,2.0,value,0 K at 0.8 m/s and 4.1 K at 2.0 m/s.,,,
+sections/04_results.md,6,−1.5,value,"The core-temperature variant does turn negative, reaching −1.5 K at 45 °C and 15 % RH while staying at 0.5",K019,[@morris2021electric],K019=-1.5
+sections/04_results.md,6,45 °C,value,"iant does turn negative, reaching −1.5 K at 45 °C and 15 % RH while staying at 0.5 K at 38 °",K019a,[@morris2021electric],K019a=0.5
+sections/04_results.md,6,15 %,value,"turn negative, reaching −1.5 K at 45 °C and 15 % RH while staying at 0.5 K at 38 °C and 80",K019a,[@morris2021electric],K019a=0.5
+sections/04_results.md,6,0.5,value,"1.5 K at 45 °C and 15 % RH while staying at 0.5 K at 38 °C and 80 % RH, which is why the m",K019a,[@morris2021electric],K019a=0.5
+sections/04_results.md,6,38 °C,value,"5 °C and 15 % RH while staying at 0.5 K at 38 °C and 80 % RH, which is why the main analysis applies the ext",,[@morris2021electric],
+sections/04_results.md,6,80 %,value,"5 % RH while staying at 0.5 K at 38 °C and 80 % RH, which is why the main analysis applies the external 38",,[@morris2021electric],
+sections/04_results.md,6,38 °C,value,"0 % RH, which is why the main analysis applies the external 38 °C window of Morris et al rather than re",,[@morris2021electric],
+sections/04_results.md,9,35 °C,value,At 35 °C and 20 % RH the supply air is 11.8 K coole,K026a,,K026a=11.8
+sections/04_results.md,9,20 %,value,At 35 °C and 20 % RH the supply air is 11.8 K cooler in dry-,K026a,,K026a=11.8
+sections/04_results.md,9,11.8,value,"At 35 °C and 20 % RH the supply air is 11.8 K cooler in dry-bulb terms, and after the",K026a,,K026a=11.8
+sections/04_results.md,9,11.2,value,and after the humidity penalty the equivalent reduction is 11.2 K with a supply RH of 66 % .,K020,,K020=11.2
+sections/04_results.md,9,66 %,value,ent reduction is 11.2 K with a supply RH of 66 % .,K025,,K025=66.0
+sections/04_results.md,9,3.8,value,"At the same temperature the value falls to 3.8 K at 50 % RH, where the supply air already",K021,,K021=3.8
+sections/04_results.md,9,50 %,value,"ame temperature the value falls to 3.8 K at 50 % RH, where the supply air already reaches 81 %",K025a,,K025a=81.0
+sections/04_results.md,9,81 %,value,"at 50 % RH, where the supply air already reaches 81 % RH and leaves the primary window, and to 0",K025a,,K025a=81.0
+sections/04_results.md,9,0.7,value,"% RH and leaves the primary window, and to 0.7 K at 80 % RH.",K022,,K022=0.7
+sections/04_results.md,9,80 %,value,"leaves the primary window, and to 0.7 K at 80 % RH.",,,
+sections/04_results.md,9,13.1,value,"The largest values occur in hot dry air, 13.1 K at 40 °C and 15 % RH, whereas warm humid",K023,,K023=13.1
+sections/04_results.md,9,40 °C,value,"gest values occur in hot dry air, 13.1 K at 40 °C and 15 % RH, whereas warm humid air yields 2.1 K",K024,,K024=2.1
+sections/04_results.md,9,15 %,value,"s occur in hot dry air, 13.1 K at 40 °C and 15 % RH, whereas warm humid air yields 2.1 K at",K024,,K024=2.1
+sections/04_results.md,9,2.1,value,"at 40 °C and 15 % RH, whereas warm humid air yields 2.1 K at 30 °C and 70 % RH.",K024,,K024=2.1
+sections/04_results.md,9,30 °C,value,"RH, whereas warm humid air yields 2.1 K at 30 °C and 70 % RH.",,,
+sections/04_results.md,9,70 %,value,as warm humid air yields 2.1 K at 30 °C and 70 % RH.,,,
+sections/04_results.md,9,1.3 %,value,"Only 1.3 % of the grid cells have ΔT at or below zero,",K026,,K026=1.3
+sections/04_results.md,9,3,value,"or temperature, while the fan contributes a nearly constant 3 to 4 K and the evaporative cooler crosses the air-condition",,,
+sections/04_results.md,9,4,value,"mperature, while the fan contributes a nearly constant 3 to 4 K and the evaporative cooler crosses the air-conditioning l",,,
+sections/04_results.md,9,11.9,value,"ng variant, which accounts for the humidity setpoint, gives 11.9 K at 35 °C and 50 % RH and 12.3 K",K027,,K027=11.9
+sections/04_results.md,9,35 °C,value,"for the humidity setpoint, gives 11.9 K at 35 °C and 50 % RH and 12.3 K at 80 % RH, close to",K028,,K028=12.3
+sections/04_results.md,9,50 %,value,"umidity setpoint, gives 11.9 K at 35 °C and 50 % RH and 12.3 K at 80 % RH, close to the nomi",K028,,K028=12.3
+sections/04_results.md,9,12.3,value,"oint, gives 11.9 K at 35 °C and 50 % RH and 12.3 K at 80 % RH, close to the nominal 12 K.",K028,,K028=12.3
+sections/04_results.md,9,80 %,value,"at 35 °C and 50 % RH and 12.3 K at 80 % RH, close to the nominal 12 K.",,,
+sections/04_results.md,9,12,value,"and 12.3 K at 80 % RH, close to the nominal 12 K.",,,
+sections/04_results.md,9,32 °C,value,"room state measured by Rugani et al (32 °C and about 18 % RH outdoors, 29.2 °C and 52 % RH in the room",K006,[@rugani2026creating],K006=0.6
+sections/04_results.md,9,18 %,value,"ured by Rugani et al (32 °C and about 18 % RH outdoors, 29.2 °C and 52 % RH in the room) gives an equi",K006,[@rugani2026creating],K006=0.6
+sections/04_results.md,9,29.2 °C,value,"al (32 °C and about 18 % RH outdoors, 29.2 °C and 52 % RH in the room) gives an equivalent reduction of 0",K006,[@rugani2026creating],K006=0.6
+sections/04_results.md,9,52 %,value,"(32 °C and about 18 % RH outdoors, 29.2 °C and 52 % RH in the room) gives an equivalent reduction of 0.6 K",K006,[@rugani2026creating],K006=0.6
+sections/04_results.md,9,0.6,value,"C and 52 % RH in the room) gives an equivalent reduction of 0.6 K at still air, rising to 2.4 K",K006,[@rugani2026creating],K006=0.6
+sections/04_results.md,9,2.4,value,"reduction of 0.6 K at still air, rising to 2.4 K at 0.3 m/s and 3.7 K at 0",K007,[@rugani2026creating],K007=2.4
+sections/04_results.md,9,0.3,value,"at still air, rising to 2.4 K at 0.3 m/s and 3.7 K at 0.5 m/s, which brackets th",K008,[@rugani2026creating],K008=3.7
+sections/04_results.md,9,3.7,value,"t still air, rising to 2.4 K at 0.3 m/s and 3.7 K at 0.5 m/s, which brackets the manikin co",K008,[@rugani2026creating],K008=3.7
+sections/04_results.md,9,0.5,value,"4 K at 0.3 m/s and 3.7 K at 0.5 m/s, which brackets the manikin cooling effect of about 3 K",,[@rugani2026creating],
+sections/04_results.md,9,3,value,"0.5 m/s, which brackets the manikin cooling effect of about 3 K reported in that study once the airstream reaching the oc",,[@rugani2026creating],
+sections/04_results.md,14,2020,year,"Applied to ERA5 hourly data for 2020, air conditioning under the Default rule would run on 76 %",K030,,K030=76.0
+sections/04_results.md,14,76 %,value,"2020, air conditioning under the Default rule would run on 76 % of land area for at least 100 hours per yea",K030,,K030=76.0
+sections/04_results.md,14,100,value,"would run on 76 % of land area for at least 100 hours per year, with an area-weighted mean of 2870 h",K031,,K031=2870.0
+sections/04_results.md,14,2870,value,"at least 100 hours per year, with an area-weighted mean of 2870 h per land point and a mean ΔT when on of 5",K031,,K031=2870.0
+sections/04_results.md,14,5.6,value,0 h per land point and a mean ΔT when on of 5.6 K ( (a)).,K038,,K038=5.6
+sections/04_results.md,14,95.8 %,value,"Of those hours, 95.8 % fall below 38 °C and therefore inside the p",K032,,K032=95.8
+sections/04_results.md,14,38 °C,value,"Of those hours, 95.8 % fall below 38 °C and therefore inside the primary fan window ( (b)).",,,
+sections/04_results.md,14,100,value,"Among land points with at least 100 air-conditioning hours, 81 % of the area ha",K034,,K034=81.0
+sections/04_results.md,14,81 %,value,"Among land points with at least 100 air-conditioning hours, 81 % of the area has coverage of 95 % or more an",K034,,K034=81.0
+sections/04_results.md,14,95 %,value,"ing hours, 81 % of the area has coverage of 95 % or more and 69 % has coverage of 99 % or m",K034a,,K034a=69.0
+sections/04_results.md,14,69 %,value,of the area has coverage of 95 % or more and 69 % has coverage of 99 % or more.,K034a,,K034a=69.0
+sections/04_results.md,14,99 %,value,e of 95 % or more and 69 % has coverage of 99 % or more.,,,
+sections/04_results.md,14,35 %,value,"e loss is confined to the hot deserts, consistent with only 35 % of land seeing any hour above 38 °C and a g",K101,,K101=35.0
+sections/04_results.md,14,38 °C,value,ith only 35 % of land seeing any hour above 38 °C and a global mean of 282 h above 35 °C.,K100,,K100=282.0
+sections/04_results.md,14,282,value,of land seeing any hour above 38 °C and a global mean of 282 h above 35 °C.,K100,,K100=282.0
+sections/04_results.md,14,35 °C,value,bove 38 °C and a global mean of 282 h above 35 °C.,,,
+sections/04_results.md,14,3.6,value,"Inside its window the fan delivers a mean ΔT of 3.6 K , which translates into a global fan equiv",K001,,K001=3.6
+sections/04_results.md,14,60.6 %,value,", which translates into a global fan equivalence ratio of 60.6 % of the exposure degree-hours removed by air",K033,,K033=60.6
+sections/04_results.md,14,82 %,value,"level distribution is wide, with an area-weighted median of 82 % and a 10th to 90th percentile range of 42 %",K035,,K035=82.0
+sections/04_results.md,14,10,value,with an area-weighted median of 82 % and a 10th to 90th percentile range of 42 % to 147 %,K036,,K036=42.0
+sections/04_results.md,14,90,value,area-weighted median of 82 % and a 10th to 90th percentile range of 42 % to 147 %,K036,,K036=42.0
+sections/04_results.md,14,42 %,value,82 % and a 10th to 90th percentile range of 42 % to 147 % .,K036,,K036=42.0
+sections/04_results.md,14,147 %,value,a 10th to 90th percentile range of 42 % to 147 % .,K037,,K037=147.0
+sections/04_results.md,14,100 %,value,Ratios above 100 % occur where air conditioning runs mostly in the 23 to 27 °C,,,
+sections/04_results.md,14,23,value,"above 100 % occur where air conditioning runs mostly in the 23 to 27 °C band, so that the fan removes more than the small",,,
+sections/04_results.md,14,27 °C,value,"100 % occur where air conditioning runs mostly in the 23 to 27 °C band, so that the fan removes more than the small excess ab",,,
+sections/04_results.md,14,23 °C,value,"d, so that the fan removes more than the small excess above 23 °C.",,,
+sections/04_results.md,14,1884,value,Under the DLS rule air conditioning runs for 1884 h on average with a mean ΔT when on of 4.8,K040,,K040=1884.0
+sections/04_results.md,14,4.8,value,"1884 h on average with a mean ΔT when on of 4.8 K , fan coverage is 93.6 % ,",K044,,K044=4.8
+sections/04_results.md,14,93.6 %,value,"a mean ΔT when on of 4.8 K , fan coverage is 93.6 % , the fan mean ΔT is again 3.6 K",K041,,K041=93.6
+sections/04_results.md,14,3.6,value,"overage is 93.6 % , the fan mean ΔT is again 3.6 K , and the equivalence ratio rises to 69.6",K043,,K043=3.6
+sections/04_results.md,14,69.6 %,value,"n 3.6 K , and the equivalence ratio rises to 69.6 % because the higher setpoint shrinks the air",K042,,K042=69.6
+sections/04_results.md,17,42.5 %,value,"Globally they are inside their window during 42.5 % of Default air-conditioning hours, but with",K050,,K050=42.5
+sections/04_results.md,17,9.6,value,"of Default air-conditioning hours, but with a mean ΔT of 9.6 K inside that window they reach an equivale",K057,,K057=9.6
+sections/04_results.md,17,72.8 %,value,"inside that window they reach an equivalence ratio of 72.8 % , higher than the fan despite the narrower w",K051,,K051=72.8
+sections/04_results.md,17,100,value,"Among land points with at least 100 air-conditioning hours, 44 % of the area ha",K052,,K052=44.0
+sections/04_results.md,17,44 %,value,"Among land points with at least 100 air-conditioning hours, 44 % of the area has an evaporative ratio at or",K052,,K052=44.0
+sections/04_results.md,17,100 %,value,"of the area has an evaporative ratio at or above 100 % and 22 % has a ratio below 25 %, with an ar",K053,,K053=22.0
+sections/04_results.md,17,22 %,value,"of the area has an evaporative ratio at or above 100 % and 22 % has a ratio below 25 %, with an area-weight",K053,,K053=22.0
+sections/04_results.md,17,25 %,value,"t or above 100 % and 22 % has a ratio below 25 %, with an area-weighted median of 88 % and a",K060,,K060=88.0
+sections/04_results.md,17,88 %,value,"has a ratio below 25 %, with an area-weighted median of 88 % and a 10th to 90th percentile range from 5",K060,,K060=88.0
+sections/04_results.md,17,10,value,with an area-weighted median of 88 % and a 10th to 90th percentile range from 5 % to 178,K061,,K061=5.0
+sections/04_results.md,17,90,value,area-weighted median of 88 % and a 10th to 90th percentile range from 5 % to 178 %,K061,,K061=5.0
+sections/04_results.md,17,5 %,value,% and a 10th to 90th percentile range from 5 % to 178 % .,K061,,K061=5.0
+sections/04_results.md,17,178 %,value,a 10th to 90th percentile range from 5 % to 178 % .,K062,,K062=178.0
+sections/04_results.md,17,24 °C,value,"by the share of warm hours with wet-bulb temperature above 24 °C, the dry class covers 68 % of the area wit",K054b,,K054b=68.0
+sections/04_results.md,17,68 %,value,"with wet-bulb temperature above 24 °C, the dry class covers 68 % of the area with meaningful air-conditioni",K054b,,K054b=68.0
+sections/04_results.md,17,112 %,value,ful air-conditioning demand and has an evaporative ratio of 112 % against a fan ratio of 56 %,K054,,K054=112.0
+sections/04_results.md,17,56 %,value,ative ratio of 112 % against a fan ratio of 56 % and fan coverage of 93.5 %,K054a,,K054a=56.0
+sections/04_results.md,17,93.5 %,value,st a fan ratio of 56 % and fan coverage of 93.5 % .,K054c,,K054c=93.5
+sections/04_results.md,17,10 %,value,"The humid class covers 10 % of that area and reverses the ranking, wit",K055b,,K055b=10.0
+sections/04_results.md,17,9 %,value,"area and reverses the ranking, with an evaporative ratio of 9 % , a fan ratio of 72 % and f",K055,,K055=9.0
+sections/04_results.md,17,72 %,value,"an evaporative ratio of 9 % , a fan ratio of 72 % and fan coverage of 99.2 %",K055a,,K055a=72.0
+sections/04_results.md,17,99.2 %,value,", a fan ratio of 72 % and fan coverage of 99.2 % .",K055c,,K055c=99.2
+sections/04_results.md,17,22 %,value,"The intermediate class, 22 % of the area, sits between with 45 %",K056b,,K056b=22.0
+sections/04_results.md,17,45 %,value,"class, 22 % of the area, sits between with 45 % for the evaporative cooler, 63 %",K056,,K056=45.0
+sections/04_results.md,17,63 %,value,"tween with 45 % for the evaporative cooler, 63 % for the fan and 96.8 % fa",K056a,,K056a=63.0
+sections/04_results.md,17,96.8 %,value,"e evaporative cooler, 63 % for the fan and 96.8 % fan coverage.",K056c,,K056c=96.8
+sections/04_results.md,17,53.1 %,value,Under the DLS rule the evaporative coverage rises to 53.1 % and the global ratio to 110.8 %,K059,,K059=53.1
+sections/04_results.md,17,110.8 %,value,"age rises to 53.1 % and the global ratio to 110.8 % , because the hours removed from the denomin",K058,,K058=110.8
+sections/04_results.md,22,3,value,"ditioning combination raises both threshold and setpoint by 3 K, which is less than the fan ΔT of 3.4 K a",K076,,K076=3.4
+sections/04_results.md,22,3.4,value,"shold and setpoint by 3 K, which is less than the fan ΔT of 3.4 K at the 26 °C and 55 % RH boundary, so the",K076,,K076=3.4
+sections/04_results.md,22,26 °C,value,"ich is less than the fan ΔT of 3.4 K at the 26 °C and 55 % RH boundary, so the exposure temperature inside th",,,
+sections/04_results.md,22,55 %,value,"s than the fan ΔT of 3.4 K at the 26 °C and 55 % RH boundary, so the exposure temperature inside the fan win",,,
+sections/04_results.md,22,34.4 %,value,"Globally, the combination avoids 34.4 % of Default air-conditioning operating hours",K070,,K070=34.4
+sections/04_results.md,22,44.1 %,value,"of Default air-conditioning operating hours and 44.1 % of cooling degree-hours, while the exposure",K071,,K071=44.1
+sections/04_results.md,22,118 %,value,"degree-hours, while the exposure degree-hours removed reach 118 % of those removed by air conditioning alone,",K072,,K072=118.0
+sections/04_results.md,22,41.1 %,value,Under the DLS rule the avoided shares are 41.1 % of hours and 49.0 % of cool,K073,,K073=41.1
+sections/04_results.md,22,49.0 %,value,"the avoided shares are 41.1 % of hours and 49.0 % of cooling degree-hours, with a benefit rat",K074,,K074=49.0
+sections/04_results.md,22,122 %,value,"of cooling degree-hours, with a benefit ratio of 122 % .",K075,,K075=122.0
+sections/04_results.md,22,32 %,value,"The avoided share varies little by humidity class, 32 % in the dry class, 37 % in t",K077,,K077=32.0
+sections/04_results.md,22,37 %,value,"e by humidity class, 32 % in the dry class, 37 % in the humid class and 36 %",K078,,K078=37.0
+sections/04_results.md,22,36 %,value,"the dry class, 37 % in the humid class and 36 % in the intermediate class, because it depen",K079,,K079=36.0
+sections/04_results.md,22,23,value,"ass, because it depends on the distribution of hours in the 23 to 26 °C band rather than on humidity.",,,
+sections/04_results.md,22,26 °C,value,ecause it depends on the distribution of hours in the 23 to 26 °C band rather than on humidity.,,,
+sections/04_results.md,22,75 %,value,"window covers every air-conditioning hour, the fan ratio is 75 % , 74 % and 80 %",K272,,K272=75.0
+sections/04_results.md,22,74 %,value,"r-conditioning hour, the fan ratio is 75 % , 74 % and 80 % under the Default",K282,,K282=74.0
+sections/04_results.md,22,80 %,value,"fan ratio is 75 % , 74 % and 80 % under the Default rule and exceeds 100 % un",K292,,K292=80.0
+sections/04_results.md,22,100 %,value,"and 80 % under the Default rule and exceeds 100 % under the DLS rule, while the evaporative ratio is at or be",,,
+sections/04_results.md,22,5 %,value,"er the DLS rule, while the evaporative ratio is at or below 5 %.",,,
+sections/04_results.md,22,1015,value,"In the hot-dry cities Phoenix and Riyadh, 1015 h and 1527 h exceed 38 °C,",K209,,K209=1015.0
+sections/04_results.md,22,1527,value,"t-dry cities Phoenix and Riyadh, 1015 h and 1527 h exceed 38 °C, fan coverage falls to 78 %",K219,,K219=1527.0
+sections/04_results.md,22,38 °C,value,"h, 1015 h and 1527 h exceed 38 °C, fan coverage falls to 78 % and 74 %",K201,,K201=78.0
+sections/04_results.md,22,78 %,value,"1527 h exceed 38 °C, fan coverage falls to 78 % and 74 % , the fan ratio dro",K201,,K201=78.0
+sections/04_results.md,22,74 %,value,"xceed 38 °C, fan coverage falls to 78 % and 74 % , the fan ratio drops below one third and th",K211,,K211=74.0
+sections/04_results.md,22,111 %,value,evaporative cooler exceeds air conditioning with ratios of 111 % and 112 % .,K203,,K203=111.0
+sections/04_results.md,22,112 %,value,s air conditioning with ratios of 111 % and 112 % .,K213,,K213=112.0
+sections/04_results.md,22,23 %,value,"arachi keep high fan coverage but low evaporative ratios of 23 % and 24 % , because the hot h",K243,,K243=23.0
+sections/04_results.md,22,24 %,value,"rage but low evaporative ratios of 23 % and 24 % , because the hot hours are dry while the ai",K253,,K253=24.0
+sections/04_results.md,22,797,value,"In Paris, where air conditioning would run for 797 h , both technologies exceed air conditionin",K310,,K310=797.0
+sections/04_results.md,22,3,value,", both technologies exceed air conditioning and the 3 K shift avoids 57 % of air-conditioning hou",K314,,K314=57.0
+sections/04_results.md,22,57 %,value,chnologies exceed air conditioning and the 3 K shift avoids 57 % of air-conditioning hours.,K314,,K314=57.0
+sections/04_results.md,22,12 %,value,"oss the twelve cities the Default avoided share ranges from 12 % in Phoenix to that Paris value, and the DLS",K204,,K204=12.0
+sections/04_results.md,22,61 %,value,"in Phoenix to that Paris value, and the DLS share reaches 61 % in Singapore and 64 % in La",K278,,K278=61.0
+sections/04_results.md,22,64 %,value,the DLS share reaches 61 % in Singapore and 64 % in Lagos.,K288,,K288=64.0
+sections/04_results.md,24,2020,year,"** .** Twelve cities, ERA5 2020.",,,
+sections/04_results.md,24,23 °C,value,"Air-conditioning hours under the Default (T > 23 °C) and DLS (T > 26 °C) rules, share of Default air-conditioni",,,
+sections/04_results.md,24,26 °C,value,"nditioning hours under the Default (T > 23 °C) and DLS (T > 26 °C) rules, share of Default air-conditioning hours inside the",,,
+sections/04_results.md,24,38 °C,value,"f Default air-conditioning hours inside the fan window (T < 38 °C), equivalence ratios of the fan (1.2 m/s) and the direct ev",,,
+sections/04_results.md,24,1.2,value,"the fan window (T < 38 °C), equivalence ratios of the fan (1.2 m/s) and the direct evaporative cooler (ε = 0.75) relative",,,
+sections/04_results.md,24,0.75,value,"of the fan (1.2 m/s) and the direct evaporative cooler (ε = 0.75) relative to air conditioning under the Default rule, and s",,,
+sections/04_results.md,28,4595,value,| Phoenix | 4595 | 4049 | 78,K200,,K200=4595.0
+sections/04_results.md,28,4049,value,| Phoenix | 4595 | 4049 | 78 | 30 |,K205,,K205=4049.0
+sections/04_results.md,28,78,value,| Phoenix | 4595 | 4049 | 78 | 30 | 111,K201,,K201=78.0
+sections/04_results.md,28,30,value,| 4049 | 78 | 30 | 111 | 12,K202,,K202=30.0
+sections/04_results.md,28,111,value,| 78 | 30 | 111 | 12 |,K203,,K203=111.0
+sections/04_results.md,28,12,value,| 30 | 111 | 12 |,K204,,K204=12.0
+sections/04_results.md,29,5765,value,| Riyadh | 5765 | 4980 | 74,K210,,K210=5765.0
+sections/04_results.md,29,4980,value,| Riyadh | 5765 | 4980 | 74 | 27 |,K215,,K215=4980.0
+sections/04_results.md,29,74,value,| Riyadh | 5765 | 4980 | 74 | 27 | 112,K211,,K211=74.0
+sections/04_results.md,29,27,value,| 4980 | 74 | 27 | 112 | 14,K212,,K212=27.0
+sections/04_results.md,29,112,value,| 74 | 27 | 112 | 14 |,K213,,K213=112.0
+sections/04_results.md,29,14,value,| 27 | 112 | 14 |,K214,,K214=14.0
+sections/04_results.md,30,4278,value,| Cairo | 4278 | 2874 | 98,K220,,K220=4278.0
+sections/04_results.md,30,2874,value,| Cairo | 4278 | 2874 | 98 | 59 |,K225,,K225=2874.0
+sections/04_results.md,30,98,value,| Cairo | 4278 | 2874 | 98 | 59 | 76 |,K221,,K221=98.0
+sections/04_results.md,30,59,value,| 2874 | 98 | 59 | 76 | 33 |,K222,,K222=59.0
+sections/04_results.md,30,76,value,| 98 | 59 | 76 | 33 |,K223,,K223=76.0
+sections/04_results.md,30,33,value,| 59 | 76 | 33 |,K224,,K224=33.0
+sections/04_results.md,31,3005,value,| Tehran | 3005 | 2255 | 97,K230,,K230=3005.0
+sections/04_results.md,31,2255,value,| Tehran | 3005 | 2255 | 97 | 54 |,K235,,K235=2255.0
+sections/04_results.md,31,97,value,| Tehran | 3005 | 2255 | 97 | 54 | 150,K231,,K231=97.0
+sections/04_results.md,31,54,value,| 2255 | 97 | 54 | 150 | 25,K232,,K232=54.0
+sections/04_results.md,31,150,value,| 97 | 54 | 150 | 25 |,K233,,K233=150.0
+sections/04_results.md,31,25,value,| 54 | 150 | 25 |,K234,,K234=25.0
+sections/04_results.md,32,5289,value,| Delhi | 5289 | 4413 | 97,K240,,K240=5289.0
+sections/04_results.md,32,4413,value,| Delhi | 5289 | 4413 | 97 | 46 |,K245,,K245=4413.0
+sections/04_results.md,32,97,value,| Delhi | 5289 | 4413 | 97 | 46 | 23 |,K241,,K241=97.0
+sections/04_results.md,32,46,value,| 4413 | 97 | 46 | 23 | 17 |,K242,,K242=46.0
+sections/04_results.md,32,23,value,| 97 | 46 | 23 | 17 |,K243,,K243=23.0
+sections/04_results.md,32,17,value,| 46 | 23 | 17 |,K244,,K244=17.0
+sections/04_results.md,33,6458,value,| Karachi | 6458 | 5566 | 100,K250,,K250=6458.0
+sections/04_results.md,33,5566,value,| Karachi | 6458 | 5566 | 100 | 49,K255,,K255=5566.0
+sections/04_results.md,33,100,value,| Karachi | 6458 | 5566 | 100 | 49 | 24 |,K251,,K251=100.0
+sections/04_results.md,33,49,value,| 5566 | 100 | 49 | 24 | 14 |,K252,,K252=49.0
+sections/04_results.md,33,24,value,| 100 | 49 | 24 | 14 |,K253,,K253=24.0
+sections/04_results.md,33,14,value,| 49 | 24 | 14 |,K254,,K254=14.0
+sections/04_results.md,34,5080,value,| Guangzhou | 5080 | 3705 | 100,K260,,K260=5080.0
+sections/04_results.md,34,3705,value,| Guangzhou | 5080 | 3705 | 100 | 67,K265,,K265=3705.0
+sections/04_results.md,34,100,value,| Guangzhou | 5080 | 3705 | 100 | 67 | 3 |,K261,,K261=100.0
+sections/04_results.md,34,67,value,| 3705 | 100 | 67 | 3 | 27 |,K262,,K262=67.0
+sections/04_results.md,34,3,value,| 100 | 67 | 3 | 27 |,K263,,K263=3.0
+sections/04_results.md,34,27,value,| 67 | 3 | 27 |,K264,,K264=27.0
+sections/04_results.md,35,8784,value,| Singapore | 8784 | 5634 | 100,K270,,K270=8784.0
+sections/04_results.md,35,5634,value,| Singapore | 8784 | 5634 | 100 | 75,K275,,K275=5634.0
+sections/04_results.md,35,100,value,| Singapore | 8784 | 5634 | 100 | 75 | 0 |,K271,,K271=100.0
+sections/04_results.md,35,75,value,| 5634 | 100 | 75 | 0 | 36 |,K272,,K272=75.0
+sections/04_results.md,35,0,value,| 100 | 75 | 0 | 36 |,K273,,K273=0.0
+sections/04_results.md,35,36,value,| 75 | 0 | 36 |,K274,,K274=36.0
+sections/04_results.md,36,8689,value,| Lagos | 8689 | 5843 | 100,K280,,K280=8689.0
+sections/04_results.md,36,5843,value,| Lagos | 8689 | 5843 | 100 | 74,K285,,K285=5843.0
+sections/04_results.md,36,100,value,| Lagos | 8689 | 5843 | 100 | 74 | 5 |,K281,,K281=100.0
+sections/04_results.md,36,74,value,| 5843 | 100 | 74 | 5 | 33 |,K282,,K282=74.0
+sections/04_results.md,36,5,value,| 100 | 74 | 5 | 33 |,K283,,K283=5.0
+sections/04_results.md,36,33,value,| 74 | 5 | 33 |,K284,,K284=33.0
+sections/04_results.md,37,6878,value,| Miami | 6878 | 4515 | 100,K290,,K290=6878.0
+sections/04_results.md,37,4515,value,| Miami | 6878 | 4515 | 100 | 80,K295,,K295=4515.0
+sections/04_results.md,37,100,value,| Miami | 6878 | 4515 | 100 | 80 | 2 |,K291,,K291=100.0
+sections/04_results.md,37,80,value,| 4515 | 100 | 80 | 2 | 34 |,K292,,K292=80.0
+sections/04_results.md,37,2,value,| 100 | 80 | 2 | 34 |,K293,,K293=2.0
+sections/04_results.md,37,34,value,| 80 | 2 | 34 |,K294,,K294=34.0
+sections/04_results.md,38,2545,value,| Beijing | 2545 | 1650 | 99,K300,,K300=2545.0
+sections/04_results.md,38,1650,value,| Beijing | 2545 | 1650 | 99 | 71 |,K305,,K305=1650.0
+sections/04_results.md,38,99,value,| Beijing | 2545 | 1650 | 99 | 71 | 66 |,K301,,K301=99.0
+sections/04_results.md,38,71,value,| 1650 | 99 | 71 | 66 | 35 |,K302,,K302=71.0
+sections/04_results.md,38,66,value,| 99 | 71 | 66 | 35 |,K303,,K303=66.0
+sections/04_results.md,38,35,value,| 71 | 66 | 35 |,K304,,K304=35.0
+sections/04_results.md,39,797,value,| Paris | 797 | 343 | 100,K310,,K310=797.0
+sections/04_results.md,39,343,value,| Paris | 797 | 343 | 100 | 103,K315,,K315=343.0
+sections/04_results.md,39,100,value,| Paris | 797 | 343 | 100 | 103 | 115,K311,,K311=100.0
+sections/04_results.md,39,103,value,| 343 | 100 | 103 | 115 | 57,K312,,K312=103.0
+sections/04_results.md,39,115,value,| 100 | 103 | 115 | 57 |,K313,,K313=115.0
+sections/04_results.md,39,57,value,| 103 | 115 | 57 |,K314,,K314=57.0
+sections/04_results.md,44,38 °C,value,"Moving the threshold from 38 °C to 35, 37 or 39 °C changes the Default equivalence ratio fr",K033,,K033=60.6
+sections/04_results.md,44,35,value,"Moving the threshold from 38 °C to 35, 37 or 39 °C changes the Default equivalence ratio from 60.",K033,,K033=60.6
+sections/04_results.md,44,37,value,"Moving the threshold from 38 °C to 35, 37 or 39 °C changes the Default equivalence ratio from 60.6 %",K033,,K033=60.6
+sections/04_results.md,44,39 °C,value,"Moving the threshold from 38 °C to 35, 37 or 39 °C changes the Default equivalence ratio from 60.6 %",K033,,K033=60.6
+sections/04_results.md,44,60.6 %,value,"35, 37 or 39 °C changes the Default equivalence ratio from 60.6 % to 56.6 % , 59.5 %",K033,,K033=60.6
+sections/04_results.md,44,56.6 %,value,"he Default equivalence ratio from 60.6 % to 56.6 % , 59.5 % and 61.6 %",K080,,K080=56.6
+sections/04_results.md,44,59.5 %,value,"atio from 60.6 % to 56.6 % , 59.5 % and 61.6 % , with coverage o",K081,,K081=59.5
+sections/04_results.md,44,61.6 %,value,"to 56.6 % , 59.5 % and 61.6 % , with coverage of 90.2 % , 9",K082,,K082=61.6
+sections/04_results.md,44,90.2 %,value,"and 61.6 % , with coverage of 90.2 % , 94.3 % and 97.0 %",K097,,K097=90.2
+sections/04_results.md,44,94.3 %,value,"% , with coverage of 90.2 % , 94.3 % and 97.0 % .",K099a,,K099a=94.3
+sections/04_results.md,44,97.0 %,value,"rage of 90.2 % , 94.3 % and 97.0 % .",K099,,K099=97.0
+sections/04_results.md,44,35 °C,value,"The Foster rule, which excludes hours at or above 35 °C with RH below 50 %, gives 56.7 % with cover",K083,,K083=56.7
+sections/04_results.md,44,50 %,value,"rule, which excludes hours at or above 35 °C with RH below 50 %, gives 56.7 % with coverage of 90.3 %",K083,,K083=56.7
+sections/04_results.md,44,56.7 %,value,"excludes hours at or above 35 °C with RH below 50 %, gives 56.7 % with coverage of 90.3 % , an",K083,,K083=56.7
+sections/04_results.md,44,90.3 %,value,"H below 50 %, gives 56.7 % with coverage of 90.3 % , and combining it with the 38 °C window lea",K098,,K098=90.3
+sections/04_results.md,44,38 °C,value,"verage of 90.3 % , and combining it with the 38 °C window leaves the ratio at 56.7 % and the c",K084,,K084=56.7
+sections/04_results.md,44,56.7 %,value,and combining it with the 38 °C window leaves the ratio at 56.7 % and the coverage at 90.3 % .,K084,,K084=56.7
+sections/04_results.md,44,90.3 %,value,ves the ratio at 56.7 % and the coverage at 90.3 % .,K039,,K039=90.3
+sections/04_results.md,44,64.0 %,value,"Removing the window altogether raises the ratio only to 64.0 % , and allowing negative ΔT outside the 38 °C",K085,,K085=64.0
+sections/04_results.md,44,38 °C,value,"4.0 % , and allowing negative ΔT outside the 38 °C window lowers it only to 60.4 % , because th",K086,,K086=60.4
+sections/04_results.md,44,60.4 %,value,"wing negative ΔT outside the 38 °C window lowers it only to 60.4 % , because the hours above 38 °C are few and",K086,,K086=60.4
+sections/04_results.md,44,38 °C,value,"it only to 60.4 % , because the hours above 38 °C are few and the penalty there is small.",,,
+sections/04_results.md,44,28.0 %,value,"ndow is the one assumption that changes the picture, giving 28.0 % , since it credits the fan with much less co",K087,,K087=28.0
+sections/04_results.md,44,50.3 %,value,"Air speed matters more than the window, with 50.3 % at 0.8 m/s and 72.4 % at 2.",K088,,K088=50.3
+sections/04_results.md,44,0.8,value,"atters more than the window, with 50.3 % at 0.8 m/s and 72.4 % at 2.0 m/s.",K089,,K089=72.4
+sections/04_results.md,44,72.4 %,value,"than the window, with 50.3 % at 0.8 m/s and 72.4 % at 2.0 m/s.",K089,,K089=72.4
+sections/04_results.md,44,2.0,value,% at 0.8 m/s and 72.4 % at 2.0 m/s.,,,
+sections/04_results.md,44,62.4 %,value,Under the DLS rule the corresponding values are 62.4 % for the 35 °C window with coverage of 85.0,K080d,,K080d=62.4
+sections/04_results.md,44,35 °C,value,"he corresponding values are 62.4 % for the 35 °C window with coverage of 85.0 % , 69.3 %",K097d,,K097d=85.0
+sections/04_results.md,44,85.0 %,value,".4 % for the 35 °C window with coverage of 85.0 % , 69.3 % with negative ΔT",K097d,,K097d=85.0
+sections/04_results.md,44,69.3 %,value,"the 35 °C window with coverage of 85.0 % , 69.3 % with negative ΔT outside the window, and 5",K086d,,K086d=69.3
+sections/04_results.md,44,58.6 %,value,"% with negative ΔT outside the window, and 58.6 % and 81.9 % at 0.8 and 2.0",K088d,,K088d=58.6
+sections/04_results.md,44,81.9 %,value,"tive ΔT outside the window, and 58.6 % and 81.9 % at 0.8 and 2.0 m/s.",K089d,,K089d=81.9
+sections/04_results.md,44,0.8,value,and 58.6 % and 81.9 % at 0.8 and 2.0 m/s.,,,
+sections/04_results.md,44,2.0,value,6 % and 81.9 % at 0.8 and 2.0 m/s.,,,
+sections/04_results.md,44,70 %,value,Tightening the supply RH cap to 70 % lowers the Default ratio from 72.8 % to 48.,K051,,K051=72.8
+sections/04_results.md,44,72.8 %,value,"ing the supply RH cap to 70 % lowers the Default ratio from 72.8 % to 48.4 % , removing the cap",K051,,K051=72.8
+sections/04_results.md,44,48.4 %,value,"0 % lowers the Default ratio from 72.8 % to 48.4 % , removing the cap raises it to 95.9 %",K090,,K090=48.4
+sections/04_results.md,44,95.9 %,value,"to 48.4 % , removing the cap raises it to 95.9 % , and a wet-bulb rule of 24 °C or less gives",K091,,K091=95.9
+sections/04_results.md,44,24 °C,value,"raises it to 95.9 % , and a wet-bulb rule of 24 °C or less gives 87.4 % .",K092,,K092=87.4
+sections/04_results.md,44,87.4 %,value,", and a wet-bulb rule of 24 °C or less gives 87.4 % .",K092,,K092=87.4
+sections/04_results.md,44,0.6,value,Saturation effectiveness of 0.6 and 0.85 gives 64.9 % and 54.3 %,K093,,K093=64.9
+sections/04_results.md,44,0.85,value,Saturation effectiveness of 0.6 and 0.85 gives 64.9 % and 54.3 % und,K093,,K093=64.9
+sections/04_results.md,44,64.9 %,value,Saturation effectiveness of 0.6 and 0.85 gives 64.9 % and 54.3 % under the Defaul,K093,,K093=64.9
+sections/04_results.md,44,54.3 %,value,"ectiveness of 0.6 and 0.85 gives 64.9 % and 54.3 % under the Default rule, where the higher ef",K094,,K094=54.3
+sections/04_results.md,44,96.2 %,value,"atio because more hours breach the supply humidity cap, and 96.2 % and 95.2 % under the DLS",K093d,,K093d=96.2
+sections/04_results.md,44,95.2 %,value,"ch the supply humidity cap, and 96.2 % and 95.2 % under the DLS rule.",K094d,,K094d=95.2
+sections/04_results.md,44,0.5,value,Crediting the cooler with a 0.5 m/s airstream at the occupant raises the Default ratio to 9,K095,,K095=92.7
+sections/04_results.md,44,92.7 %,value,5 m/s airstream at the occupant raises the Default ratio to 92.7 % .,K095,,K095=92.7
+sections/04_results.md,44,1 %,value,"SET-consistent variant changes the denominator by less than 1 %, with a ratio of 99.4 % between the two, so",K096,,K096=99.4
+sections/04_results.md,44,99.4 %,value,"t changes the denominator by less than 1 %, with a ratio of 99.4 % between the two, so all equivalence ratios",K096,,K096=99.4
+sections/05_discussion.md,7,1.2,value,A fan at 1.2 m/s is worth 3.6 K on average over the hour,K001,[@morris2021electric],K001=3.6
+sections/05_discussion.md,7,3.6,value,A fan at 1.2 m/s is worth 3.6 K on average over the hours in which air co,K001,[@morris2021electric],K001=3.6
+sections/05_discussion.md,7,38 °C,value,"over the hours in which air conditioning would run, and the 38 °C window covers 96 % of those hours, close to",K002,[@morris2021electric],K002=96.0
+sections/05_discussion.md,7,96 %,value,"ich air conditioning would run, and the 38 °C window covers 96 % of those hours, close to the finding of Mor",K002,[@morris2021electric],K002=96.0
+sections/05_discussion.md,7,96.6 %,value,the finding of Morris et al that fan use was beneficial on 96.6 % of hot days for young adults .,,[@morris2021electric],
+sections/05_discussion.md,7,0.8,value,Tartarini et al report that 0.8 m/s raises the critical operative temperature by up to 14 °,,[@tartarini2021application],
+sections/05_discussion.md,7,14 °C,value,"0.8 m/s raises the critical operative temperature by up to 14 °C in the same two-node model , a f",,[@tartarini2021application],
+sections/05_discussion.md,7,61 %,value,The fan equivalence ratio of 61 % and the 34 % of air-conditi,K003,[@malik2022potential];[@hoyt2015extending],K003=61.0
+sections/05_discussion.md,7,34 %,value,The fan equivalence ratio of 61 % and the 34 % of air-conditioning hours avoided by the fa,K004,[@malik2022potential];[@hoyt2015extending],K004=34.0
+sections/05_discussion.md,7,76 %,value,ditioning combination are of the same sign and order as the 76 % reduction in air-conditioning electricity reported by Malik,,[@malik2022potential];[@hoyt2015extending],
+sections/05_discussion.md,7,29 %,value,t al for a fan-first strategy and the 29 % cooling energy saving that Hoyt et al simulate for a setpoi,,[@malik2022potential];[@hoyt2015extending],
+sections/05_discussion.md,7,22.2,value,"ving that Hoyt et al simulate for a setpoint extension from 22.2 to 25 °C , although those studies count",,[@malik2022potential];[@hoyt2015extending],
+sections/05_discussion.md,7,25 °C,value,"t Hoyt et al simulate for a setpoint extension from 22.2 to 25 °C , although those studies count energy,",,[@malik2022potential];[@hoyt2015extending],
+sections/05_discussion.md,7,72.8 %,value,"For evaporative coolers, the global equivalence ratio is 72.8 % , split into 112 % in the dr",K051,,K051=72.8
+sections/05_discussion.md,7,112 %,value,"bal equivalence ratio is 72.8 % , split into 112 % in the dry class and 9 % in",K054,,K054=112.0
+sections/05_discussion.md,7,9 %,value,", split into 112 % in the dry class and 9 % in the humid class.",K055,,K055=9.0
+sections/05_discussion.md,7,2.8,value,The chamber test of Rugani et al cooled a room by 2.8 K at 32 °C and 15 to 20 % RH while raising RH to 52 %,,[@rugani2026creating],
+sections/05_discussion.md,7,32 °C,value,The chamber test of Rugani et al cooled a room by 2.8 K at 32 °C and 15 to 20 % RH while raising RH to 52 %,,[@rugani2026creating],
+sections/05_discussion.md,7,15,value,er test of Rugani et al cooled a room by 2.8 K at 32 °C and 15 to 20 % RH while raising RH to 52 % .,,[@rugani2026creating],
+sections/05_discussion.md,7,20 %,value,t of Rugani et al cooled a room by 2.8 K at 32 °C and 15 to 20 % RH while raising RH to 52 % .,,[@rugani2026creating],
+sections/05_discussion.md,7,52 %,value,oom by 2.8 K at 32 °C and 15 to 20 % RH while raising RH to 52 % .,,[@rugani2026creating],
+sections/05_discussion.md,7,0.6,value,"t measured room state gives an equivalent reduction of only 0.6 K at still air, rising to 2.4 K",K006,[@rugani2026creating],K006=0.6
+sections/05_discussion.md,7,2.4,value,"ction of only 0.6 K at still air, rising to 2.4 K at 0.3 m/s and 3.7 K at 0",K007,[@rugani2026creating],K007=2.4
+sections/05_discussion.md,7,0.3,value,"at still air, rising to 2.4 K at 0.3 m/s and 3.7 K at 0.5 m/s, which brackets th",K008,[@rugani2026creating],K008=3.7
+sections/05_discussion.md,7,3.7,value,"t still air, rising to 2.4 K at 0.3 m/s and 3.7 K at 0.5 m/s, which brackets the manikin co",K008,[@rugani2026creating],K008=3.7
+sections/05_discussion.md,7,0.5,value,"4 K at 0.3 m/s and 3.7 K at 0.5 m/s, which brackets the manikin cooling effect of about 3 K",,[@rugani2026creating],
+sections/05_discussion.md,7,3,value,"0.5 m/s, which brackets the manikin cooling effect of about 3 K that the authors report .",,[@rugani2026creating],
+sections/05_discussion.md,10,9.9 %,value,"with unlimited sweating never penalises air speed, so only 9.9 % of the lookup grid shows a negative fan eff",K005,,K005=9.9
+sections/05_discussion.md,10,38 °C,value,Chamber trials in older adults found fans ineffective at 38 °C and 60 % RH and harmful at 45 °C and 15 % RH,,[@oconnor2024effect];[@graham2025electric];[@gagnon2017electric];[@meade2024critical],
+sections/05_discussion.md,10,60 %,value,"trials in older adults found fans ineffective at 38 °C and 60 % RH and harmful at 45 °C and 15 % RH , d",,[@oconnor2024effect];[@graham2025electric];[@gagnon2017electric];[@meade2024critical],
+sections/05_discussion.md,10,45 °C,value,"found fans ineffective at 38 °C and 60 % RH and harmful at 45 °C and 15 % RH , dehydration worsens the b",,[@oconnor2024effect];[@graham2025electric];[@gagnon2017electric];[@meade2024critical],
+sections/05_discussion.md,10,15 %,value,"s ineffective at 38 °C and 60 % RH and harmful at 45 °C and 15 % RH , dehydration worsens the balance",,[@oconnor2024effect];[@graham2025electric];[@gagnon2017electric];[@meade2024critical],
+sections/05_discussion.md,10,35 °C,value,ical review of Meade et al still advises against fans above 35 °C .,,[@oconnor2024effect];[@graham2025electric];[@gagnon2017electric];[@meade2024critical],
+sections/05_discussion.md,10,61 %,value,"e the window changes the global equivalence ratio only from 61 % to 60.4 % , because few air-",K003,,K003=61.0
+sections/05_discussion.md,10,60.4 %,value,"global equivalence ratio only from 61 % to 60.4 % , because few air-conditioning hours lie abo",K086,,K086=60.4
+sections/05_discussion.md,10,38 °C,value,", because few air-conditioning hours lie above 38 °C, but a core-temperature definition of ΔT without any window",K087,,K087=28.0
+sections/05_discussion.md,10,28 %,value,"emperature definition of ΔT without any window lowers it to 28 % , so the choice of physiological criterion m",K087,,K087=28.0
+sections/05_discussion.md,13,27 °C,value,ance in Australia and the WHO advice of 27 °C plus a fan can now be scored with the same e,K002,[@bone2025fanfirst];[@who2024heat],K002=96.0
+sections/05_discussion.md,13,3,value,"ure accounting used for air-conditioning subsidies, and the 3 K allowance it relies on holds across 96 %",K002,[@bone2025fanfirst];[@who2024heat],K002=96.0
+sections/05_discussion.md,13,96 %,value,"subsidies, and the 3 K allowance it relies on holds across 96 % of the hours that matter.",K002,[@bone2025fanfirst];[@who2024heat],K002=96.0
+sections/06_conclusion.md,4,1.2,value,"On this common scale and under the Default rule, a 1.2 m/s fan operates in 96 % of the hours in wh",K002,,K002=96.0
+sections/06_conclusion.md,4,96 %,value,"scale and under the Default rule, a 1.2 m/s fan operates in 96 % of the hours in which air conditioning woul",K002,,K002=96.0
+sections/06_conclusion.md,4,2020,year,urs in which air conditioning would run over global land in 2020 and removes 61 % of the exposure degree-hou,K003,,K003=61.0
+sections/06_conclusion.md,4,61 %,value,conditioning would run over global land in 2020 and removes 61 % of the exposure degree-hours that air condi,K003,,K003=61.0
+sections/06_conclusion.md,4,72.8 %,value,"A direct evaporative cooler removes 72.8 % of the air-conditioning benefit globally, e",K051,,K051=72.8
+sections/06_conclusion.md,4,3,value,ng a fan with air conditioning and raising the threshold by 3 K avoids 34 % of air-conditioning operating,K004,,K004=34.0
+sections/06_conclusion.md,4,34 %,value,th air conditioning and raising the threshold by 3 K avoids 34 % of air-conditioning operating hours while t,K004,,K004=34.0
+sections/07_statements.md,5,2,value,ERA5 hourly 2 m temperature and 2 m dew point temperature for 2020 were r,,,
+sections/07_statements.md,5,2,value,ERA5 hourly 2 m temperature and 2 m dew point temperature for 2020 were read from the public,,,
+sections/07_statements.md,5,2020,year,A5 hourly 2 m temperature and 2 m dew point temperature for 2020 were read from the public Analysis-Ready Cloud-Optimized ER,,,
+sections/07_statements.md,9,4.8,value,Thermal comfort calculations use pythermalcomfort version 4.8.,,,
+figures/captions.md,5,1.2,value,(a) Fan equivalent reduction ΔT at 1.2 m s⁻¹ as a function of outdoor air temperature and relative,,,
+figures/captions.md,5,2021,year,"The white vertical lines mark the Morris 2021 fan window upper bounds at 37, 38 and 39 °C and the hatched",,,
+figures/captions.md,5,37,value,"tical lines mark the Morris 2021 fan window upper bounds at 37, 38 and 39 °C and the hatched area marks the Foster 2021 ex",,,
+figures/captions.md,5,38,value,"l lines mark the Morris 2021 fan window upper bounds at 37, 38 and 39 °C and the hatched area marks the Foster 2021 exclus",,,
+figures/captions.md,5,39 °C,value,"mark the Morris 2021 fan window upper bounds at 37, 38 and 39 °C and the hatched area marks the Foster 2021 exclusion (35 °C",,,
+figures/captions.md,5,2021,year,"s at 37, 38 and 39 °C and the hatched area marks the Foster 2021 exclusion (35 °C and above with relative humidity below 50",,,
+figures/captions.md,5,35 °C,value,39 °C and the hatched area marks the Foster 2021 exclusion (35 °C and above with relative humidity below 50 %).,,,
+figures/captions.md,5,50 %,value,021 exclusion (35 °C and above with relative humidity below 50 %).,,,
+figures/captions.md,5,30 °C,value,At 30 °C and 50 % relative humidity the fan is worth 3.6 K,K010,,K010=3.6
+figures/captions.md,5,50 %,value,At 30 °C and 50 % relative humidity the fan is worth 3.6 K .,K010,,K010=3.6
+figures/captions.md,5,3.6,value,At 30 °C and 50 % relative humidity the fan is worth 3.6 K .,K010,,K010=3.6
+figures/captions.md,5,0.75,value,cooler equivalent reduction ΔT at saturation efficiency ε = 0.75 on the same grid.,,,
+figures/captions.md,5,0,value,he orange line is the evaporative window boundary (ΔT above 0 and supply air relative humidity at or below 80 %).,,,
+figures/captions.md,5,80 %,value,ry (ΔT above 0 and supply air relative humidity at or below 80 %).,,,
+figures/captions.md,5,35 °C,value,At 35 °C and 20 % relative humidity the cooler is worth 11.2 K,K020,,K020=11.2
+figures/captions.md,5,20 %,value,At 35 °C and 20 % relative humidity the cooler is worth 11.2 K,K020,,K020=11.2
+figures/captions.md,5,11.2,value,At 35 °C and 20 % relative humidity the cooler is worth 11.2 K .,K020,,K020=11.2
+figures/captions.md,5,23,value,"temperature for the air conditioning Default rule (max(T − 23, 0)), the DLS rule (max(T − 26, 0)), the fan at 1.2 m s⁻¹ a",,,
+figures/captions.md,5,0,value,"perature for the air conditioning Default rule (max(T − 23, 0)), the DLS rule (max(T − 26, 0)), the fan at 1.2 m s⁻¹ and",,,
+figures/captions.md,5,26,value,"ioning Default rule (max(T − 23, 0)), the DLS rule (max(T − 26, 0)), the fan at 1.2 m s⁻¹ and the evaporative cooler at ε",,,
+figures/captions.md,5,0,value,"ng Default rule (max(T − 23, 0)), the DLS rule (max(T − 26, 0)), the fan at 1.2 m s⁻¹ and the evaporative cooler at ε = 0",,,
+figures/captions.md,5,1.2,value,"(max(T − 23, 0)), the DLS rule (max(T − 26, 0)), the fan at 1.2 m s⁻¹ and the evaporative cooler at ε = 0.75.",,,
+figures/captions.md,5,0.75,value,"0)), the fan at 1.2 m s⁻¹ and the evaporative cooler at ε = 0.75.",,,
+figures/captions.md,5,20,value,"enotes technology and line style denotes relative humidity (20, 50 and 80 %).",,,
+figures/captions.md,5,50,value,"es technology and line style denotes relative humidity (20, 50 and 80 %).",,,
+figures/captions.md,5,80 %,value,"nology and line style denotes relative humidity (20, 50 and 80 %).",,,
+figures/captions.md,5,50 %,value,"(d) Fan ΔT at 50 % relative humidity for 0.8, 1.2 and 2.0 m s⁻¹ (solid lines)",,,
+figures/captions.md,5,0.8,value,"(d) Fan ΔT at 50 % relative humidity for 0.8, 1.2 and 2.0 m s⁻¹ (solid lines) and the core temperature v",,,
+figures/captions.md,5,1.2,value,"(d) Fan ΔT at 50 % relative humidity for 0.8, 1.2 and 2.0 m s⁻¹ (solid lines) and the core temperature varian",,,
+figures/captions.md,5,2.0,value,"(d) Fan ΔT at 50 % relative humidity for 0.8, 1.2 and 2.0 m s⁻¹ (solid lines) and the core temperature variant at 1.2",,,
+figures/captions.md,5,1.2,value,2.0 m s⁻¹ (solid lines) and the core temperature variant at 1.2 m s⁻¹ (dashed line).,,,
+figures/captions.md,5,37,value,"e fan heats the body and the thin vertical lines repeat the 37, 38 and 39 °C window bounds.",,,
+figures/captions.md,5,38,value,"n heats the body and the thin vertical lines repeat the 37, 38 and 39 °C window bounds.",,,
+figures/captions.md,5,39 °C,value,"the body and the thin vertical lines repeat the 37, 38 and 39 °C window bounds.",,,
+figures/captions.md,9,2020,year,of the equivalent cooling framework to ERA5 hourly data for 2020 on a 0.5° land grid.,,,
+figures/captions.md,9,0.5,value,ivalent cooling framework to ERA5 hourly data for 2020 on a 0.5° land grid.,,,
+figures/captions.md,9,10,value,"year by air conditioning under the Default operating rule (10³ K h per year, colour scale capped at the 99th percentile).",,,
+figures/captions.md,9,99,value,"perating rule (10³ K h per year, colour scale capped at the 99th percentile).",,,
+figures/captions.md,9,38 °C,value,"ours that fall inside the fan window (air temperature below 38 °C), which reaches 95.8% of all air conditioni",K032,,K032=95.8
+figures/captions.md,9,95.8%,value,"the fan window (air temperature below 38 °C), which reaches 95.8% of all air conditioning hours over land.",K032,,K032=95.8
+figures/captions.md,9,1.2,value,"(c) Fan equivalence ratio, exposure reduction of a 1.2 m s⁻¹ fan divided by that of Default air conditioning, 60.6",K033,,K033=60.6
+figures/captions.md,9,60.6%,value,"1.2 m s⁻¹ fan divided by that of Default air conditioning, 60.6% when aggregated over land.",K033,,K033=60.6
+figures/captions.md,9,0.75,value,"(d) Evaporative cooler equivalence ratio (ε 0.75 over Default air conditioning), 72.8% aggre",K051,,K051=72.8
+figures/captions.md,9,72.8%,value,"r equivalence ratio (ε 0.75 over Default air conditioning), 72.8% aggregated over land, with values at or abo",K051,,K051=72.8
+figures/captions.md,9,1,value,"aggregated over land, with values at or above 1 on 44% of the land area shown.",K052,,K052=44.0
+figures/captions.md,9,44%,value,"aggregated over land, with values at or above 1 on 44% of the land area shown.",K052,,K052=44.0
+figures/captions.md,9,1,value,Ratios in (c) and (d) use a diverging scale centred at 1 (equal exposure reduction to air conditioning) and are capp,,,
+figures/captions.md,9,2,value,l exposure reduction to air conditioning) and are capped at 2.,,,
+figures/captions.md,9,100,value,"ht grey) where Default air conditioning runs for fewer than 100 hours per year, which leaves 76% of the lan",K030,,K030=76.0
+figures/captions.md,9,76%,value,"ioning runs for fewer than 100 hours per year, which leaves 76% of the land area, and white denotes ocean.",K030,,K030=76.0
+figures/captions.md,9,60,value,"Equirectangular (plate carrée) projection, 60°S to 85°N.",,,
+figures/captions.md,9,85,value,"Equirectangular (plate carrée) projection, 60°S to 85°N.",,,
+figures/captions.md,11,12,value,(a) Exposure degree hours removed per year in 12 cities (thousand K h) by air conditioning under the Default,,,
+figures/captions.md,11,1.2,value,"e Default rule (black) and the DLS rule (grey), by a fan at 1.2 m/s inside the 38 °C window (blue) and by an evaporative co",,,
+figures/captions.md,11,38 °C,value,"ck) and the DLS rule (grey), by a fan at 1.2 m/s inside the 38 °C window (blue) and by an evaporative cooler with ε 0.75 unde",,,
+figures/captions.md,11,0.75,value,"the 38 °C window (blue) and by an evaporative cooler with ε 0.75 under the RH_s ≤ 80 % cap (orange), all evaluated over the",,,
+figures/captions.md,11,80 %,value,") and by an evaporative cooler with ε 0.75 under the RH_s ≤ 80 % cap (orange), all evaluated over the Default air-conditioni",,,
+figures/captions.md,11,0.8,value,"Whiskers span the fan speeds 0.8 to 2.0 m/s and the effectiveness values ε 0.6 to 0.85, each",,,
+figures/captions.md,11,2.0,value,"Whiskers span the fan speeds 0.8 to 2.0 m/s and the effectiveness values ε 0.6 to 0.85, each expres",,,
+figures/captions.md,11,0.6,value,"he fan speeds 0.8 to 2.0 m/s and the effectiveness values ε 0.6 to 0.85, each expressed as the sensitivity equivalence rati",,,
+figures/captions.md,11,0.85,value,"speeds 0.8 to 2.0 m/s and the effectiveness values ε 0.6 to 0.85, each expressed as the sensitivity equivalence ratio times",,,
+figures/captions.md,11,30 %,value,Fans remove 30 % of the air-conditioning exposure in Phoenix,K202,,K202=30.0
+figures/captions.md,11,27 %,value,"he air-conditioning exposure in Phoenix and 27 % in Riyadh , rising to 75 % in Singapore",K212,,K212=27.0
+figures/captions.md,11,75 %,value,"and 27 % in Riyadh , rising to 75 % in Singapore and 80 % in Miami",K272,,K272=75.0
+figures/captions.md,11,80 %,value,", rising to 75 % in Singapore and 80 % in Miami , whereas evaporative coolers reach",K292,,K292=80.0
+figures/captions.md,11,111 %,value,"in Miami , whereas evaporative coolers reach 111 % in Phoenix and 150 % in Tehran",K203,,K203=111.0
+figures/captions.md,11,150 %,value,porative coolers reach 111 % in Phoenix and 150 % in Tehran but only 2 % in Miami,K233,,K233=150.0
+figures/captions.md,11,2 %,value,and 150 % in Tehran but only 2 % in Miami and 0 % in Singapore,K293,,K293=2.0
+figures/captions.md,11,0 %,value,n but only 2 % in Miami and 0 % in Singapore .,K273,,K273=0.0
+figures/captions.md,11,3,value,with the green marker showing the hours that remain once a 3 K fan shift is applied before air conditioning starts.,,,
+figures/captions.md,11,12 %,value,The shift removes 12 % of Default hours in Phoenix and 36 % in Sin,K204,,K204=12.0
+figures/captions.md,11,36 %,value,"emoves 12 % of Default hours in Phoenix and 36 % in Singapore , against 34.4 % of global land",K274,,K274=36.0
+figures/captions.md,11,34.4 %,value,"and 36 % in Singapore , against 34.4 % of global land air-conditioning hours .",K070,,K070=34.4
+figures/captions.md,11,56.6 %,value,The fan equivalence ratio moves from 56.6 % with a 35 °C window to 61.6 % with a 39 °C,K080,,K080=56.6
+figures/captions.md,11,35 °C,value,The fan equivalence ratio moves from 56.6 % with a 35 °C window to 61.6 % with a 39 °C window,K080,,K080=56.6
+figures/captions.md,11,61.6 %,value,"io moves from 56.6 % with a 35 °C window to 61.6 % with a 39 °C window , is 56.7 % with the Fos",K082,,K082=61.6
+figures/captions.md,11,39 °C,value,"56.6 % with a 35 °C window to 61.6 % with a 39 °C window , is 56.7 % with the Foster rule",K082,,K082=61.6
+figures/captions.md,11,56.7 %,value,"to 61.6 % with a 39 °C window , is 56.7 % with the Foster rule , 60.4 % when negative",K083,,K083=56.7
+figures/captions.md,11,60.4 %,value,", is 56.7 % with the Foster rule , 60.4 % when negative ΔT is counted outside the window",K086,,K086=60.4
+figures/captions.md,11,50.3 %,value,"ΔT is counted outside the window , and spans 50.3 % to 72.4 % for 0.8 and 2.0 m",K088,,K088=50.3
+figures/captions.md,11,72.4 %,value,"window , and spans 50.3 % to 72.4 % for 0.8 and 2.0 m/s.",K089,,K089=72.4
+figures/captions.md,11,0.8,value,spans 50.3 % to 72.4 % for 0.8 and 2.0 m/s.,,,
+figures/captions.md,11,2.0,value,0.3 % to 72.4 % for 0.8 and 2.0 m/s.,,,
+figures/captions.md,11,48.4 %,value,"The evaporative ratio is 48.4 % with RH_s ≤ 70 % , 95.9 % with no humidity c",K090,,K090=48.4
+figures/captions.md,11,70 %,value,"The evaporative ratio is 48.4 % with RH_s ≤ 70 % , 95.9 % with no humidity cap",K090,,K090=48.4
+figures/captions.md,11,95.9 %,value,"aporative ratio is 48.4 % with RH_s ≤ 70 % , 95.9 % with no humidity cap , 87.4 % with the T_wb",K091,,K091=95.9
+figures/captions.md,11,87.4 %,value,", 95.9 % with no humidity cap , 87.4 % with the T_wb ≤ 24 °C rule , 64.9 % for ε 0.",K092,,K092=87.4
+figures/captions.md,11,24 °C,value,"ith no humidity cap , 87.4 % with the T_wb ≤ 24 °C rule , 64.9 % for ε 0.6 , 54.",K092,,K092=87.4
+figures/captions.md,11,64.9 %,value,", 87.4 % with the T_wb ≤ 24 °C rule , 64.9 % for ε 0.6 , 54.3 % for ε 0.85",K093,,K093=64.9
+figures/captions.md,11,0.6,value,"% with the T_wb ≤ 24 °C rule , 64.9 % for ε 0.6 , 54.3 % for ε 0.85 and 92.7",K093,,K093=64.9
+figures/captions.md,11,54.3 %,value,"°C rule , 64.9 % for ε 0.6 , 54.3 % for ε 0.85 and 92.7 % with a 0.5 m/s airstr",K094,,K094=54.3
+figures/captions.md,11,0.85,value,", 64.9 % for ε 0.6 , 54.3 % for ε 0.85 and 92.7 % with a 0.5 m/s airstream",K094,,K094=54.3
+figures/captions.md,11,92.7 %,value,"0.6 , 54.3 % for ε 0.85 and 92.7 % with a 0.5 m/s airstream .",K095,,K095=92.7
+figures/captions.md,11,0.5,value,", 54.3 % for ε 0.85 and 92.7 % with a 0.5 m/s airstream .",K095,,K095=92.7
+figures/captions.md,11,2020,year,cities.csv and results/derived/sensitivity.csv for the year 2020.,,,
+figures/captions.md,18,2020,year,ios and air-conditioning hours avoided for twelve cities in 2020.,,,
